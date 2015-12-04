@@ -1,0 +1,1094 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getTimezoneOffset"
+			],
+			[
+				"jas-",
+				"jas-describe	Jasmine Describe Function"
+			],
+			[
+				"jas-be",
+				"jas-bef-inject	Jasmine Beforeach with Inject"
+			],
+			[
+				"ang",
+				"ang-directive	Directive Return Sentence"
+			],
+			[
+				"_",
+				"_PopularMovies_"
+			],
+			[
+				"tt00",
+				"tt0086190"
+			],
+			[
+				"find",
+				"findMovie"
+			],
+			[
+				"jas",
+				"jas-before	Jasmine beforeEach Function"
+			],
+			[
+				"omdb",
+				"omdbApi"
+			],
+			[
+				"roo",
+				"rootScope"
+			],
+			[
+				"popu",
+				"popularMovie"
+			],
+			[
+				"exp",
+				"expectedHeaders"
+			],
+			[
+				"angular",
+				"angular-resource"
+			],
+			[
+				"p",
+				"popularMovie"
+			],
+			[
+				"httpB",
+				"httpBackend"
+			],
+			[
+				"boot-",
+				"boot-panel	Bootstrap Panel"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"ang-",
+				"ang-link	Angular Directive Link Function"
+			],
+			[
+				"ang-vm",
+				"ang-vm.$FUNCTION	Angular VM Function Template"
+			],
+			[
+				"bakgr",
+				"background-color"
+			],
+			[
+				"butto",
+				"buttongroup"
+			],
+			[
+				"inset",
+				"insertBefore  (function)"
+			],
+			[
+				"ma",
+				"makeMockup  (function)"
+			],
+			[
+				"mandatory",
+				"mandatoryList"
+			],
+			[
+				"mand",
+				"mandatoryList"
+			],
+			[
+				"star",
+				"starred"
+			],
+			[
+				"set",
+				"setTitle"
+			],
+			[
+				"added",
+				"setAddedInTheSession"
+			],
+			[
+				"make",
+				"makeEmptyTable"
+			],
+			[
+				"wit",
+				"withButtons"
+			],
+			[
+				"facout",
+				"facOut_Rational"
+			],
+			[
+				"fac",
+				"facOut_Endt"
+			],
+			[
+				"facou",
+				"facOut_UWauthAgreement"
+			],
+			[
+				"cross",
+				"crossSelling_advice"
+			],
+			[
+				"cro",
+				"crossSelling_summary"
+			],
+			[
+				"policydoc_",
+				"policyDoc_nda"
+			],
+			[
+				"policyDoc",
+				"policyDoc_hccPlicySlip"
+			],
+			[
+				"po",
+				"policyDoc_hccPlicySlip"
+			],
+			[
+				"policydoc",
+				"policyDoc_ulPolicySlip"
+			],
+			[
+				"policy",
+				"policyDoc_primaryPolicySlip"
+			],
+			[
+				"pol",
+				"policyDoc_quote"
+			],
+			[
+				"uw",
+				"uwDoc_accountHistory"
+			],
+			[
+				"prop",
+				"prototype"
+			],
+			[
+				"uwDoc_uk",
+				"set_uwDoc_uwWkt"
+			],
+			[
+				"add",
+				"addedInTheSession"
+			],
+			[
+				"u",
+				"updateFavoritesHtml"
+			],
+			[
+				"wri",
+				"writeRow"
+			],
+			[
+				"favo",
+				"favorite"
+			],
+			[
+				"mocku",
+				"mockupJsonFolderCollection"
+			],
+			[
+				"create",
+				"createComplete"
+			],
+			[
+				"cra",
+				"createName"
+			],
+			[
+				"init",
+				"initialized"
+			],
+			[
+				"in",
+				"initialized  (variable)"
+			],
+			[
+				"cl",
+				"clickOnA"
+			],
+			[
+				"mock",
+				"mockSearchList"
+			],
+			[
+				"load",
+				"loadRows"
+			],
+			[
+				"extra",
+				"extraHtml"
+			],
+			[
+				"panel",
+				"panelFactory"
+			],
+			[
+				"head",
+				"headingId"
+			],
+			[
+				"table",
+				"tablesorter"
+			],
+			[
+				"cre",
+				"createAssigner"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"o",
+				"observer1"
+			],
+			[
+				"ob",
+				"observerList"
+			],
+			[
+				"Bas",
+				"basket"
+			],
+			[
+				"uni",
+				"uniqueIstance"
+			],
+			[
+				"get_",
+				"get_class_vars"
+			],
+			[
+				"pi",
+				"pizzaIngredientFactory"
+			],
+			[
+				"Pizza",
+				"PizzaStore  (class)"
+			],
+			[
+				"crea",
+				"createPizza"
+			],
+			[
+				"Che",
+				"CheesePizza  (class)"
+			],
+			[
+				"temp",
+				"temperature"
+			],
+			[
+				"fly",
+				"flyBehavior  (variable)"
+			],
+			[
+				"quack",
+				"quackBehavior"
+			],
+			[
+				"tem",
+				"templateCache_"
+			],
+			[
+				"_init",
+				"_initButtonGroup"
+			],
+			[
+				"up",
+				"updateMandatoryPercentage"
+			],
+			[
+				"folderN",
+				"folderName"
+			],
+			[
+				"fold",
+				"folder-name"
+			],
+			[
+				"EFO",
+				"EFOLDER"
+			],
+			[
+				"th",
+				"thClass"
+			],
+			[
+				"EF",
+				"EFOLDER"
+			],
+			[
+				"fac-out",
+				"fac-out-slip"
+			],
+			[
+				"ap",
+				"application-form"
+			],
+			[
+				"sele",
+				"selectRightOption"
+			],
+			[
+				"_c",
+				"_currentElement"
+			],
+			[
+				"cont",
+				"control-section"
+			],
+			[
+				"_in",
+				"_initMockupRows"
+			],
+			[
+				"class",
+				"classToCollapse"
+			],
+			[
+				"collaps",
+				"collapseSections"
+			],
+			[
+				"text",
+				"textarea	Tag"
+			],
+			[
+				"todos",
+				"todosInStore"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"const",
+				"CONST_updateInvoices"
+			],
+			[
+				"CONST_",
+				"CONST_daysBeforeReAttemptingLookup"
+			],
+			[
+				"rate",
+				"rateToUpdate"
+			],
+			[
+				"lin",
+				"linkAIM"
+			],
+			[
+				"getmis",
+				"getMissingExchangeRateInfoQuery"
+			],
+			[
+				"AIM",
+				"aimDB"
+			],
+			[
+				"update",
+				"updateInvoices"
+			],
+			[
+				"ob_",
+				"ob_get_level"
+			],
+			[
+				"ob_end",
+				"ob_end_flush"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package control repos",
+				"Package Control: Add Repository"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimelinter",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimelint",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"linter",
+				"SublimeLinter: Show Errors on Save"
+			],
+			[
+				"local",
+				"Local History: Compare"
+			],
+			[
+				"localh",
+				"Local History: Open"
+			],
+			[
+				"locale",
+				"Local History: Open"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"gitgutter",
+				"GitGutter: Compare Against Commit"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"packagere",
+				"Package Control: Remove Package"
+			],
+			[
+				"removep",
+				"Package Control: Remove Package"
+			],
+			[
+				"installp",
+				"Package Control: Install Package"
+			],
+			[
+				"install pak",
+				"Package Control: Install Package"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"JSLint jsl",
+			"jsl",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/ppages/Desktop/ticketing-tool",
+		"/C/Users/ppages/Desktop/ticketing-tool/www",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js"
+	],
+	"file_history":
+	[
+		"/C/Users/ppages/Desktop/ticketing-tool/gulpfile.js",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js/app.js",
+		"/C/Users/ppages/Desktop/ticketing-tool/README.md",
+		"/C/Users/ppages/Desktop/ticketing-tool/ionic.project",
+		"/C/Users/ppages/Desktop/ticketing-tool/package.json",
+		"/C/Users/ppages/Desktop/ticketing-tool/ionic-ticketing.sublime-project",
+		"/C/Users/ppages/Desktop/ticketing-tool/.gitignore",
+		"/C/Users/ppages/Desktop/ticketing-tool/bower.json",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/lib/angular-sanitize/.bower.json",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/lib/angular-ui-router/.bower.json",
+		"/C/Users/ppages/Desktop/test/bower.json",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/lib/angular-animate/.bower.json",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/lib/angular/.bower.json",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/home/home.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/home/home.controller.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/home/directives/movie-result.directive.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/README.MD",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/index.html",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/home/directives/movie-result.directive.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/utilities/from-now.filter.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/utilities/from-now.filter.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/utilities/utilities.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/my-app.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/karma.conf.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/karma-windows.conf.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/karma-default.conf.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/common",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/home/directives/movie-result.html",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/home/home.html",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/jas-before-each-with-inject.sublime-snippet",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/results/my-results.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/movie-core/popular-movies.factory.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/home/home.controller.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/movie-core/popular-movies.factory.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/movie-core/movie-core.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/omdb/omdb.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/omdb/omdbApi.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/search/search.controller.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/search/search.controller.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/search/search.html",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/ang-timeout.sublime-snippet",
+		"/C/etc/www/travel/README.MD",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/results/results.html",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/results/results.controller.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/results/results.controller.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/run.bat",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/server/index.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/bower_components/angular-bootstrap/ui-bootstrap-csp.css",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/omdb/omdbApi.factory.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/results/results.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/results/resuls.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/search/my-search.module.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/search/search.module.js",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/jas-before-each.sublime-snippet",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/jasmine-it.sublime-snippet",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/bower_components/angular-resource/bower.json",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/bower_components/angular-resource/index.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/bower_components/angular-resource/angular-resource.js",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/jasmine-describe.sublime-snippet",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/commit.bat",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/movie-core/movie-core.factory.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/karma-mac.conf.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/karma-window.conf.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/.gitignore",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/hello/service.spec.js",
+		"/C/Users/ppages/.boxsync/Box Sync/PROJECTS/in-progress/LEARNING/learning-angular-mock/app/hello/service.js",
+		"/C/Users/ppages/.boxsync/Box Sync/HCC Trainings/Security Trainning/Unvalidated Redirects and Forwards.txt",
+		"/C/Users/ppages/.boxsync/Box Sync/HCC Trainings/Security Trainning/intro.txt",
+		"/C/Users/ppages/.boxsync/Box Sync/HCC Trainings/Security Trainning/pwd.txt",
+		"/C/Users/ppages/Desktop/components with known vulnerabilities.txt",
+		"/C/Users/ppages/Desktop/cross site request forgery.txt",
+		"/C/Users/ppages/Desktop/missing function level access control.txt",
+		"/C/Users/ppages/Desktop/uar drill-down-title.txt",
+		"/C/Users/ppages/Desktop/knowledge-base/docs/Lipusm235/lpsum9878.md",
+		"/C/Users/ppages/Desktop/knowledge-base/docs/index.md",
+		"/C/Users/ppages/Desktop/gulp-examples/src/hello.js",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/Default (Windows).sublime-keymap",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/javascript-iife.sublime-snippet",
+		"/C/Users/ppages/Desktop/gulp-examples/.jshintrc",
+		"/C/Users/ppages/Desktop/gulp-examples/.jscsrc",
+		"/C/Users/ppages/Desktop/gulp-examples/README.MD",
+		"/C/Users/ppages/Desktop/gulp-examples/gulpfile.js",
+		"/C/Users/ppages/Desktop/gulp-examples/package.json",
+		"/C/Users/ppages/Desktop/gulp-examples/docs/packages.md",
+		"/C/Users/ppages/Desktop/gulp-examples/.gitignore",
+		"/C/Users/ppages/Desktop/gulp-examples/docs/gulp-api.md",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/user-list.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/user-list.controller.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/directives/user-list.directive.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/routing.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/common/menu.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/index.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/directives",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/myRepeat/my-repeat.controller.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/myRepeat/my-repeat.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/myRepeat/directives/my-repeat.directive.js",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/ang-vm-function.sublime-snippet",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/boot-well.sublime-snippet",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/ang-vm.sublime-snippet",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/ang-activate.sublime-snippet",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/ang-directive.sublime-snippet",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/lazyRender/directives/lazy-render.directive.js",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/.gitignore",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/lazyRender/lazy-render.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/lazyRender/lazy-render.controller.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/advTrans/directives/adv-trans.directive.js",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/ang-transclude.sublime-snippet",
+		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/ang-link.sublime-snippet",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/advTrans/directives/adv-trans.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/advTrans/adv-trans.controller.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/advTrans/adv-trans.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/droid.controller.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/droid.html",
+		"/C/Users/ppages/Documents/cmder/vendor/msysgit/doc/git/html/git-reset.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/common/test.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/panel/panel.directive.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/panel/panel.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/droid/droid.directive.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/droid/droid.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userCards/directives/stateDisplay/state-display.directive.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userCards/directives/advUserCard/advUserCard.html",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userCards/directives/userInfoCard/userInfoCard.directive.js",
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/droid.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 92.0,
+		"where_history":
+		[
+			"C:\\Users\\ppages\\.boxsync\\Box Sync\\PROJECTS\\in-progress\\LEARNING\\learning-angular-mock\\app",
+			"C:\\Users\\ppages\\.boxsync\\Box Sync\\PROJECTS\\in-progress\\LEARNING\\learning-angular-mock",
+			"<open folders>",
+			"c:/etc/wwww/pearpages.github.io",
+			"C:\\Users\\ppages\\Desktop\\mockup\\js"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"',\n",
+			"console.log",
+			"here",
+			">\n",
+			"data",
+			"\"\n				},",
+			",\n					",
+			"when",
+			"},",
+			"popularMOvies",
+			"repositories",
+			"user",
+			"ignored",
+			"'",
+			"bountyHunters",
+			"myRepeat",
+			".after",
+			"MyRepeat",
+			"my-lazy-render",
+			"adv-trans",
+			"myAdvTrans",
+			"AdvTransController",
+			"adv-trans",
+			"nextLevel",
+			"li",
+			"}}",
+			"user",
+			"questions",
+			"django",
+			"Annotations and Code Analysis via Gulp Task Automation",
+			"HEAD",
+			"th",
+			"tr",
+			"make",
+			"Drop Files",
+			"btn-sm",
+			"status",
+			"makeTitle",
+			"checkboxes",
+			"th",
+			"facout",
+			"to-load",
+			"2px",
+			"folder",
+			"policyDoc_nda",
+			"policyDoc_endt",
+			"policyDoc_hccPolicySlip",
+			"policyDoc_endt",
+			"quote",
+			"get_uwDoc_accountHistory()",
+			"get_facOut_Endt",
+			" = value;",
+			"console.log('error in Mandatory');",
+			"if(that.checkValue(value)){",
+			"}else{",
+			"set_",
+			"this",
+			"this.checkValue(value){",
+			"return ",
+			" 'Pending',",
+			";",
+			"=",
+			"console",
+			"this.favorites",
+			"that",
+			"mockTable",
+			"glaphycon",
+			"<td class=\"delete\">",
+			"'<td>'+elements.icons.trash()+'</td>' +",
+			"$target.",
+			"<a href=\"#folder-detail\">",
+			"'<td class=\"status\">Unbound</td>' +",
+			"'+elements.icons.pencil()+' ",
+			"'<td>Unbound</td>' +",
+			"+'<a ",
+			"Move To",
+			"primary",
+			"mockup.",
+			"document.write",
+			"	         ",
+			"#list",
+			"tabkle",
+			"mockup.icons",
+			"mockup.input",
+			"mockup.makeTable",
+			"loadRows",
+			"html",
+			"makeGroup",
+			"Basic",
+			"init",
+			"#accordion",
+			"collapse",
+			"makeTable",
+			"makeGroup",
+			"collapseThree",
+			"href=\"#folder-detail\"",
+			");",
+			"webkit",
+			"$q",
+			"$template",
+			"myService",
+			"imgCanvas",
+			"toDataURL",
+			"toDataUrl",
+			"ngfsrc",
+			"removeclass",
+			"_select",
+			"<td ",
+			"uk-modal-dialog",
+			"<td ",
+			"pending ",
+			"<a class=\"uk-icon-close",
+			"a ",
+			"data-uk-modal href=\"#my-modal\"",
+			"<i ",
+			"</i>",
+			"Pending</td>",
+			"<td class=\"mandatory-section ",
+			"collapse",
+			"<select><option value='pending'>Pending</option><option value='na'>N/A</option><option value='Issued'>Issued</option></select><button>Upload</button>",
+			"<option>Status</option>",
+			"collapse",
+			"<td class=\"non-mandatory-section\"><select><option>Status</option></select><button>Upload</button></td>",
+			"<select><option>Status</option></select>",
+			"lorem ipsum",
+			"<td class=\"control-section checklist\">lorem ipsum</td>",
+			"<input type=\"text\" />",
+			"<th>"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"hunters",
+			"userList",
+			"my-lazy-render",
+			"myLazyRender",
+			"LazyRenderController",
+			"lazy-render",
+			"nextState",
+			"td",
+			"th",
+			"",
+			"modal",
+			"td",
+			";",
+			"",
+			"get_",
+			"that",
+			"if(this.checkValue(value)){",
+			"",
+			" function (value){},",
+			",",
+			":",
+			"glyphicon",
+			"<td>",
+			"'<td class=\"delete\">'+elements.icons.trash()+'</td>' +",
+			"$a.",
+			"<a href=\"#folder-detail\" title=\"Load\">",
+			"",
+			"'<td class=\"status\">Unbound</td>' +",
+			"+' <a ",
+			"'+elements.input.moveTo()+'",
+			"list.",
+			"html.push",
+			"table",
+			"elements.icons",
+			"elements.input",
+			"tabkle.makeTable",
+			"'+collapseId+'",
+			"collapseId",
+			"href=\"#mockup\"",
+			"myNamespace",
+			"<td data-title=\"\" ",
+			"<td status=\"pending\" ",
+			"",
+			"<a title=\"upload file\" class=\"uk-icon-close",
+			"a",
+			"",
+			"<a data-uk-modal href=\"#my-modal\" ",
+			"<a href=\"#my-modal\" ",
+			"</a>",
+			"<i class=\"uk-icon-close clickable\"></i>",
+			"<td class=\"mandatory-section pending ",
+			"<td class=\"mandatory-section pending",
+			"tollapse",
+			"Pending",
+			"<option value='pending'>Pending</option><option value='na'>N/A</option><option value='Issued'>Issued</option>",
+			"tollapse",
+			"collapse-class",
+			"<td class=\"non-mandatory-section\"></td>",
+			"<select><option>Status</option></select><button>Upload</button>",
+			"<select><option>Status</option></select>",
+			"<td class=\"control-section checklist\"><a href=\"#\">Checklist</a></td>",
+			"<textarea></textarea>",
+			"<th class=\"mandatory-section\">"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ionic-ticketing.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"directive",
+				"app\\home\\directives\\movie-result.directive.js"
+			],
+			[
+				"search",
+				"app\\search\\search.controller.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"lazy-render",
+				"app\\lazyRender\\directives\\lazy-render.directive.js"
+			],
+			[
+				"index.html",
+				"index.html"
+			],
+			[
+				"adv",
+				"app\\advTrans\\directives\\adv-trans.directive.js"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"productedit",
+				"app\\products\\ProductEdit.controller.js"
+			],
+			[
+				"producteti",
+				"app\\products\\productEditInfoView.html"
+			],
+			[
+				"productedti",
+				"app\\products\\productEditInfoView.html"
+			],
+			[
+				"producteditinf",
+				"app\\products\\productEditInfoView.html"
+			],
+			[
+				"producteditinfo",
+				"app\\products\\productEditInfoView.html"
+			],
+			[
+				"prdouctedit",
+				"app\\products\\productEditView.html"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"gitir",
+				".gitignore"
+			],
+			[
+				"tablebefore",
+				"ais-dev\\app\\application\\modules\\reports\\views\\helpers\\limitException\\TableBefore2014.php"
+			],
+			[
+				"mar.php",
+				"ais-dev\\app\\application\\modules\\reports\\forms\\Mar.php"
+			],
+			[
+				"facout",
+				"ais-dev\\app\\application\\modules\\reports\\forms\\FacOutPortfolio.php"
+			],
+			[
+				"facoutpo",
+				"ais-dev\\app\\application\\modules\\reports\\forms\\FacOutPortfolio.php"
+			],
+			[
+				"reprots/form/form",
+				"ais-dev\\app\\application\\modules\\reports\\forms\\Form.php"
+			],
+			[
+				"form.php",
+				"cms-zend-test\\library\\Pform\\Form.php"
+			],
+			[
+				"uar",
+				"ais-dev\\app\\application\\modules\\reports\\forms\\Uar.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
