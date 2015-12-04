@@ -9,3 +9,12 @@ I usually put in the .git-ignore the sublime project file. But this time I've ju
 ```
 After updating dependencies via **bower update** you have to do **ionic io init** again in order to set the current settings for your services.
 ```
+
+## Models
+
+### Users
+
++ Normal User
++ Helpdesk
++ Admin
+
