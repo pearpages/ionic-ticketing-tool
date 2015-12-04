@@ -1,4 +1,11 @@
-angular.module('ticketing', ['ionic','ionic.service.core', 'starter.controllers', 'starter.services'])
+angular.module('ticketing', [
+  'ionic',
+  'ionic.service.core',
+  'ticketing-home',
+  'ticketing-chats',
+  'ticketing-account',
+  'ticketing-dash'
+  ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
