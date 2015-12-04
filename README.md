@@ -18,3 +18,32 @@ After updating dependencies via **bower update** you have to do **ionic io init*
 + Helpdesk
 + Admin
 
+### Use Case
+
++ Normal User
+	+ Submit a Ticket
+	+ See "my" tickets
+	+ See a ticket detail
+	+ Evaluate a ticket
+
++ Helpdesk
+	+ See the total of tickets
+	+ Flag a ticket
+	+ Send an email (only link to an email)
+	+ See the number of currently opened tickets
+	+ Create an express ticket*
+	+ Assign a ticket
+	+ Comment a ticket
+	+ Close a ticket
+	+ Re-open a ticket
+	+ Send follow-up message
+	+ See detail of a ticket
+	+ See tickets
+		+ Filter by office
+		+ Filter by my assigned tickets
+		+ Closed Tickets 
+	
++ Admin
+	+ See statistics
+	+ CRUD Categories
+	+ Delete a ticket
