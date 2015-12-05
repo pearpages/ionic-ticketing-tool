@@ -1,9 +1,19 @@
 <ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="vm.settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
+    <ion-content class="padding">
+
+    <label class="item item-input">
+      <span class="input-label">Username</span>
+      <input type="text" ng-model="vm.user.name">
+    </label>
+
+    <label class="item item-input">
+      <span class="input-label">Password</span>
+      <input type="password" ng-model="vm.user.password">
+    </label>
+
+    <button class="button button-block button-stable" ng-click="vm.validateUser()">
+        Submit
+    </button>
+    
+    </ion-content>
 </ion-view>
