@@ -1,6 +1,13 @@
 <ion-view view-title="Account">
     <ion-content class="padding">
 
+    <div ng-show="vm.logged">
+      <button class="button button-block button-stable" ng-click="vm.loggout()">
+        Loggout
+    </button>
+    </div>
+
+<div ng-hide="vm.logged">
     <label class="item item-input">
       <span class="input-label">Username</span>
       <input type="text" ng-model="vm.user.name">
@@ -14,6 +21,6 @@
     <button class="button button-block button-stable" ng-click="vm.validateUser()">
         Submit
     </button>
-    
+    </div>
     </ion-content>
 </ion-view>
