@@ -11,6 +11,7 @@
 		vm.logged;
 		vm.user;
 		vm.validateUser = validateUser;
+		vm.loggout = loggout;
 
 		activate();
 
@@ -30,6 +31,10 @@
 				vm.logged = false;
 				alert('Wrong Password');
 			}
+		}
+
+		function loggout() {
+			activate();
 		}
 	}
 })();

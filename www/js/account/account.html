@@ -2,6 +2,7 @@
     <ion-content class="padding">
 
     <div ng-show="vm.logged">
+      <p>You are logged as <strong>{{vm.user.name}}</strong></p>
       <button class="button button-block button-stable" ng-click="vm.loggout()">
         Loggout
     </button>
