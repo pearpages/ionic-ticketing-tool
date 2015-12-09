@@ -2,13 +2,16 @@
     'use strict';
 
     angular.module("ticketing-users")
-    .factory('myUsers',['$state',myUsers]);
+    .factory('myUsers',['$state','CacheFactory',myUsers]);
 
-    function myUsers($state) {
+    function myUsers($state,CacheFactory) {
         var self = this;
 
-        self.logged = false;
+        self.logged = null;
         self.currentUser = null;
+        self.cache = null;
+
+        activate();
 
         return {
             isLogged: isLogged,
@@ -18,6 +21,16 @@
             isHelpdesk: isHelpdesk,
             logout: logout
         };
+
+        function activate() {
+            self.cache = CacheFactory.get('ticketingUsersCache');
+            self.currentUser = self.cache.get('user');
+            if(self.currentUser){
+                self.logged = true;
+            }else {
+                self.logged = false;
+            }
+        }
 
         function isAdmin() {
             if(self.currentUser){
@@ -46,6 +59,7 @@
         function logout() {
             self.logged = false;
             self.currentUser = null;
+            self.cache.put('user',null);
         }
 
         // User:
@@ -73,6 +87,7 @@
                 self.currentUser = user;
                 self.logged = true;
 
+                self.cache.put('user',user);
                 return true;
             }
         }

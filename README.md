@@ -47,3 +47,6 @@ After updating dependencies via **bower update** you have to do **ionic io init*
 	+ See statistics
 	+ CRUD Categories
 	+ Delete a ticket
+
+## Considerations
+
