@@ -1,27 +1,13 @@
 <ion-view view-title="Account">
     <ion-content class="padding">
 
-    <div ng-show="vm.logged">
-      <p>You are logged as <strong>{{vm.user.name}}</strong></p>
-      <button class="button button-block button-stable" ng-click="vm.loggout()">
-        Log out
-    </button>
-    </div>
+      <div ng-show="vm.logged">
+        <ng-include src="'js/account/logged.html'"></ng-include>
+      </div>
 
-<div ng-hide="vm.logged">
-    <label class="item item-input">
-      <span class="input-label">Username</span>
-      <input type="text" ng-model="vm.user.name">
-    </label>
+      <div ng-hide="vm.logged">
+        <ng-include src="'js/account/form.html'"></ng-include>
+      </div>
 
-    <label class="item item-input">
-      <span class="input-label">Password</span>
-      <input type="password" ng-model="vm.user.password">
-    </label>
-
-    <button class="button button-block button-stable" ng-click="vm.validateUser()">
-        Submit
-    </button>
-    </div>
     </ion-content>
 </ion-view>

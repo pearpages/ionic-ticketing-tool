@@ -2,9 +2,9 @@
 	'use strict';
 
 	angular.module("ticketing-chats")
-	.controller('ChatsController',['Chats',ChatsController]);
+	.controller('ChatsController',['myUsers','Chats',ChatsController]);
 
-	function ChatsController(Chats) {
+	function ChatsController(myUsers,Chats) {
 
 		var vm = this;
 
@@ -14,6 +14,7 @@
   		activate();
 
   		function activate() {
+        myUsers.isLogged();
   			vm.chats = Chats.all();
   		}
 

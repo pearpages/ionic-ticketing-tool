@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module("ticketing-dash",[])
+	angular.module("ticketing-dash",['ticketing-users'])
 	.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider

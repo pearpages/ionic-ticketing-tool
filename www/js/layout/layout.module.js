@@ -1,6 +1,6 @@
 (function() {
 	'use strict';
-	angular.module("ticketing-home",[])
+	angular.module("ticketing-layout",[])
 		.config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
@@ -9,9 +9,8 @@
   .state('tab', {
   	url: '/tab',
   	abstract: true,
-  	templateUrl: 'js/home/home.html',
-    controller: 'HomeController',
-    controllerAs: 'vm'
+  	templateUrl: 'js/layout/layout.html',
+    controller: 'LayoutController'
   });
 
 

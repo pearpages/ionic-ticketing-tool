@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module("ticketing-account",[])
+	angular.module("ticketing-account",['ticketing-users'])
 	.config(function($stateProvider, $urlRouterProvider) {
 
 		  // Ionic uses AngularUI Router which uses the concept of states

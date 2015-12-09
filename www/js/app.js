@@ -1,7 +1,8 @@
 angular.module('ticketing', [
   'ionic',
   'ionic.service.core',
-  'ticketing-home',
+  'ticketing-users',
+  'ticketing-layout',
   'ticketing-chats',
   'ticketing-account',
   'ticketing-dash',

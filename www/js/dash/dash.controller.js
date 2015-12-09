@@ -2,9 +2,14 @@
 	'use strict';
 
 	angular.module("ticketing-dash")
-	.controller('DashController',[DashController]);
+	.controller('DashController',['myUsers',DashController]);
 
-	function DashController() {
+	function DashController(myUsers) {
 
+        activate();
+
+        function activate() {
+          myUsers.isLogged();
+        }
 	}
 })();
