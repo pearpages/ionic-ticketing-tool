@@ -1,0 +1,13 @@
+ <div class="bar bar-subheader bar-stable">
+            
+            <h2 class="title">Who needs help</h2>
+            
+        </div>
+
+<ion-content class="has-subheader padding">
+<div class="list" ng-click="vm.selectName()">
+    
+        <ion-radio style="font-size:12px;" ng-repeat="name in vm.names" ng-model="vm.ticket.who" ng-value="vm.transformName(name)">{{name}}</ion-radio>
+    
+</div>
+</ion-content>

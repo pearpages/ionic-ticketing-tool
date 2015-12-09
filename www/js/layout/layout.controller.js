@@ -19,7 +19,6 @@
             } else {
                 vm.userRole = 'user';
             }
-            
         }
 
         function setUserRole(role) {

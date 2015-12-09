@@ -59,7 +59,7 @@
         function logout() {
             self.logged = false;
             self.currentUser = null;
-            self.cache.put('user',null);
+            self.cache.remove('user');
         }
 
         // User:

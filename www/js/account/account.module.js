@@ -11,13 +11,11 @@
 		  $stateProvider
 		  .state('tab.account', {
 		  	url: '/account',
-		  	views: {
-		  		'tab-account': {
+
 		  			templateUrl: 'js/account/account.html',
 		  			controller: 'AccountController',
 		  			controllerAs: 'vm'
-		  		}
-		  	}
+
 		  });
 
 		});

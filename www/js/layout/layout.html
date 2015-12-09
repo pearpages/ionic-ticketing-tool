@@ -1,4 +1,7 @@
+<ion-nav-bar class="bar-positive"></ion-nav-bar>
 
+<ion-nav-view></ion-nav-view>
+
+<!-- MENUS -->
 <ng-include src="'js/layout/user.html'" ng-show="vm.userRole === 'user'"></ng-include>
-
 <ng-include src="'js/layout/helpdesk.html'" ng-show="vm.userRole === 'helpdesk'"></ng-include>

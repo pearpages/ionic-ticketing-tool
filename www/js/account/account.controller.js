@@ -23,14 +23,12 @@
 		function validateUser() {
 			vm.logged = myUsers.validateUser(vm.user);
 			vm.user = myUsers.getCurrentUser();
-			$state.reload();			
 		}
 
 		function logout() {
 			myUsers.logout();
 			vm.logged = false;
 			vm.user = null;
-			$state.reload();
 		}
 
 	}

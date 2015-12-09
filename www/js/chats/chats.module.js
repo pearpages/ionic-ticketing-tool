@@ -12,23 +12,20 @@
 
   .state('tab.chats', {
   	url: '/chats',
-  	views: {
-  		'tab-chats': {
+  	
   			templateUrl: 'js/chats/chats.html',
   			controller: 'ChatsController',
   			controllerAs: 'vm'
-  		}
-  	}
+
+
   })
   .state('tab.chat-detail', {
   	url: '/chats/:chatId',
-  	views: {
-  		'tab-chats': {
+
   			templateUrl: 'js/chats/detail.html',
   			controller: 'DetailController',
   			controllerAs: 'vm'
-  		}
-  	}
+
   });
 
 });
