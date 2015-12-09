@@ -1,5 +1,47 @@
-<ion-view view-title="New Ticket">
-  <ion-content>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem fugiat suscipit quasi quia, ratione excepturi similique, perspiciatis sequi consequuntur adipisci quo ex quae sint fugit cum unde officia dolorum autem, repudiandae dolor voluptas pariatur. Sequi ducimus ullam illo temporibus, vitae facilis expedita quos suscipit praesentium fugit eum tempora quaerat reiciendis odit labore necessitatibus architecto voluptatem aliquid ipsam illum neque. Quam blanditiis rerum aliquam quis est odio nostrum odit non officiis, commodi quaerat eius nesciunt recusandae sequi, nemo ipsa nam ea, quasi facere cum minus cupiditate voluptatum doloribus. Commodi consequatur ea ipsa excepturi, veritatis, doloribus totam iusto fugiat praesentium et nobis.
+<ion-view view-title="New ticket">
+
+    <ion-nav-buttons side="right" >
+        <button class="button pull-right button-clear">Submit</button>
+    </ion-nav-buttons>
+
+  <ion-content class="padding">
+
+      <div class="list">
+
+        <div class="item item-toggle">
+            Express Ticket
+            <label class="toggle toggle-assertive">
+                <input type="checkbox">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </div>
+
+        <div class="item item-icon-left item-icon-right">
+            <i class="icon ion-person-stalker"></i>
+            <span>Who needs help</span>
+            <span style="display:inline-block;float:right;text-align:right; font-size:12px">ppages</span>
+            <i class="icon ion-arrow-right-c icon-accessory"></i>
+        </div>
+
+        <div class="item item-icon-left item-icon-right">
+            <i class="icon ion-medkit"></i>
+            <span>Issue</span>
+            <span style="display:inline-block;float:right; text-align:right; font-size:12px">ppages</span>
+            <i class="icon ion-arrow-right-c icon-accessory"></i>
+        </div>
+
+        <label class="item item-input item-stacked-label">
+            <i class="icon ion-edit"></i> 
+            <span class="input-label">Description</span>
+            <input type="text" placeholder="Description">
+        </label>
+
+        <button class="ion-button button button-block"><i class="icon ion-camera"></i></button>
+        
+
+    </div>
+
   </ion-content>
 </ion-view>

@@ -5,7 +5,6 @@ angular.module('ticketing', [
   'ticketing-layout',
   'ticketing-chats',
   'ticketing-account',
-  'ticketing-dash',
   'new-ticket'
   ])
 
