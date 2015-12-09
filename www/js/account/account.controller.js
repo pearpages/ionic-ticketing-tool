@@ -2,9 +2,9 @@
 	'use strict';
 
 	angular.module("ticketing-account")
-	.controller('AccountController',['myUsers',AccountController]);
+	.controller('AccountController',['$state','myUsers',AccountController]);
 
-	function AccountController(myUsers) {
+	function AccountController($state,myUsers) {
 
 		var vm = this;
 
@@ -23,12 +23,14 @@
 		function validateUser() {
 			vm.logged = myUsers.validateUser(vm.user);
 			vm.user = myUsers.getCurrentUser();
+			$state.reload();			
 		}
 
 		function logout() {
 			myUsers.logout();
 			vm.logged = false;
 			vm.user = null;
+			$state.reload();
 		}
 
 	}

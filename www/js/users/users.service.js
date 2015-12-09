@@ -14,8 +14,26 @@
             isLogged: isLogged,
             validateUser: validateUser,
             getCurrentUser: getCurrentUser,
+            isAdmin: isAdmin,
+            isHelpdesk: isHelpdesk,
             logout: logout
         };
+
+        function isAdmin() {
+            if(self.currentUser){
+                return (self.currentUser === 'admin') ? true: false;
+            } else {
+                return false;
+            }
+        }
+
+        function isHelpdesk() {
+            if(self.currentUser){
+                return (self.currentUser === 'helpdesk') ? true: false;
+            } else {
+                return false;
+            }
+        }
 
         function isLogged() {
             if(!self.logged){

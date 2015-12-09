@@ -10,7 +10,8 @@
   	url: '/tab',
   	abstract: true,
   	templateUrl: 'js/layout/layout.html',
-    controller: 'LayoutController'
+    controller: 'LayoutController',
+    controllerAs: 'vm'
   });
 
 
