@@ -5,7 +5,8 @@ angular.module('ticketing', [
   'ticketing-layout',
   'ticketing-chats',
   'ticketing-account',
-  'new-ticket'
+  'new-ticket',
+  'tickets-zone'
   ])
 
 .run(function($ionicPlatform) {

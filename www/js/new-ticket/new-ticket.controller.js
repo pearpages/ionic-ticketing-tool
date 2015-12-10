@@ -2,15 +2,16 @@
 	'use strict';
 
 	angular.module("new-ticket")
-	.controller('NewTicketController',['myUsers','myTickets',NewTicketController]);
+	.controller('NewTicketController',['myUsers','myTickets','$state',NewTicketController]);
 
-	function NewTicketController(myUsers,myTickets) {
+	function NewTicketController(myUsers,myTickets,$state) {
 		var vm = this;
 
 		vm.ticket = null;
         vm.view = null;
         vm.show = show;
         vm.names = null;
+        vm.me = null;
         vm.seeExpress = false;
         vm.whoOffice = null;
         vm.getIssueDescription = getIssueDescription;
@@ -24,6 +25,7 @@
             
             if(myUsers.getCurrentUser()){
                 vm.ticket = myTickets.make(myTickets,myUsers.getCurrentUser().id);
+                vm.me = myUsers.getCurrentUser().id;
                 vm.whoOffice = myUsers.getCurrentUser().office;    
 
                 vm.seeExpress = (myUsers.getCurrentUser().role === 'admin' ||
@@ -83,6 +85,7 @@
 
         function submit() {
             vm.ticket.save();
+            $state.go('tab.my-tickets');
         }
 
         function getRandomNames(office) {

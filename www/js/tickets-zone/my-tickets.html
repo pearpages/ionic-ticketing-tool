@@ -1,0 +1,31 @@
+<ion-view view-title="My Tickets">
+    <ion-content class="has-header padding">
+    
+    <div class="button-bar">
+      <span ng-click="vm.setView('my')" class="button" ng-class="(vm.view === 'my') ? 'active' : ''">My Issues</span>
+      <span ng-click="vm.setView('others')" class="button" ng-class="(vm.view === 'others') ? 'active' : ''">Others</span>
+    </div>
+    <br/>
+
+    <div ng-show="vm.view === 'my'" class="list">
+        <div class="item" ng-repeat="ticket in vm.who">{{ticket.id}}</div>
+    </div>
+
+    <div ng-show="vm.view === 'others'" class="list">
+        <div class="item" style="font-size:12px">
+            <div class="row">
+                <div class="col status">Status</div>
+                <div class="col category">Category</div>
+                <div class="col notified">Notified</div>
+            </div>
+        </div>
+        <div class="item" ng-repeat="ticket in vm.requested">
+            <div class="row">
+                <div class="col status">{{ticket.status}}</div>
+                <div class="col category">{{ticket.issueDescription}}</div>
+                <div class="col notified">{{ticket.notified | date : 'MMM-dd'}}</div>
+            </div>
+        </div>
+    </div>
+    </ion-content>
+</ion-view>

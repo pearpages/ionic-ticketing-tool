@@ -1,22 +1,19 @@
  <div class="bar bar-subheader bar-stable">
+    <button class="button" ng-click="vm.show('form')">Back</button>
     <h2 class="title">Who needs help</h2>
 </div>
 
 <ion-content class="has-subheader padding">
 
-<div class="button-bar">
-  <span class="button" ng-class="(vm.whoOffice === 'bcn') ? 'active' : ''" ng-click="vm.setWhoOffice('bcn')">BCN</span>
-  <span class="button" ng-class="(vm.whoOffice === 'mad') ? 'active' : ''" ng-click="vm.setWhoOffice('mad')">MAD</span>
-  <span class="button" ng-class="(vm.whoOffice === 'ldn') ? 'active' : ''" ng-click="vm.setWhoOffice('ldn')">LDN</span>
+
+<div class="list" >
+    <ion-radio ng-model="vm.ticket.who" ng-value="vm.me" ng-click="vm.show('form')">ME</ion-radio>    
+    <div ng-click="vm.show('other')" class="item item-icon-right"><span>
+    <div class="row" style='padding:0'>
+        <div class="col" style='padding:0'>Other</div>
+        <div class="col" style='text-align:right; font-size:12px;'>{{(vm.ticket.who === vm.me) ? '' : vm.ticket.who}}</div>
+    </div>
+    </span><i class="icon ion-arrow-right-c icon-accessory"></i></div>
 </div>
-<br/>
-<div ng-show="vm.whoOffice === 'bcn'" class="list" ng-click="vm.show('form')">
-        <ion-radio style="font-size:12px;" ng-repeat="name in vm.names.bcn" ng-model="vm.ticket.who" ng-value="vm.transformName(name)">{{name}}</ion-radio>
-</div>
-<div ng-show="vm.whoOffice === 'mad'" class="list" ng-click="vm.show('form')">
-        <ion-radio style="font-size:12px;" ng-repeat="name in vm.names.mad" ng-model="vm.ticket.who" ng-value="vm.transformName(name)">{{name}}</ion-radio>
-</div>
-<div ng-show="vm.whoOffice === 'ldn'" class="list" ng-click="vm.show('form')">
-        <ion-radio style="font-size:12px;" ng-repeat="name in vm.names.ldn" ng-model="vm.ticket.who" ng-value="vm.transformName(name)">{{name}}</ion-radio>
-</div>
+
 </ion-content>
