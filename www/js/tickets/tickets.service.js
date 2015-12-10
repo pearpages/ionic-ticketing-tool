@@ -33,10 +33,8 @@
                     options.who = 'ppages';
                 }
                 ticket = factory.make(factory,userid, options);
-                console.log(ticket);
-                ticket.save();
+                ticket.save(true);
             }
-            console.log(tickets);
         }
 
         function getUserTickets(userid) {
@@ -61,9 +59,14 @@
             return tickets.id;
         }
 
-        function save(ticket) {
+        function save(ticket,mock) {
+            mock = mock || false;
             if(ticket.id === -1){
-                ticket.notified = new Date();
+                if(mock){
+                    ticket.notified = new Date(2015,Math.floor(Math.random() * 12), Math.floor(Math.random() * 30));
+                }else{
+                    ticket.notified = new Date();    
+                }
                 lastId++;
                 ticket.id = lastId;
                 tickets[lastId] = ticket;
@@ -129,8 +132,9 @@
                     return res;
                 }
 
-                function save() {
-                    factory.save(self);
+                function save(mock) {
+                    mock = mock || false;
+                    factory.save(self,mock);
                 }
 
             };
