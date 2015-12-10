@@ -11,16 +11,27 @@
         vm.view = null;
         vm.show = show;
         vm.names = null;
+        vm.whoOffice = null;
         vm.transformName = transformName;
         vm.selectName = selectName;
+        vm.setWhoOffice = setWhoOffice;
 
         activate();
 
+        function setWhoOffice (office) {
+            vm.whoOffice = office;
+        }
+
         function activate() {
+            vm.whoOffice = myUsers.getCurrentUser().office;
             vm.ticket.completed = false;
             myUsers.isLogged();
             vm.view = 'form';
-            vm.names = getRandomNames();
+            vm.names = {
+                bcn:getRandomNames('bcn'),
+                ldn:getRandomNames('ldn'),
+                mad:getRandomNames('mad')
+            };
         }
 
         function show(id) {
@@ -37,110 +48,121 @@
             vm.show('form');
         }
 
-        function getRandomNames() {
+        function getRandomNames(office) {
 
-            var names = [];
-            names.push('Raquel  Holloway');
-            names.push('Carrie  Rodriguez');
-            names.push('Cedric  Perkins');
-            names.push('Herbert Vega');
-            names.push('Garry   Morgan');
-            names.push('Gerardo Moore');
-            names.push('Dora    Garrett');
-            names.push('Emilio  Lawson');
-            names.push('Colleen Banks');
-            names.push('Juan    Freeman');
-            names.push('Laurence    Gutierrez');
-            names.push('Lester  Kennedy');
-            names.push('Ebony   Richardson');
-            names.push('Roosevelt   Saunders');
-            names.push('Kirk    Alvarez');
-            names.push('Ruby    Perez');
-            names.push('Beulah  Neal');
-            names.push('Damon   Mckenzie');
-            names.push('Judith  Butler');
-            names.push('Thelma  Jones');
-            names.push('Phillip Sharp');
-            names.push('Debbie  Figueroa');
-            names.push('Robin   Webb');
-            names.push('Joe Munoz');
-            names.push('Jill    Wilkerson');
-            names.push('Cary    Fitzgerald');
-            names.push('Bill    Bradley');
-            names.push('Laverne Ruiz');
-            names.push('Forrest Fuller');
-            names.push('Julian  Kim');
-            names.push('Cecelia George');
-            names.push('Rene    Barber');
-            names.push('Angelina    Howell');
-            names.push('Stephanie   Olson');
-            names.push('Christopher Love');
-            names.push('Terry   Vaughn');
-            names.push('Alexander   Barnett');
-            names.push('Kim Bryant');
-            names.push('Jeremy  Mcgee');
-            names.push('Gwen    Johnson');
-            names.push('Grady   Pope');
-            names.push('Joanna  Blake');
-            names.push('Angel   Blair');
-            names.push('Mercedes    Waters');
-            names.push('Rolando Mccoy');
-            names.push('Allan   Lynch');
-            names.push('Karl    Cox');
-            names.push('Janie   Murray');
-            names.push('Benny   Ortiz');
-            names.push('Patty   Benson');
-            names.push('Phil    Marsh');
-            names.push('Brian   Norman');
-            names.push('Judy    Swanson');
-            names.push('Teresa  Weber');
-            names.push('Gretchen    Rogers');
-            names.push('Cynthia Hill');
-            names.push('Kristin Poole');
-            names.push('Nancy   Castro');
-            names.push('Kristi  Cohen');
-            names.push('Luis    Reynolds');
-            names.push('Catherine   Curtis');
-            names.push('Jerome  Bishop');
-            names.push('Dustin  Nichols');
-            names.push('Freddie Stewart');
-            names.push('Evelyn  Thomas');
-            names.push('Henry   Pierce');
-            names.push('Fannie  Watts');
-            names.push('Emma    Mcdaniel');
-            names.push('Otis    Lloyd');
-            names.push('Cheryl  Owens');
-            names.push('Della   Mccormick');
-            names.push('Wendy   Hopkins');
-            names.push('Jeff    Stokes');
-            names.push('Jerry   Barton');
-            names.push('Rochelle    Walker');
-            names.push('Dennis  Cannon');
-            names.push('Wilma   Hunt');
-            names.push('Jeannette   Fisher');
-            names.push('Eva Norton');
-            names.push('Beth    Ford');
-            names.push('Brad    Moss');
-            names.push('Marian  Price');
-            names.push('Francisco   Martin');
-            names.push('Delbert Medina');
-            names.push('Brooke  Stanley');
-            names.push('Carmen  Gilbert');
-            names.push('Carol   May');
-            names.push('Steven  Bennett');
-            names.push('Cora    Ferguson');
-            names.push('Emanuel Schmidt');
-            names.push('Mattie  Walters');
-            names.push('Luz Hogan');
-            names.push('Ruth    Mendoza');
-            names.push('Daniel  Sparks');
-            names.push('Jo  Burton');
-            names.push('Leo Carlson');
-            names.push('Brenda  Boone');
-            names.push('Elmer   Brown');
-            names.push('Tony    Simon');
-            names.push('Elsie   Washington');
-            return names;
+            var ldn = [];
+            ldn.push('Mattie  Walters');
+            ldn.push('Luz Hogan');
+            ldn.push('Ruth    Mendoza');
+            ldn.push('Daniel  Sparks');
+            ldn.push('Jo  Burton');
+            ldn.push('Leo Carlson');
+            ldn.push('Brenda  Boone');
+            ldn.push('Elmer   Brown');
+            ldn.push('Tony    Simon');
+            ldn.push('Elsie   Washington');
+
+            var mad = [];
+            mad.push('Nancy   Castro');
+            mad.push('Kristi  Cohen');
+            mad.push('Luis    Reynolds');
+            mad.push('Catherine   Curtis');
+            mad.push('Jerome  Bishop');
+            mad.push('Dustin  Nichols');
+            mad.push('Freddie Stewart');
+            mad.push('Evelyn  Thomas');
+            mad.push('Henry   Pierce');
+            mad.push('Fannie  Watts');
+            mad.push('Emma    Mcdaniel');
+            mad.push('Otis    Lloyd');
+            mad.push('Cheryl  Owens');
+            mad.push('Della   Mccormick');
+            mad.push('Wendy   Hopkins');
+            mad.push('Jeff    Stokes');
+            mad.push('Jerry   Barton');
+            mad.push('Rochelle    Walker');
+            mad.push('Dennis  Cannon');
+            mad.push('Wilma   Hunt');
+            mad.push('Jeannette   Fisher');
+            mad.push('Eva Norton');
+            mad.push('Beth    Ford');
+            mad.push('Brad    Moss');
+            mad.push('Marian  Price');
+            mad.push('Francisco   Martin');
+            mad.push('Delbert Medina');
+            mad.push('Brooke  Stanley');
+            mad.push('Carmen  Gilbert');
+            mad.push('Carol   May');
+            mad.push('Steven  Bennett');
+            mad.push('Cora    Ferguson');
+            mad.push('Emanuel Schmidt');
+
+            var bcn = [];
+            bcn.push('Raquel  Holloway');
+            bcn.push('Carrie  Rodriguez');
+            bcn.push('Cedric  Perkins');
+            bcn.push('Herbert Vega');
+            bcn.push('Garry   Morgan');
+            bcn.push('Gerardo Moore');
+            bcn.push('Dora    Garrett');
+            bcn.push('Emilio  Lawson');
+            bcn.push('Colleen Banks');
+            bcn.push('Juan    Freeman');
+            bcn.push('Laurence    Gutierrez');
+            bcn.push('Lester  Kennedy');
+            bcn.push('Ebony   Richardson');
+            bcn.push('Roosevelt   Saunders');
+            bcn.push('Kirk    Alvarez');
+            bcn.push('Ruby    Perez');
+            bcn.push('Beulah  Neal');
+            bcn.push('Damon   Mckenzie');
+            bcn.push('Judith  Butler');
+            bcn.push('Thelma  Jones');
+            bcn.push('Phillip Sharp');
+            bcn.push('Debbie  Figueroa');
+            bcn.push('Robin   Webb');
+            bcn.push('Joe Munoz');
+            bcn.push('Jill    Wilkerson');
+            bcn.push('Cary    Fitzgerald');
+            bcn.push('Bill    Bradley');
+            bcn.push('Laverne Ruiz');
+            bcn.push('Forrest Fuller');
+            bcn.push('Julian  Kim');
+            bcn.push('Cecelia George');
+            bcn.push('Rene    Barber');
+            bcn.push('Angelina    Howell');
+            bcn.push('Stephanie   Olson');
+            bcn.push('Christopher Love');
+            bcn.push('Terry   Vaughn');
+            bcn.push('Alexander   Barnett');
+            bcn.push('Kim Bryant');
+            bcn.push('Jeremy  Mcgee');
+            bcn.push('Gwen    Johnson');
+            bcn.push('Grady   Pope');
+            bcn.push('Joanna  Blake');
+            bcn.push('Angel   Blair');
+            bcn.push('Mercedes    Waters');
+            bcn.push('Rolando Mccoy');
+            bcn.push('Allan   Lynch');
+            bcn.push('Karl    Cox');
+            bcn.push('Janie   Murray');
+            bcn.push('Benny   Ortiz');
+            bcn.push('Patty   Benson');
+            bcn.push('Phil    Marsh');
+            bcn.push('Brian   Norman');
+            bcn.push('Judy    Swanson');
+            bcn.push('Teresa  Weber');
+            bcn.push('Gretchen    Rogers');
+            bcn.push('Cynthia Hill');
+            bcn.push('Kristin Poole');
+
+            if(office === 'bcn'){
+                return bcn;
+            }else if (office === 'mad') {
+                return mad;
+            }else if (office === 'ldn') {
+                return ldn;
+            }
         }
 	}
 })();

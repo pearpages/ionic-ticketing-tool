@@ -1,3 +1,11 @@
+        // User:
+        // {
+        //     id: '',
+        //     name: '',
+        //     password: '',
+        //     role: '',
+        //     office: ''
+        // }
 (function() {
     'use strict';
 
@@ -62,13 +70,6 @@
             self.cache.remove('user');
         }
 
-        // User:
-        // {
-        //     id: '',
-        //     name: '',
-        //     password: '',
-        //     role: ''
-        // }
         function validateUser(user) {
 
             if(user.name !== user.password){
@@ -83,6 +84,7 @@
                 }
 
                 user.id = user.name;
+                user.office = 'bcn';
 
                 self.currentUser = user;
                 self.logged = true;
