@@ -11,6 +11,7 @@
         vm.view = null;
         vm.show = show;
         vm.names = null;
+        vm.issues = null;
         vm.me = null;
         vm.seeExpress = false;
         vm.whoOffice = null;
@@ -84,6 +85,7 @@
         }
 
         function submit() {
+            vm.ticket.issueDescription = vm.getIssueDescription(vm.ticket.issue);
             vm.ticket.save();
             $state.go('tab.my-tickets');
         }

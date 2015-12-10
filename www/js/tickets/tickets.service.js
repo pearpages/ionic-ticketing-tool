@@ -14,12 +14,29 @@
             make: make,
             save: save,
             find: find,
-            getUserTickets: getUserTickets
+            getUserTickets: getUserTickets,
+            mockTickets : mockTickets
         };
 
 
         function activate() {
+            
+        }
 
+        function mockTickets(howMany,factory,userid) {
+            var ticket;
+            var options = {};
+            for(var i = 0; i < howMany; i++) {
+                if (Math.random() < 0.8) {
+                    options.who = 'user';
+                } else {
+                    options.who = 'ppages';
+                }
+                ticket = factory.make(factory,userid, options);
+                console.log(ticket);
+                ticket.save();
+            }
+            console.log(tickets);
         }
 
         function getUserTickets(userid) {
@@ -30,14 +47,13 @@
             var ticket;
             for(var id in tickets){
                 ticket = tickets[id];
-                if(tickets.who === userid){
+                if(ticket.who === userid){
                     res.who.push(ticket);
                 }
-                if(ticket.requested === userid){
+                if(ticket.requested === userid && ticket.who !== userid){
                     res.requested.push(ticket);
                 }
             }
-
             return res;
         }
 
@@ -47,15 +63,18 @@
 
         function save(ticket) {
             if(ticket.id === -1){
+                ticket.notified = new Date();
                 lastId++;
                 ticket.id = lastId;
                 tickets[lastId] = ticket;
             }
         }
 
-        function make(aFactory,userid) {
+        function make(aFactory,userid,options) {
 
-            var Ticket = function (aFactory,userid){
+            options = options || {};
+
+            var Ticket = function (aFactory,userid,options){
 
                 var self = this;
                 var factory = aFactory;
@@ -79,11 +98,23 @@
                 function activate() {
                     self.requested = userid;
                     self.id = -1;
-                    self.notified = new Date();
-                    self.status = 'open';
+                    self.notified = null;
+                    self.status = 'open';    
+                    if(options.status) {
+                        self.status =  options.status;
+                    }
                     self.express = false;
+                    if(options.express){
+                        self.express = options.express;
+                    }
                     self.who = null;
+                    if(options.who){
+                        self.who = options.who;
+                    }
                     self.issue = -1;
+                    if(options.issue){
+                        self.issue = options.issue;
+                    }
                     self.description = '';
                     self.photo = null;
                 }
@@ -104,7 +135,7 @@
 
             };
 
-            return new Ticket(aFactory,userid);
+            return new Ticket(aFactory,userid,options);
         }
     }
 

@@ -8,20 +8,33 @@
     <br/>
 
     <div ng-show="vm.view === 'my'" class="list">
-        <div class="item" ng-repeat="ticket in vm.who">{{ticket.id}}</div>
+        <div class="item" style="font-size:12px">
+            <div class="row">
+                <div class="col col-15 status">Status</div>
+                <div class="col category">Category</div>
+                <div class="col notified">Notified</div>
+            </div>
+        </div>
+        <div class="item" ng-repeat="ticket in vm.who">
+            <div class="row">
+                <div class="col col-15 status">{{ticket.status}}</div>
+                <div class="col category">{{ticket.issueDescription}}</div>
+                <div class="col notified">{{ticket.notified | date : 'MMM-dd'}}</div>
+            </div>
+        </div>
     </div>
 
     <div ng-show="vm.view === 'others'" class="list">
         <div class="item" style="font-size:12px">
             <div class="row">
-                <div class="col status">Status</div>
+                <div class="col col-15 status">Status</div>
                 <div class="col category">Category</div>
                 <div class="col notified">Notified</div>
             </div>
         </div>
         <div class="item" ng-repeat="ticket in vm.requested">
             <div class="row">
-                <div class="col status">{{ticket.status}}</div>
+                <div class="col col-15 status">{{ticket.status}}</div>
                 <div class="col category">{{ticket.issueDescription}}</div>
                 <div class="col notified">{{ticket.notified | date : 'MMM-dd'}}</div>
             </div>

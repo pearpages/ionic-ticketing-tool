@@ -2,9 +2,9 @@
 	'use strict';
 
 	angular.module("ticketing-account")
-	.controller('AccountController',['$state','myUsers',AccountController]);
+	.controller('AccountController',['$state','myUsers','myTickets',AccountController]);
 
-	function AccountController($state,myUsers) {
+	function AccountController($state,myUsers,myTickets) {
 
 		var vm = this;
 
@@ -23,6 +23,7 @@
 		function validateUser() {
 			vm.logged = myUsers.validateUser(vm.user);
 			vm.user = myUsers.getCurrentUser();
+			myTickets.mockTickets(30,myTickets,vm.user.id);
 			$state.reload();
 		}
 
