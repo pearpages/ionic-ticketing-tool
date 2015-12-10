@@ -1,10 +1,10 @@
 <ion-content class="has-header padding">
 <div class="list">
 
-        <div class="item item-toggle">
+        <div class="item item-toggle" ng-show="vm.seeExpress">
             Express Ticket
             <label class="toggle toggle-balanced">
-                <input type="checkbox">
+                <input type="checkbox" ng-model="vm.ticket.express">
                 <div class="track">
                     <div class="handle"></div>
                 </div>
@@ -21,8 +21,8 @@
         <div class="item item-icon-left item-icon-right">
             <i class="icon ion-medkit"></i>
             <span>Issue</span>
-            <span style="display:inline-block;float:right; text-align:right; font-size:12px">{{vm.ticket.issue}}</span>
-            <i class="icon ion-arrow-right-c icon-accessory"></i>
+            <span style="display:inline-block;float:right; text-align:right; font-size:12px">{{vm.getIssueDescription(vm.ticket.issue)}}</span>
+            <i class="icon ion-arrow-right-c icon-accessory" ng-click="vm.show('issue')"></i>
         </div>
 
         <label class="item item-input item-stacked-label">

@@ -1,0 +1,11 @@
+ <div class="bar bar-subheader bar-stable">
+    <h2 class="title">Issue</h2>
+</div>
+<div class="list has-subheader" ng-click="vm.show('form')">
+    <ion-radio style="font-size:12px;" ng-repeat="issue in vm.issues" ng-model="vm.ticket.issue" ng-value="issue.id">
+    <div class="row">
+        <div class="col"><strong>{{issue.group}}</strong></div>
+        <div class="col">{{issue.description}}</div>
+    </div>
+    </ion-radio>
+</div>

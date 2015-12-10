@@ -7,23 +7,31 @@
 	function NewTicketController(myUsers,myTickets) {
 		var vm = this;
 
-		vm.ticket = {};
+		vm.ticket = null;
         vm.view = null;
         vm.show = show;
         vm.names = null;
+        vm.seeExpress = false;
         vm.whoOffice = null;
+        vm.getIssueDescription = getIssueDescription;
         vm.transformName = transformName;
-        vm.selectName = selectName;
         vm.setWhoOffice = setWhoOffice;
 
         activate();
 
-        function setWhoOffice (office) {
-            vm.whoOffice = office;
-        }
-
         function activate() {
-            vm.whoOffice = myUsers.getCurrentUser().office;
+            vm.ticket = {};
+            if(myUsers.getCurrentUser()){
+                vm.whoOffice = myUsers.getCurrentUser().office;    
+
+                vm.seeExpress = (myUsers.getCurrentUser().role === 'admin' ||
+                myUsers.getCurrentUser().role === 'helpdesk') ? true : false;
+            }else {
+                vm.whoOffice = 'bcn';
+
+                vm.seeExpress= false;
+            }
+                        
             vm.ticket.completed = false;
             myUsers.isLogged();
             vm.view = 'form';
@@ -32,6 +40,34 @@
                 ldn:getRandomNames('ldn'),
                 mad:getRandomNames('mad')
             };
+            vm.issues = [
+                {id: 23, group: 'Emails', description: 'Emails on Outlook'},
+                {id: 24, group: 'Printers', description: 'Network problem'},
+                {id: 25, group: 'Applications', description: 'AIM Underwriting'},
+                {id: 26, group: 'Telephony', description: 'Phone Configuration'},
+                {id: 27, group: 'Printers', description: 'Replace toner'},
+                {id: 28, group: 'Other', description: null},
+            ];
+        }
+
+        function getIssueDescription(id) {
+            if(id === null){
+                return '';
+            } else {
+                for(var i = 0; i < vm.issues.length; i++) {
+                    if (id === vm.issues[i].id){
+                        if(vm.issues[i].description === null){
+                            return 'Other';
+                        }else {
+                            return vm.issues[i].description;
+                        }
+                    }
+                }
+            }
+        }
+
+        function setWhoOffice (office) {
+            vm.whoOffice = office;
         }
 
         function show(id) {
@@ -42,10 +78,6 @@
             var temp = name.toLowerCase().split(' ');
             var res = temp[0][0] + temp[temp.length-1];
             return res;
-        }
-
-        function selectName(name) {
-            vm.show('form');
         }
 
         function getRandomNames(office) {
