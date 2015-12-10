@@ -16,12 +16,14 @@
         vm.getIssueDescription = getIssueDescription;
         vm.transformName = transformName;
         vm.setWhoOffice = setWhoOffice;
+        vm.submit = submit;
 
         activate();
 
         function activate() {
-            vm.ticket = {};
+            
             if(myUsers.getCurrentUser()){
+                vm.ticket = myTickets.make(myTickets,myUsers.getCurrentUser().id);
                 vm.whoOffice = myUsers.getCurrentUser().office;    
 
                 vm.seeExpress = (myUsers.getCurrentUser().role === 'admin' ||
@@ -32,7 +34,6 @@
                 vm.seeExpress= false;
             }
                         
-            vm.ticket.completed = false;
             myUsers.isLogged();
             vm.view = 'form';
             vm.names = {
@@ -78,6 +79,10 @@
             var temp = name.toLowerCase().split(' ');
             var res = temp[0][0] + temp[temp.length-1];
             return res;
+        }
+
+        function submit() {
+            vm.ticket.save();
         }
 
         function getRandomNames(office) {
