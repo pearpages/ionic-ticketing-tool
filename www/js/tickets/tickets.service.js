@@ -1,8 +1,8 @@
 (function() {
     angular.module("my-tickets")
-    .factory('myTickets',['CategoriesMocks',myTickets]);
+    .factory('myTickets',['CategoriesMocks','myUsers',myTickets]);
 
-    function myTickets(CategoriesMocks) {
+    function myTickets(CategoriesMocks,myUsers) {
 
         var self = this;
         var lastId = 0;
@@ -66,7 +66,7 @@
                     ticket.status = (Math.random() >= 0.5) ? 'open' : 'closed';
                     ticket.notified = new Date(2015,Math.floor(Math.random() * 11), Math.floor(Math.random() * 30));
                     if (Math.random() < 0.8) {
-                        ticket.who = 'user';
+                        ticket.who = myUsers.getCurrentUser().id;
                     } else {
                         ticket.who = 'ppages';
                     }
