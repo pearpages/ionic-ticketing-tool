@@ -7,7 +7,8 @@ angular.module('ticketing', [
   'ticketing-account',
   'new-ticket',
   'tickets-zone',
-  'ngTable'
+  'ngTable',
+  'tickets-mocks'
   ])
 
 .run(function($ionicPlatform) {
@@ -24,6 +25,5 @@ angular.module('ticketing', [
       StatusBar.styleDefault();
     }
 
-    myUsers.isLogged();
   });
 });

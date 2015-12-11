@@ -1,10 +1,11 @@
-<ion-content class="has-header padding">
-
-<div class="button-bar">
-      <span ng-click="vm.setView('my')" class="button" ng-class="(vm.view === 'my') ? 'active' : ''">My Issues</span>
-      <span ng-click="vm.setView('others')" class="button" ng-class="(vm.view === 'others') ? 'active' : ''">Others</span>
+<div class="bar bar-subheader bar-stable">
+    <div class="button-bar">
+          <span ng-click="vm.setView('my')" class="button" ng-class="(vm.view === 'my') ? 'active' : ''">My Issues</span>
+          <span ng-click="vm.setView('others')" class="button" ng-class="(vm.view === 'others') ? 'active' : ''">Others</span>
+    </div>
 </div>
-    
+<ion-content class="has-subheader padding">
+
 <table ng-show="vm.view === 'my'" ng-table="vm.who" class="table" show-filter="false">
 <tr ng-click="vm.viewDetail(ticket.id,'my')" ng-repeat="ticket in $data">
     <td title="'Status'" sortable="'status'">
