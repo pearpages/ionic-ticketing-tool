@@ -63,6 +63,7 @@
             mock = mock || false;
             if(ticket.id === -1){
                 if(mock){
+                    ticket.status = (Math.random() >= 0.5) ? 'open' : 'closed';
                     ticket.notified = new Date(2015,Math.floor(Math.random() * 12), Math.floor(Math.random() * 30));
                 }else{
                     ticket.notified = new Date();    

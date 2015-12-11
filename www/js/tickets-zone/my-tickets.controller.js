@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module("tickets-zone")
-    .controller('MyTicketsController',['myUsers','myTickets',MyTicketsController]);
+    .controller('MyTicketsController',['myUsers','myTickets','NgTableParams',MyTicketsController]);
 
-    function MyTicketsController(myUsers,myTickets) {
+    function MyTicketsController(myUsers,myTickets,NgTableParams) {
         var vm = this;
 
         vm.who = null;
@@ -21,7 +21,8 @@
             if(myUsers.getCurrentUser()){
                 var data = myTickets.getUserTickets(myUsers.getCurrentUser().id);
 
-                vm.who = data.who;
+                vm.who = new NgTableParams({count:data.who.length},{data: data.who, counts: []});
+                console.log(data,vm.who);
                 vm.requested = data.requested;    
             }
             

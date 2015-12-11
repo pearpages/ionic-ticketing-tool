@@ -7,6 +7,18 @@
     </div>
     <br/>
 
+    <table ng-table="vm.who" class="table" show-filter="false">
+    <tr ng-repeat="ticket in $data">
+        <td title="'Status'" sortable="'status'">
+            {{ticket.status}}</td>
+        <td title="'Category'" sortable="'category'">
+            {{ticket.issueDescription}}</td>
+        <td title="'Notified'" sortable="'notified'">
+            {{ticket.notified | date : 'MM-d'}}</td>
+    </tr>
+</table>
+
+<!--
     <div ng-show="vm.view === 'my'" class="list">
         <div class="item" style="font-size:12px">
             <div class="row">
@@ -40,5 +52,6 @@
             </div>
         </div>
     </div>
+    -->
     </ion-content>
 </ion-view>

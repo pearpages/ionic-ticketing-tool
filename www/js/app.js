@@ -6,7 +6,8 @@ angular.module('ticketing', [
   'ticketing-chats',
   'ticketing-account',
   'new-ticket',
-  'tickets-zone'
+  'tickets-zone',
+  'ngTable'
   ])
 
 .run(function($ionicPlatform) {
