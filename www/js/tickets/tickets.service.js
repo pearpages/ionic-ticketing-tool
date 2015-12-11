@@ -72,6 +72,7 @@
                     }
                     ticket.issue = CategoriesMocks.randomCategory();
                     ticket.issueDescription = CategoriesMocks.getDescription(ticket.issue);
+                    ticket.it = 'lvicens';
                 }else{
                     ticket.notified = new Date();    
                 }
@@ -101,6 +102,7 @@
                 self.photo;
                 self.completed;
                 self.requested;
+                self.it;
                 self.isCompleted = isCompleted;
                 self.save = save;
 
@@ -109,6 +111,7 @@
                 function activate() {
                     self.requested = userid;
                     self.id = -1;
+                    self.it = null;
                     self.notified = null;
                     self.status = 'open';    
                     if(options.status) {
