@@ -22,8 +22,10 @@
                 var data = myTickets.getUserTickets(myUsers.getCurrentUser().id);
 
                 vm.who = new NgTableParams({count:data.who.length},{data: data.who, counts: []});
-                console.log(data,vm.who);
-                vm.requested = data.requested;    
+                vm.requested = new NgTableParams({count:data.requested.length},{data: data.requested, counts: []});
+
+                console.log(vm.who);
+                console.log(vm.requested);
             }
             
         }
