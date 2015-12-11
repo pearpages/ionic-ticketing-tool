@@ -14,6 +14,7 @@
         vm.back = null;
         vm.setView = setView;
         vm.viewDetail = viewDetail;
+        vm.badgeColor = badgeColor;
         
         activate();
 
@@ -28,6 +29,14 @@
                 vm.requested = new NgTableParams({count:data.requested.length},{data: data.requested, counts: []});
             }
             
+        }
+
+        function badgeColor(status) {
+            if(status === 'open'){
+                return 'badge-balanced';
+            } else if (status === 'closed') {
+                return 'badge-assertive';
+            }
         }
 
         function setView(view) {
