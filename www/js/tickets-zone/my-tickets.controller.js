@@ -25,8 +25,8 @@
             if(myUsers.getCurrentUser()){
                 var data = myTickets.getUserTickets(myUsers.getCurrentUser().id);
 
-                vm.who = new NgTableParams({count:data.who.length},{data: data.who, counts: []});
-                vm.requested = new NgTableParams({count:data.requested.length},{data: data.requested, counts: []});
+                vm.who = new NgTableParams({count:data.who.length, sorting: {status:'desc',notified:'desc'}},{data: data.who, counts: []});
+                vm.requested = new NgTableParams({count:data.requested.length, sorting: {status:'desc',notified:'desc'}},{data: data.requested, counts: []});
             }
             
         }
@@ -44,7 +44,6 @@
         }
 
         function viewDetail(ticketId,backButton) {
-            console.log('clicked',ticketId,backButton);
             
             vm.ticketDetail = myTickets.find(ticketId);
             vm.view = 'detail';

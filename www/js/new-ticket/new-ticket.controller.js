@@ -55,7 +55,6 @@
 
         function setWhoOffice (office) {
             vm.whoOffice = office;
-            console.log(vm.whoOffice);
         }
 
         function show(id) {

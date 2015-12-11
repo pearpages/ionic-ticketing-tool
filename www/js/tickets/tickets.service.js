@@ -1,8 +1,8 @@
 (function() {
     angular.module("my-tickets")
-    .factory('myTickets',[myTickets]);
+    .factory('myTickets',['CategoriesMocks',myTickets]);
 
-    function myTickets() {
+    function myTickets(CategoriesMocks) {
 
         var self = this;
         var lastId = 0;
@@ -21,7 +21,7 @@
 
 
         function activate() {
-            
+
         }
 
         function size() {
@@ -32,18 +32,13 @@
             var ticket;
             var options = {};
             for(var i = 0; i < howMany; i++) {
-                if (Math.random() < 0.8) {
-                    options.who = 'user';
-                } else {
-                    options.who = 'ppages';
-                }
                 ticket = factory.make(factory,userid, options);
                 ticket.save(true);
             }
         }
 
         function getUserTickets(userid) {
-            
+
             var res = {};
             res.who = [];
             res.requested = [];
@@ -70,6 +65,13 @@
                 if(mock){
                     ticket.status = (Math.random() >= 0.5) ? 'open' : 'closed';
                     ticket.notified = new Date(2015,Math.floor(Math.random() * 11), Math.floor(Math.random() * 30));
+                    if (Math.random() < 0.8) {
+                        ticket.who = 'user';
+                    } else {
+                        ticket.who = 'ppages';
+                    }
+                    ticket.issue = CategoriesMocks.randomCategory();
+                    ticket.issueDescription = CategoriesMocks.getDescription(ticket.issue);
                 }else{
                     ticket.notified = new Date();    
                 }

@@ -14,11 +14,16 @@
 
         return {
             getAll: getAll,
-            getDescription: getDescription
+            getDescription: getDescription,
+            randomCategory: randomCategory
         };
 
         function getAll() {
             return self.categories;
+        }
+
+        function randomCategory() {
+            return Math.ceil(Math.random() * 6);
         }
 
         function getDescription(id) {
@@ -39,12 +44,12 @@
 
         function activate() {
             self.categories = [
-                {id: 23, group: 'Emails', description: 'Emails on Outlook'},
-                {id: 24, group: 'Printers', description: 'Network problem'},
-                {id: 25, group: 'Applications', description: 'AIM Underwriting'},
-                {id: 26, group: 'Telephony', description: 'Phone Configuration'},
-                {id: 27, group: 'Printers', description: 'Replace toner'},
-                {id: 28, group: 'Other', description: null},
+                {id: 1, group: 'Emails', description: 'Emails on Outlook'},
+                {id: 2, group: 'Printers', description: 'Network problem'},
+                {id: 3, group: 'Applications', description: 'AIM Underwriting'},
+                {id: 4, group: 'Telephony', description: 'Phone Configuration'},
+                {id: 5, group: 'Printers', description: 'Replace toner'},
+                {id: 6, group: 'Other', description: null},
             ];
         }
     }
