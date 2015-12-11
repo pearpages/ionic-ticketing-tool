@@ -15,15 +15,22 @@
 
 		activate();
 
+		function mock() {
+			if(myTickets.size() === 0){
+				myTickets.mockTickets(30,myTickets,vm.user.id); 
+			}
+		}
+
 		function activate() {
 			vm.logged = myUsers.isLogged();
 			vm.user = myUsers.getCurrentUser();
+			
+			mock(); //remove this
 		}
 
 		function validateUser() {
 			vm.logged = myUsers.validateUser(vm.user);
 			vm.user = myUsers.getCurrentUser();
-			myTickets.mockTickets(30,myTickets,vm.user.id);
 			$state.reload();
 		}
 

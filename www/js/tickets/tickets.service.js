@@ -15,12 +15,17 @@
             save: save,
             find: find,
             getUserTickets: getUserTickets,
-            mockTickets : mockTickets
+            mockTickets : mockTickets,
+            size: size
         };
 
 
         function activate() {
             
+        }
+
+        function size() {
+            return Object.keys(tickets).length;
         }
 
         function mockTickets(howMany,factory,userid) {
@@ -56,7 +61,7 @@
         }
 
         function find(id) {
-            return tickets.id;
+            return tickets[id];
         }
 
         function save(ticket,mock) {

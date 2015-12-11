@@ -11,18 +11,18 @@
             </label>
         </div>
 
-        <div class="item item-icon-left item-icon-right">
+        <div class="item item-icon-left item-icon-right" ng-click="vm.show('who')">
             <i class="icon ion-person-stalker"></i>
             <span>Who needs help</span>
             <span style="display:inline-block;float:right;text-align:right; font-size:12px">{{vm.ticket.who}}</span>
-            <i class="icon ion-arrow-right-c icon-accessory" ng-click="vm.show('who')"></i>
+            <i class="icon ion-arrow-right-c icon-accessory"></i>
         </div>
 
-        <div class="item item-icon-left item-icon-right">
+        <div class="item item-icon-left item-icon-right" ng-click="vm.show('issue')">
             <i class="icon ion-medkit"></i>
             <span>Issue</span>
             <span style="display:inline-block;float:right; text-align:right; font-size:12px">{{vm.getIssueDescription(vm.ticket.issue)}}</span>
-            <i class="icon ion-arrow-right-c icon-accessory" ng-click="vm.show('issue')"></i>
+            <i class="icon ion-arrow-right-c icon-accessory"></i>
         </div>
 
         <label class="item item-input item-stacked-label">

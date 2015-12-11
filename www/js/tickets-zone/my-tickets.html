@@ -1,32 +1,7 @@
 <ion-view view-title="My Tickets">
-    <ion-content class="has-header padding">
-    
-    <div class="button-bar">
-      <span ng-click="vm.setView('my')" class="button" ng-class="(vm.view === 'my') ? 'active' : ''">My Issues</span>
-      <span ng-click="vm.setView('others')" class="button" ng-class="(vm.view === 'others') ? 'active' : ''">Others</span>
-    </div>
-    
-    <table ng-show="vm.view === 'my'" ng-table="vm.who" class="table" show-filter="false">
-    <tr ng-repeat="ticket in $data">
-        <td title="'Status'" sortable="'status'">
-            {{ticket.status}}</td>
-        <td title="'Category'" sortable="'category'">
-            {{ticket.issueDescription}}</td>
-        <td title="'Notified'" sortable="'notified'">
-            {{ticket.notified | date : 'MMM-dd'}}</td>
-    </tr>
-    </table>
+        
+    <ng-include ng-show="vm.view === 'my' || vm.view === 'others'" src="'js/tickets-zone/lists.html'"></ng-include>
 
-    <table ng-show="vm.view === 'others'" ng-table="vm.requested" class="table" show-filter="false">
-    <tr ng-repeat="ticket in $data">
-        <td title="'Status'" sortable="'status'">
-            {{ticket.status}}</td>
-        <td title="'Category'" sortable="'category'">
-            {{ticket.issueDescription}}</td>
-        <td title="'Notified'" sortable="'notified'">
-            {{ticket.notified | date : 'MMM-dd'}}</td>
-    </tr>
-    </table>
+    <ng-include ng-show="vm.view === 'detail'" src="'js/tickets-zone/detail.html'"></ng-include>
 
-    </ion-content>
 </ion-view>

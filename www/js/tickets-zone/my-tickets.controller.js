@@ -10,7 +10,10 @@
         vm.who = null;
         vm.requested = null;
         vm.view = null;
+        vm.ticketDetail = null;
+        vm.back = null;
         vm.setView = setView;
+        vm.viewDetail = viewDetail;
         
         activate();
 
@@ -23,9 +26,6 @@
 
                 vm.who = new NgTableParams({count:data.who.length},{data: data.who, counts: []});
                 vm.requested = new NgTableParams({count:data.requested.length},{data: data.requested, counts: []});
-
-                console.log(vm.who);
-                console.log(vm.requested);
             }
             
         }
@@ -34,5 +34,12 @@
             vm.view = view;
         }
 
+        function viewDetail(ticketId,backButton) {
+            console.log('clicked',ticketId,backButton);
+            
+            vm.ticketDetail = myTickets.find(ticketId);
+            vm.view = 'detail';
+            vm.back = backButton;
+        }
     }
 })();

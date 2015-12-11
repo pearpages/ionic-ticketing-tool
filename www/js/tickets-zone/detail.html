@@ -1,0 +1,48 @@
+<div class="bar bar-subheader bar-stable">
+    <button class="button" ng-click="vm.setView(vm.back)">Back</button>
+    <h2 class="title">Ticket Detail {{vm.ticketDetail.id}}</h2>
+</div>
+
+<ion-content class="has-subheader padding">
+
+<div class="card">
+    <div class="item">
+        <div class="row">
+            <div class="col">Requested by </div>
+            <div class="col">{{vm.ticketDetail.requested}}</div>
+        </div>
+        <div class="row">
+            <div class="col">For</div>
+            <div class="col">{{vm.ticketDetail.who}}</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="row">
+            <div class="col">Notified</div>
+            <div class="col">{{vm.ticketDetail.notified | date : 'yyyy-mm-dd'}}</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="row">
+            <div class="col">Description</div>
+            <div class="col">{{vm.ticketDetail.description}}</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
+
+{{vm.ticketDetail}}
+
+
+</ion-content>
