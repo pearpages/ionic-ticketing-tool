@@ -25,7 +25,10 @@
 			vm.logged = myUsers.isLogged();
 			vm.user = myUsers.getCurrentUser();
 			
-			mock(); //remove this
+			if(myUsers.getCurrentUser()){
+				mock(); //remove this	
+			}
+			
 		}
 
 		function validateUser() {
