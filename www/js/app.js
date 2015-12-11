@@ -23,5 +23,7 @@ angular.module('ticketing', [
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    myUsers.isLogged();
   });
 });

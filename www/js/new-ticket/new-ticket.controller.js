@@ -23,6 +23,7 @@
         activate();
 
         function activate() {
+            myUsers.isLogged();
             
             if(myUsers.getCurrentUser()){
                 vm.ticket = myTickets.make(myTickets,myUsers.getCurrentUser().id);
@@ -37,7 +38,6 @@
                 vm.seeExpress= false;
             }
                         
-            myUsers.isLogged();
             vm.view = 'form';
             vm.names = {
                 bcn:getRandomNames('bcn'),
