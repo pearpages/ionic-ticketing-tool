@@ -20,12 +20,17 @@
 
   })
   .state('tab.chat-detail', {
-  	url: '/chats/:chatId',
+  	url: '/chats/whatever/:chatId',
 
   			templateUrl: 'js/chats/detail.html',
   			controller: 'DetailController',
   			controllerAs: 'vm'
 
+  })
+
+  .state('tab.chat-a-test', {
+    url: '/chats/a-test',
+        templateUrl: 'js/chats/a-test.html',
   });
 
 });
