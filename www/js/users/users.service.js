@@ -32,7 +32,7 @@
 
         function activate() {
             self.cache = CacheFactory.get('ticketingUsersCache');
-            self.currentUser = self.cache.get('user');
+            self.currentUser = self.cache.get('user') || null;
             if(self.currentUser){
                 self.logged = true;
             }else {

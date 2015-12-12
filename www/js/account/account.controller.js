@@ -12,6 +12,7 @@
 		vm.user;
 		vm.validateUser = validateUser;
 		vm.logout = logout;
+		vm.mock = mock;
 
 		activate();
 
@@ -24,11 +25,6 @@
 		function activate() {
 			vm.logged = myUsers.isLogged();
 			vm.user = myUsers.getCurrentUser();
-			
-			if(myUsers.getCurrentUser()){
-				mock(); //remove this	
-			}
-			
 		}
 
 		function validateUser() {
