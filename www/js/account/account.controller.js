@@ -17,7 +17,7 @@
 
 		function mock() {
 			if(myTickets.size() === 0){
-				myTickets.mockTickets(30,myTickets,vm.user.id); 
+				myTickets.mockTickets(10,myTickets,vm.user.id); 
 			}
 		}
 

@@ -10,16 +10,22 @@
         vm.ticket = null;
         vm.helpdesks = null;
         vm.currentUser = null;
+        vm.goBack = goBack;
+        vm.transformName = transformName;
         activate();
 
         function activate() {
             vm.currentUser = myUsers.getCurrentUser();
             vm.ticket = myTickets.find($state.params.id);
+            if(vm.ticket === undefined){
+                vm.ticket = {};
+                vm.ticket.it = null;
+            }
             vm.helpdesks = UserMocks.getHelpdesks();
         }
 
         function goBack() {
-            $state.go('tab.ticket-detail', {id: vm.ticket.id});
+            $state.go('tab.ticket-detail', {id: vm.ticket.id, assign: true});
         }
 
         function transformName(name) {

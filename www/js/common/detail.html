@@ -21,8 +21,8 @@
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col">Assigned to</div>
-            <div ng-show="vmd.ticket.it" class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.it}}@company.com">{{vmd.ticket.it}}</a></div>
-            <div ng-show="vmd.ticket.it === null && vmd.assign === 'false'" class="col">Not Assigned</div>
+            <div ng-show="vmd.ticket.it !==null" class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.it}}@company.com">{{vmd.ticket.it}}</a></div>
+            <div ng-show="vmd.ticket.it === null && vmd.assign !== 'true'" class="col">Not Assigned</div>
             <div ng-show="vmd.ticket.it === null && vmd.assign === 'true'" class="col"><button class="button" ng-click="vmd.assignTicket()">ASSIGN</button></div>
         </div>
     </div>

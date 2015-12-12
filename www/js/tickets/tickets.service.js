@@ -99,7 +99,11 @@
                     }
                     ticket.issue = CategoriesMocks.randomCategory();
                     ticket.issueDescription = CategoriesMocks.getDescription(ticket.issue);
-                    ticket.it = null;
+                    if(ticket.status === 'open'){
+                        ticket.it = null;                        
+                    } else {
+                        ticket.it = 'helpdesk';
+                    }
                     ticket.office = 'bcn';
                     ticket.description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, pariatur?';
                 }else{
