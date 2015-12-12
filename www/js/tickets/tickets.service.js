@@ -18,12 +18,28 @@
             mockTickets : mockTickets,
             size: size,
             getNotAssigned: getNotAssigned,
-            getClosed: getClosed
+            getClosed: getClosed,
+            getMine: getMine
         };
 
 
         function activate() {
 
+        }
+
+        function getMine() {
+            var mine = [];
+            var me = myUsers.getCurrentUser().id;
+
+            var ticket;
+            for(id in tickets){
+                ticket = tickets[id];
+                if(ticket.it === me && ticket.status === 'open'){
+                    mine.push(ticket);
+                }
+            }
+
+            return mine;
         }
 
         function getClosed() {

@@ -26,6 +26,8 @@
       .state('tab.assigned-to-me', {
         url: '/helpdesk/assigned-to-me',
             templateUrl: 'js/helpdesk/assigned-to-me.html',
+            controller: 'AssignedToMeController',
+            controllerAs: 'vm'
       })
       .state('tab.assign', {
         url: '/helpdesk/assign/:id',
