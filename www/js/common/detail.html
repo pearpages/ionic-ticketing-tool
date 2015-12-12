@@ -1,0 +1,41 @@
+<div class="card">
+    <div style="font-size:12px;" class="item item-divider">
+        {{vmd.ticket.issueDescription}} <badge ticket="vmd.ticket"></badge>
+    </div>
+    <div style="font-size:12px; padding:0" class="item">
+        <div class="row">
+            <div class="col">Notified</div>
+            <div class="col">{{vmd.ticket.notified | date : 'yyyy-MM-dd'}}</div>
+        </div>
+    </div>
+    <div style="font-size:12px; padding:0" class="item">
+        <div class="row">
+            <div class="col">Requested by </div>
+            <div class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.requested}}@company.com">{{vmd.ticket.requested}}</a></div>
+        </div>
+        <div class="row">
+            <div class="col">For</div>
+            <div class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.who}}@company.com">{{vmd.ticket.who}}</a></div>
+        </div>
+    </div>
+    <div style="font-size:12px; padding:0" class="item">
+        <div class="row">
+            <div class="col">Assigned to</div>
+            <div ng-show="vmd.ticket.it" class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.it}}@company.com">{{vmd.ticket.it}}</a></div>
+            <div ng-show="vmd.ticket.it === null && vmd.assign === 'false'" class="col">Not Assigned</div>
+            <div ng-show="vmd.ticket.it === null && vmd.assign === 'true'" class="col"><button class="button" ng-click="vmd.assignTicket()">ASSIGN</button></div>
+        </div>
+    </div>
+    <div style="font-size:12px; padding:0" class="item">
+        <div class="row">
+            <div class="col">Description</div>
+            <div class="col">{{vmd.ticket.description}}</div>
+        </div>
+    </div>
+    <div style="font-size:12px; padding:0" class="item">
+        <div class="row">
+            <div class="col">IT comments</div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
