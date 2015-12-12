@@ -23,7 +23,6 @@
 		}
 
 		function activate() {
-			vm.logged = myUsers.isLogged();
 			vm.user = myUsers.getCurrentUser();
 		}
 
