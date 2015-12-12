@@ -48,6 +48,16 @@ After updating dependencies via **bower update** you have to do **ionic io init*
 	+ CRUD Categories
 	+ Delete a ticket
 
+### Helpdesk
+
++ Tickets Assigned to the helpdesk logged user
++ Inbox tickets (tickets which have not been assigned yet)
++ last closed tickets
++ detail ticket
+	* assign / reassign
+	* close
+	* write a comment
+
 ## Considerations
 
 + Check the relation between the users module and the layout module concerning the abstract view and the tabs
