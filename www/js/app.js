@@ -8,7 +8,8 @@ angular.module('ticketing', [
   'new-ticket',
   'tickets-zone',
   'ngTable',
-  'tickets-mocks'
+  'tickets-mocks',
+  'helpdesk'
   ])
 
 .run(function($ionicPlatform) {
