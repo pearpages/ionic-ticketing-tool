@@ -8,21 +8,38 @@
 
         var self = this;
 
-        self.users;
+        self.bcn = null;
+        self.mad = null;
+        self.ldn = null;
+        self.helpdesks = null;
 
         activate();
 
         return {
             getOffice: getOffice,
             getAllOffices: getAllOffices,
-            getUserId: getUserId
+            getUserId: getUserId,
+            getHelpdesks: getHelpdesks
         };
 
         function activate() {
             createMockUsers();
         }
 
+        function getHelpdesks() {
+            return self.helpdesks;
+        }
+
         function createMockUsers() {
+
+            var helpdesks = [];
+            helpdesks.push({name: 'Beulah  Neal', office: 'bcn'});
+            helpdesks.push({name: 'Damon   Mckenzie', office: 'bcn'});
+            helpdesks.push({name: 'Judith  Butler', office: 'bcn'});
+            helpdesks.push({name: 'Thelma  Jones', office: 'bcn'});
+            helpdesks.push({name: 'Phillip Sharp', office: 'bcn'});
+            helpdesks.push({name: 'Debbie  Figueroa', office: 'bcn'});
+
             var ldn = [];
             ldn.push({name: 'Mattie  Walters', office: 'ldn'});
             ldn.push({name: 'Luz Hogan', office: 'ldn'});
@@ -132,10 +149,10 @@
             bcn.push({name: 'Kristin Poole', office: 'bcn'});
             bcn.sort();
 
-            self.users = {};
             self.bcn = bcn;
             self.mad = mad;
             self.ldn = ldn;
+            self.helpdesks = helpdesks;
 
         }
 

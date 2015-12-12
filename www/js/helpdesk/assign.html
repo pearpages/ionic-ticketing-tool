@@ -1,0 +1,19 @@
+<ion-view view-title="Helpdesk">
+
+<div class="bar bar-subheader bar-stable">
+    <button class="button" ng-click="vm.goBack()">Back</button>
+    <h2 class="title">Asssign ticket {{vm.ticket.id}}</h2>
+</div>
+
+<ion-content class="has-subheader has-footer padding">
+
+{{vm.ticket}}
+
+<div class="list">
+    <ion-radio style="font-size:12px;" ng-model="vm.ticket.it" ng-value="{{vm.currentUser.id}}">ME</ion-radio>
+    <div class="item item-divider">Colleagues</div>
+    <ion-radio ng-repeat="h in vm.helpdesks" style="font-size:12px;" ng-model="vm.ticket.it" ng-value="vm.transformName(h.name)">{{h.name}}</ion-radio>
+</div>
+
+</ion-content>
+</ion-view>

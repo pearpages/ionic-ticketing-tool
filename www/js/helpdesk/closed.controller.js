@@ -17,7 +17,7 @@
         }
 
         function gotoDetail(ticket) {
-            $state.go('tab.ticket-detail', {id: ticket.id});
+            $state.go('tab.ticket-detail', {id: ticket.id, back: 'tab.last-closed'});
         }
     }
 })();

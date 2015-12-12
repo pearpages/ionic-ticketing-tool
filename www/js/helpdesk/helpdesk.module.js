@@ -19,7 +19,8 @@
                 controllerAs: 'vm',
                 params: {
                   'id' : -1,
-                  'assign' : false
+                  'assign' : false,
+                  'back' : 'tab.inbox'
                 }
       })
       .state('tab.assigned-to-me', {
@@ -28,7 +29,9 @@
       })
       .state('tab.assign', {
         url: '/helpdesk/assign/:id',
-            template: 'hello!!'
+            templateUrl: 'js/helpdesk/assign.html',
+            controller: 'AssignController',
+            controllerAs: 'vm'
       })
       .state('tab.last-closed', {
         url: '/helpdesk/last-closed',

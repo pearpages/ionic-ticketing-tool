@@ -99,7 +99,9 @@
                     }
                     ticket.issue = CategoriesMocks.randomCategory();
                     ticket.issueDescription = CategoriesMocks.getDescription(ticket.issue);
-                    ticket.it = 'lvicens';
+                    ticket.it = null;
+                    ticket.office = 'bcn';
+                    ticket.description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, pariatur?';
                 }else{
                     ticket.notified = new Date();    
                 }
