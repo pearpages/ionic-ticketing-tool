@@ -6,7 +6,7 @@
         <table ng-table="vm.closedTickets" class="table" show-filter="false">
         <tr ng-repeat="ticket in $data">
             <td title="'Status'" sortable="'status'">
-                <span style='font-size:12px' class="badge" ng-class="vm.badgeColor(ticket.status)">{{ticket.status}}</span></td>
+                <badge ticket="ticket"></badge>
             <td title="'Category'" sortable="'category'">
                 {{ticket.issueDescription}}</td>
             <td title="'Notified'" sortable="'notified'">

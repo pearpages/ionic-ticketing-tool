@@ -9,7 +9,7 @@
 <table ng-show="vm.view === 'my'" ng-table="vm.who" class="table" show-filter="false">
 <tr ng-click="vm.viewDetail(ticket.id,'my')" ng-repeat="ticket in $data">
     <td title="'Status'" sortable="'status'">
-        <span style='font-size:12px' class="badge" ng-class="vm.badgeColor(ticket.status)">{{ticket.status}}</span></td>
+        <badge ticket="ticket"></badge>
     <td title="'Category'" sortable="'category'">
         {{ticket.issueDescription}}</td>
     <td title="'Notified'" sortable="'notified'">
@@ -22,7 +22,7 @@ rgb(204, 204, 204)"></i></td>
 <table ng-show="vm.view === 'others'" ng-table="vm.requested" class="table" show-filter="false">
 <tr ng-click="vm.viewDetail(ticket.id,'others')" ng-repeat="ticket in $data">
     <td title="'Status'" sortable="'status'">
-        <span style='font-size:12px' class="badge" ng-class="vm.badgeColor(ticket.status)">{{ticket.status}}</span></td>
+        <badge ticket="ticket"></badge>
     <td title="'Category'" sortable="'category'">
         {{ticket.issueDescription}}</td>
     <td title="'Notified'" sortable="'notified'">

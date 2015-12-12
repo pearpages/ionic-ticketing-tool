@@ -7,7 +7,7 @@
 
 <div class="card">
     <div style="font-size:12px;" class="item item-divider">
-        {{vm.ticketDetail.issueDescription}} <span class="badge" ng-class="vm.badgeColor(vm.ticketDetail.status)">{{vm.ticketDetail.status}}</span>
+        {{vm.ticketDetail.issueDescription}} <badge ticket="vm.ticketDetail"></badge>
     </div>
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
