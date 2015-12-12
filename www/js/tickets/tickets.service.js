@@ -16,12 +16,39 @@
             find: find,
             getUserTickets: getUserTickets,
             mockTickets : mockTickets,
-            size: size
+            size: size,
+            getNotAssigned: getNotAssigned,
+            getClosed: getClosed
         };
 
 
         function activate() {
 
+        }
+
+        function getClosed() {
+            var closed = [];
+
+            var ticket;
+            for(id in tickets){
+                ticket = tickets[id];
+                if(ticket.status === 'closed'){
+                    closed.push(ticket);
+                }
+            }
+
+            return closed;
+
+        }
+
+        function getNotAssigned() {
+            var notAssigned = [];
+            for(id in tickets){
+                if(tickets[id].it === null){
+                    notAssigned.push(tickets[id]);
+                }
+            }
+            return notAssigned;
         }
 
         function size() {
@@ -103,6 +130,7 @@
                 self.completed;
                 self.requested;
                 self.it;
+                self.office; //office comes given by the who 'user'
                 self.isCompleted = isCompleted;
                 self.save = save;
 

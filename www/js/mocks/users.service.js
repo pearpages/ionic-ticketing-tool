@@ -8,14 +8,141 @@
 
         var self = this;
 
+        self.users;
+
         activate();
+
         return {
             getOffice: getOffice,
-            getAllOffices: getAllOffices
+            getAllOffices: getAllOffices,
+            getUserId: getUserId
         };
 
         function activate() {
+            createMockUsers();
+        }
 
+        function createMockUsers() {
+            var ldn = [];
+            ldn.push({name: 'Mattie  Walters', office: 'ldn'});
+            ldn.push({name: 'Luz Hogan', office: 'ldn'});
+            ldn.push({name: 'Ruth    Mendoza', office: 'ldn'});
+            ldn.push({name: 'Daniel  Sparks', office: 'ldn'});
+            ldn.push({name: 'Jo  Burton', office: 'ldn'});
+            ldn.push({name: 'Leo Carlson', office: 'ldn'});
+            ldn.push({name: 'Brenda  Boone', office: 'ldn'});
+            ldn.push({name: 'Elmer   Brown', office: 'ldn'});
+            ldn.push({name: 'Tony    Simon', office: 'ldn'});
+            ldn.push({name: 'Elsie   Washington', office: 'ldn'});
+            ldn.sort();
+
+            var mad = [];
+            mad.push({name: 'Nancy   Castro', office: 'mad'});
+            mad.push({name: 'Kristi  Cohen', office: 'mad'});
+            mad.push({name: 'Luis    Reynolds', office: 'mad'});
+            mad.push({name: 'Catherine   Curtis', office: 'mad'});
+            mad.push({name: 'Jerome  Bishop', office: 'mad'});
+            mad.push({name: 'Dustin  Nichols', office: 'mad'});
+            mad.push({name: 'Freddie Stewart', office: 'mad'});
+            mad.push({name: 'Evelyn  Thomas', office: 'mad'});
+            mad.push({name: 'Henry   Pierce', office: 'mad'});
+            mad.push({name: 'Fannie  Watts', office: 'mad'});
+            mad.push({name: 'Emma    Mcdaniel', office: 'mad'});
+            mad.push({name: 'Otis    Lloyd', office: 'mad'});
+            mad.push({name: 'Cheryl  Owens', office: 'mad'});
+            mad.push({name: 'Della   Mccormick', office: 'mad'});
+            mad.push({name: 'Wendy   Hopkins', office: 'mad'});
+            mad.push({name: 'Jeff    Stokes', office: 'mad'});
+            mad.push({name: 'Jerry   Barton', office: 'mad'});
+            mad.push({name: 'Rochelle    Walker', office: 'mad'});
+            mad.push({name: 'Dennis  Cannon', office: 'mad'});
+            mad.push({name: 'Wilma   Hunt', office: 'mad'});
+            mad.push({name: 'Jeannette   Fisher', office: 'mad'});
+            mad.push({name: 'Eva Norton', office: 'mad'});
+            mad.push({name: 'Beth    Ford', office: 'mad'});
+            mad.push({name: 'Brad    Moss', office: 'mad'});
+            mad.push({name: 'Marian  Price', office: 'mad'});
+            mad.push({name: 'Francisco   Martin', office: 'mad'});
+            mad.push({name: 'Delbert Medina', office: 'mad'});
+            mad.push({name: 'Brooke  Stanley', office: 'mad'});
+            mad.push({name: 'Carmen  Gilbert', office: 'mad'});
+            mad.push({name: 'Carol   May', office: 'mad'});
+            mad.push({name: 'Steven  Bennett', office: 'mad'});
+            mad.push({name: 'Cora    Ferguson', office: 'mad'});
+            mad.push({name: 'Emanuel Schmidt', office: 'mad'});
+            mad.sort();
+
+            var bcn = [];
+            bcn.push({name: 'Raquel  Holloway', office: 'bcn'});
+            bcn.push({name: 'Carrie  Rodriguez', office: 'bcn'});
+            bcn.push({name: 'Cedric  Perkins', office: 'bcn'});
+            bcn.push({name: 'Herbert Vega', office: 'bcn'});
+            bcn.push({name: 'Garry   Morgan', office: 'bcn'});
+            bcn.push({name: 'Gerardo Moore', office: 'bcn'});
+            bcn.push({name: 'Dora    Garrett', office: 'bcn'});
+            bcn.push({name: 'Emilio  Lawson', office: 'bcn'});
+            bcn.push({name: 'Colleen Banks', office: 'bcn'});
+            bcn.push({name: 'Juan    Freeman', office: 'bcn'});
+            bcn.push({name: 'Laurence    Gutierrez', office: 'bcn'});
+            bcn.push({name: 'Lester  Kennedy', office: 'bcn'});
+            bcn.push({name: 'Ebony   Richardson', office: 'bcn'});
+            bcn.push({name: 'Roosevelt   Saunders', office: 'bcn'});
+            bcn.push({name: 'Kirk    Alvarez', office: 'bcn'});
+            bcn.push({name: 'Ruby    Perez', office: 'bcn'});
+            bcn.push({name: 'Beulah  Neal', office: 'bcn'});
+            bcn.push({name: 'Damon   Mckenzie', office: 'bcn'});
+            bcn.push({name: 'Judith  Butler', office: 'bcn'});
+            bcn.push({name: 'Thelma  Jones', office: 'bcn'});
+            bcn.push({name: 'Phillip Sharp', office: 'bcn'});
+            bcn.push({name: 'Debbie  Figueroa', office: 'bcn'});
+            bcn.push({name: 'Robin   Webb', office: 'bcn'});
+            bcn.push({name: 'Joe Munoz', office: 'bcn'});
+            bcn.push({name: 'Jill    Wilkerson', office: 'bcn'});
+            bcn.push({name: 'Cary    Fitzgerald', office: 'bcn'});
+            bcn.push({name: 'Bill    Bradley', office: 'bcn'});
+            bcn.push({name: 'Laverne Ruiz', office: 'bcn'});
+            bcn.push({name: 'Forrest Fuller', office: 'bcn'});
+            bcn.push({name: 'Julian  Kim', office: 'bcn'});
+            bcn.push({name: 'Cecelia George', office: 'bcn'});
+            bcn.push({name: 'Rene    Barber', office: 'bcn'});
+            bcn.push({name: 'Angelina    Howell', office: 'bcn'});
+            bcn.push({name: 'Stephanie   Olson', office: 'bcn'});
+            bcn.push({name: 'Christopher Love', office: 'bcn'});
+            bcn.push({name: 'Terry   Vaughn', office: 'bcn'});
+            bcn.push({name: 'Alexander   Barnett', office: 'bcn'});
+            bcn.push({name: 'Kim Bryant', office: 'bcn'});
+            bcn.push({name: 'Jeremy  Mcgee', office: 'bcn'});
+            bcn.push({name: 'Gwen    Johnson', office: 'bcn'});
+            bcn.push({name: 'Grady   Pope', office: 'bcn'});
+            bcn.push({name: 'Joanna  Blake', office: 'bcn'});
+            bcn.push({name: 'Angel   Blair', office: 'bcn'});
+            bcn.push({name: 'Mercedes    Waters', office: 'bcn'});
+            bcn.push({name: 'Rolando Mccoy', office: 'bcn'});
+            bcn.push({name: 'Allan   Lynch', office: 'bcn'});
+            bcn.push({name: 'Karl    Cox', office: 'bcn'});
+            bcn.push({name: 'Janie   Murray', office: 'bcn'});
+            bcn.push({name: 'Benny   Ortiz', office: 'bcn'});
+            bcn.push({name: 'Patty   Benson', office: 'bcn'});
+            bcn.push({name: 'Phil    Marsh', office: 'bcn'});
+            bcn.push({name: 'Brian   Norman', office: 'bcn'});
+            bcn.push({name: 'Judy    Swanson', office: 'bcn'});
+            bcn.push({name: 'Teresa  Weber', office: 'bcn'});
+            bcn.push({name: 'Gretchen    Rogers', office: 'bcn'});
+            bcn.push({name: 'Cynthia Hill', office: 'bcn'});
+            bcn.push({name: 'Kristin Poole', office: 'bcn'});
+            bcn.sort();
+
+            self.users = {};
+            self.bcn = bcn;
+            self.mad = mad;
+            self.ldn = ldn;
+
+        }
+
+        function getUserId(name) {
+            var temp = name.toLowerCase().split(' ');
+            var res = temp[0][0] + temp[temp.length-1];
+            return res;
         }
 
         function getAllOffices() {
@@ -27,122 +154,12 @@
         }
 
         function getOffice(office) {
-
-            var ldn = [];
-            ldn.push('Mattie  Walters');
-            ldn.push('Luz Hogan');
-            ldn.push('Ruth    Mendoza');
-            ldn.push('Daniel  Sparks');
-            ldn.push('Jo  Burton');
-            ldn.push('Leo Carlson');
-            ldn.push('Brenda  Boone');
-            ldn.push('Elmer   Brown');
-            ldn.push('Tony    Simon');
-            ldn.push('Elsie   Washington');
-            ldn.sort();
-
-            var mad = [];
-            mad.push('Nancy   Castro');
-            mad.push('Kristi  Cohen');
-            mad.push('Luis    Reynolds');
-            mad.push('Catherine   Curtis');
-            mad.push('Jerome  Bishop');
-            mad.push('Dustin  Nichols');
-            mad.push('Freddie Stewart');
-            mad.push('Evelyn  Thomas');
-            mad.push('Henry   Pierce');
-            mad.push('Fannie  Watts');
-            mad.push('Emma    Mcdaniel');
-            mad.push('Otis    Lloyd');
-            mad.push('Cheryl  Owens');
-            mad.push('Della   Mccormick');
-            mad.push('Wendy   Hopkins');
-            mad.push('Jeff    Stokes');
-            mad.push('Jerry   Barton');
-            mad.push('Rochelle    Walker');
-            mad.push('Dennis  Cannon');
-            mad.push('Wilma   Hunt');
-            mad.push('Jeannette   Fisher');
-            mad.push('Eva Norton');
-            mad.push('Beth    Ford');
-            mad.push('Brad    Moss');
-            mad.push('Marian  Price');
-            mad.push('Francisco   Martin');
-            mad.push('Delbert Medina');
-            mad.push('Brooke  Stanley');
-            mad.push('Carmen  Gilbert');
-            mad.push('Carol   May');
-            mad.push('Steven  Bennett');
-            mad.push('Cora    Ferguson');
-            mad.push('Emanuel Schmidt');
-            mad.sort();
-
-            var bcn = [];
-            bcn.push('Raquel  Holloway');
-            bcn.push('Carrie  Rodriguez');
-            bcn.push('Cedric  Perkins');
-            bcn.push('Herbert Vega');
-            bcn.push('Garry   Morgan');
-            bcn.push('Gerardo Moore');
-            bcn.push('Dora    Garrett');
-            bcn.push('Emilio  Lawson');
-            bcn.push('Colleen Banks');
-            bcn.push('Juan    Freeman');
-            bcn.push('Laurence    Gutierrez');
-            bcn.push('Lester  Kennedy');
-            bcn.push('Ebony   Richardson');
-            bcn.push('Roosevelt   Saunders');
-            bcn.push('Kirk    Alvarez');
-            bcn.push('Ruby    Perez');
-            bcn.push('Beulah  Neal');
-            bcn.push('Damon   Mckenzie');
-            bcn.push('Judith  Butler');
-            bcn.push('Thelma  Jones');
-            bcn.push('Phillip Sharp');
-            bcn.push('Debbie  Figueroa');
-            bcn.push('Robin   Webb');
-            bcn.push('Joe Munoz');
-            bcn.push('Jill    Wilkerson');
-            bcn.push('Cary    Fitzgerald');
-            bcn.push('Bill    Bradley');
-            bcn.push('Laverne Ruiz');
-            bcn.push('Forrest Fuller');
-            bcn.push('Julian  Kim');
-            bcn.push('Cecelia George');
-            bcn.push('Rene    Barber');
-            bcn.push('Angelina    Howell');
-            bcn.push('Stephanie   Olson');
-            bcn.push('Christopher Love');
-            bcn.push('Terry   Vaughn');
-            bcn.push('Alexander   Barnett');
-            bcn.push('Kim Bryant');
-            bcn.push('Jeremy  Mcgee');
-            bcn.push('Gwen    Johnson');
-            bcn.push('Grady   Pope');
-            bcn.push('Joanna  Blake');
-            bcn.push('Angel   Blair');
-            bcn.push('Mercedes    Waters');
-            bcn.push('Rolando Mccoy');
-            bcn.push('Allan   Lynch');
-            bcn.push('Karl    Cox');
-            bcn.push('Janie   Murray');
-            bcn.push('Benny   Ortiz');
-            bcn.push('Patty   Benson');
-            bcn.push('Phil    Marsh');
-            bcn.push('Brian   Norman');
-            bcn.push('Judy    Swanson');
-            bcn.push('Teresa  Weber');
-            bcn.push('Gretchen    Rogers');
-            bcn.push('Cynthia Hill');
-            bcn.push('Kristin Poole');
-            bcn.sort();
-
             if(office === 'bcn'){
-                return bcn;
+                return self.bcn;
             }else if (office === 'mad') {
-                return mad;
+                return self.mad;
             }else if (office === 'ldn') {
-                return ldn;
+                return self.ldn;
             }
         }
     }

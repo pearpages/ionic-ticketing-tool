@@ -4,7 +4,7 @@
           <span ng-click="vm.setView('others')" class="button" ng-class="(vm.view === 'others') ? 'active' : ''">Others</span>
     </div>
 </div>
-<ion-content class="has-subheader padding">
+<ion-content class="has-subheader has-footer padding">
 
 <table ng-show="vm.view === 'my'" ng-table="vm.who" class="table" show-filter="false">
 <tr ng-click="vm.viewDetail(ticket.id,'my')" ng-repeat="ticket in $data">

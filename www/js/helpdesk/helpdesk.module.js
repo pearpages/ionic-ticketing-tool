@@ -8,6 +8,8 @@
       .state('tab.inbox', {
         url: '/helpdesk',
                 templateUrl: 'js/helpdesk/inbox.html',
+                controller: 'InboxController',
+                controllerAs: 'vm'
       })
       .state('tab.ticket-detail', {
         url: '/helpdesk/ticket/:id',
@@ -21,6 +23,8 @@
       .state('tab.last-closed', {
         url: '/helpdesk/last-closed',
             templateUrl: 'js/helpdesk/last-closed.html',
+            controller: 'ClosedController',
+            controllerAs: 'vm'
       });
 
     });
