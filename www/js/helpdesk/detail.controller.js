@@ -12,7 +12,6 @@
         activate();
 
         function activate() {
-            console.log($state);
             vm.ticket = myTickets.find($state.params.id);
             if($state.params.assign){
                 vm.assign = true;

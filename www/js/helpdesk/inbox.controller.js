@@ -19,7 +19,6 @@
         
         function gotoDetail(ticket) {
             var params = {id: ticket.id, assign: true};
-            console.log(params);
             $state.go('tab.ticket-detail', params);
         }
     }

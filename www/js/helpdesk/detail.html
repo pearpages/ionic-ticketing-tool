@@ -1,6 +1,12 @@
-<ion-view view-title="Ticket {{vm.ticket.id}}">
-<ion-content class="has-header has-footer padding">
+<ion-view view-title="Helpdesk">
 
+<div class="bar bar-subheader bar-stable">
+    <button class="button">Back</button>
+    <h2 class="title">Ticket {{vm.ticket.id}}</h2>
+</div>
+
+<ion-content class="has-subheader has-footer padding">
+    
     <detail ticket="vm.ticket" assign="{{vm.assign}}"></detail>
 
 </ion-content>
