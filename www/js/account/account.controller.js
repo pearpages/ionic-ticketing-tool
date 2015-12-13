@@ -8,8 +8,8 @@
 
 		var vm = this;
 
-		vm.logged;
-		vm.user;
+		vm.logged = null;
+		vm.user = null;
 		vm.validateUser = validateUser;
 		vm.logout = logout;
 		vm.mock = mock;
@@ -24,6 +24,11 @@
 
 		function activate() {
 			vm.user = myUsers.getCurrentUser();
+			if(vm.user){
+				vm.logged = true;
+			}else{
+				vm.logged = false;
+			}
 		}
 
 		function validateUser() {
