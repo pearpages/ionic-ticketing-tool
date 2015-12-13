@@ -40,9 +40,10 @@
                 vm.view = 'form';
                 vm.users = UserMocks.getAllOffices();
                 vm.issues = CategoriesMocks.getAll();
+            } else {
+                $state.go('tab.account');
             }
                         
-            $state.go('tab.account');
         }
 
         function getIssueDescription(id) {
