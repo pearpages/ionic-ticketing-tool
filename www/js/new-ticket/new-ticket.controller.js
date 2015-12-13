@@ -28,24 +28,21 @@
         activate();
 
         function activate() {
-            myUsers.isLogged();
-            
-            if(myUsers.getCurrentUser()){
+
+            if(myUsers.getCurrentUser()!== null){
                 vm.ticket = myTickets.make(myTickets,myUsers.getCurrentUser().id);
                 vm.me = myUsers.getCurrentUser().id;
                 vm.ticket.office = myUsers.getCurrentUser().office;    
 
                 vm.seeExpress = (myUsers.getCurrentUser().role === 'admin' ||
                 myUsers.getCurrentUser().role === 'helpdesk') ? true : false;
-            }else {
-                vm.ticket.office = 'bcn';
 
-                vm.seeExpress= false;
+                vm.view = 'form';
+                vm.users = UserMocks.getAllOffices();
+                vm.issues = CategoriesMocks.getAll();
             }
                         
-            vm.view = 'form';
-            vm.users = UserMocks.getAllOffices();
-            vm.issues = CategoriesMocks.getAll();
+            $state.go('tab.account');
         }
 
         function getIssueDescription(id) {

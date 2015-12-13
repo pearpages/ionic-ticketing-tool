@@ -13,16 +13,18 @@
 		vm.validateUser = validateUser;
 		vm.logout = logout;
 		vm.mock = mock;
+		vm.mockButton = null;
 
 		activate();
 
 		function mock() {
-			if(myTickets.size() === 0){
-				myTickets.mockTickets(10,myTickets,vm.user.id); 
-			}
+			myTickets.mockTickets(10,myTickets,vm.user.id); 
+			vm.mockButton = false;
 		}
 
-		function activate() {
+		function activate() 
+		{	
+			vm.mockButton = true;
 			vm.user = myUsers.getCurrentUser();
 			if(vm.user){
 				vm.logged = true;

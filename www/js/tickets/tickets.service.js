@@ -32,7 +32,7 @@
             var me = myUsers.getCurrentUser().id;
 
             var ticket;
-            for(id in tickets){
+            for(var id in tickets){
                 ticket = tickets[id];
                 if(ticket.it === me && ticket.status === 'open'){
                     mine.push(ticket);
@@ -46,7 +46,7 @@
             var closed = [];
 
             var ticket;
-            for(id in tickets){
+            for(var id in tickets){
                 ticket = tickets[id];
                 if(ticket.status === 'closed'){
                     closed.push(ticket);
@@ -59,7 +59,7 @@
 
         function getNotAssigned() {
             var notAssigned = [];
-            for(id in tickets){
+            for(var id in tickets){
                 if(tickets[id].it === null){
                     notAssigned.push(tickets[id]);
                 }

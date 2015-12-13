@@ -8,7 +8,7 @@
 
         var vm = this;
 
-        vm.userRole;
+        vm.userRole = null;
         vm.setUserRole = setUserRole;
 
         activate();
@@ -17,7 +17,7 @@
             if(myUsers.getCurrentUser()) {
                 vm.userRole = myUsers.getCurrentUser().role;        
             } else {
-                vm.userRole = 'user';
+                vm.userRole = 'none';
             }
         }
 
