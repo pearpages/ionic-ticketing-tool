@@ -60,5 +60,4 @@ After updating dependencies via **bower update** you have to do **ionic io init*
 
 ## Considerations
 
-+ Check the relation between the users module and the layout module concerning the abstract view and the tabs
-
++ Cordova should not be included in the repository, remove it.
