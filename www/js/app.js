@@ -8,6 +8,7 @@ angular.module('ticketing', [
   'new-ticket',
   'tickets-zone',
   'ngTable',
+  'ngCordova',
   'tickets-mocks',
   'helpdesk'
   ])
