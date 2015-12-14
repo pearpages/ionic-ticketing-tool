@@ -115,6 +115,12 @@
                     }
                     ticket.issue = CategoriesMocks.randomCategory();
                     ticket.issueDescription = CategoriesMocks.getDescription(ticket.issue);
+                    if(ticket.status === 'closed'){
+                        ticket.evaluation = Math.floor(Math.random() * 6);
+                        if(ticket.evaluation === 0){
+                            ticket.evaluation = null;
+                        }
+                    }
                     if(ticket.status === 'open'){
                         ticket.it = null;                        
                     } else {

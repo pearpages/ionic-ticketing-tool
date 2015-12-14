@@ -30,12 +30,12 @@
                 activate();
                 
                 function activate() {
-                    
+                    //activation only occurs once. The same directive is kepty in memory like a service. Is a singleton
                 }
 
                 function showEvaluation() {
                     if(vmd.ticket !== null){
-                        if(vmd.ticket.who === myUsers.getCurrentUser().id && vmd.ticket.status === 'closed'){
+                        if((vmd.ticket.who === myUsers.getCurrentUser().id && vmd.ticket.status === 'closed') || vmd.ticket.evaluation !== null){
                             return true;
                         }else{
                             return false;

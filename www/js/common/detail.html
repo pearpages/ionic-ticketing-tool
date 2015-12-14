@@ -25,7 +25,8 @@
     <div ng-show="vmd.showEvaluation() === true" style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col">Evaluation</div>
-            <div class="col"><button class="button button-small" ng-click="vmd.evaluateTicket()">EVALUATE</button></div>
+            <div ng-show="vmd.ticket.evaluation === null" class="col"><button class="button button-small" ng-click="vmd.evaluateTicket()">EVALUATE</button></div>
+            <div ng-show="vmd.ticket.evaluation !== null" class="col"><stars stars="{{vmd.ticket.evaluation}}"></stars></div>
         </div>
     </div>
 
