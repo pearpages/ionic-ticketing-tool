@@ -35,7 +35,7 @@
 
                 function showEvaluation() {
                     if(vmd.ticket !== null){
-                        if((vmd.ticket.who === myUsers.getCurrentUser().id && vmd.ticket.status === 'closed') || vmd.ticket.evaluation !== null){
+                        if((vmd.ticket.who === myUsers.getCurrentUser().id && vmd.ticket.status === 'closed')){
                             return true;
                         }else{
                             return false;

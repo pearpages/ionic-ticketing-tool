@@ -84,6 +84,7 @@
 
             var res = {};
             res.who = [];
+            res.evaluate = [];
             res.requested = [];
             var ticket;
             for(var id in tickets){
@@ -93,6 +94,9 @@
                 }
                 if(ticket.requested === userid && ticket.who !== userid){
                     res.requested.push(ticket);
+                }
+                if(ticket.evaluation === null && ticket.status === 'closed' && ticket.who === userid) {
+                    res.evaluate.push(ticket);
                 }
             }
             return res;

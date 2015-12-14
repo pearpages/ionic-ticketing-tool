@@ -18,6 +18,8 @@
         activate();
 
         function activate() {
+            console.log('reloaded');
+
             myUsers.isLogged();
 
             vm.view = 'my'; //can also be 'others'
@@ -26,6 +28,7 @@
 
                 vm.who = new NgTableParams({count:data.who.length, sorting: {status:'desc',notified:'desc'}},{data: data.who, counts: []});
                 vm.requested = new NgTableParams({count:data.requested.length, sorting: {status:'desc',notified:'desc'}},{data: data.requested, counts: []});
+                vm.evaluate = new NgTableParams({count:data.evaluate.length, sorting: {notified:'asc'}},{data: data.evaluate, counts: []});
             }
             
         }

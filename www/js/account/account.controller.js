@@ -18,7 +18,7 @@
 		activate();
 
 		function mock() {
-			myTickets.mockTickets(10,myTickets,vm.user.id); 
+			myTickets.mockTickets(100,myTickets,vm.user.id); 
 			vm.mockButton = false;
 		}
 
