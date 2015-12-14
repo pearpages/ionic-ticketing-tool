@@ -7,25 +7,25 @@
 
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
-            <div class="col">Notified</div>
+            <div class="col" style="font-weight:bold">Notified</div>
             <div class="col">{{vmd.ticket.notified | date : 'yyyy-MM-dd'}}</div>
         </div>
     </div>
     
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
-            <div class="col">Requested by </div>
+            <div class="col"  style="font-weight:bold">Requested by </div>
             <div class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.requested}}@company.com">{{vmd.ticket.requested}}</a></div>
         </div>
         <div class="row">
-            <div class="col">For</div>
+            <div class="col" style="font-weight:bold">For</div>
             <div class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.who}}@company.com">{{vmd.ticket.who}}</a></div>
         </div>
     </div>
 
     <div ng-show="vmd.showEvaluation() === true" style="font-size:12px; padding:0" class="item">
         <div class="row">
-            <div class="col">Evaluation</div>
+            <div class="col" style="font-weight:bold">Evaluation</div>
             <div ng-show="vmd.ticket.evaluation === null" class="col"><button class="button button-small" ng-click="vmd.evaluateTicket()">EVALUATE</button></div>
             <div ng-show="vmd.ticket.evaluation !== null" class="col"><stars stars="{{vmd.ticket.evaluation}}"></stars></div>
         </div>
@@ -33,7 +33,7 @@
 
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
-            <div class="col">Assigned to</div>
+            <div class="col" style="font-weight:bold">Assigned to</div>
             <div ng-show="vmd.ticket.it !==null" class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.it}}@company.com">{{vmd.ticket.it}}</a></div>
             <div ng-show="vmd.ticket.it === null && vmd.assign !== 'true'" class="col">Not Assigned</div>
             <div ng-show="vmd.ticket.it === null && vmd.assign === 'true'" class="col"><button class="button button-small" ng-click="vmd.assignTicket()">ASSIGN</button></div>
@@ -42,19 +42,47 @@
     
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
-            <div class="col">Description</div>
+            <div class="col"  style="font-weight:bold">Description</div>
          </div>
          <div class="row">
-            <p style="display:block; white-space: normal">{{vmd.ticket.description}}</p>
+            <div class="col" style="display:block; white-space: normal">{{vmd.ticket.description}}</div>
          </div>
+    </div>
+
+    <div style="font-size:12px; padding:0" class="item">
+        <div class="row" style="font-weight: bold;"><div class="col">Picture</div></div>
+        <div class="row">
+            <div class="col" style="text-align:center"><img src="img/ionic.png"></div>
+        </div>
     </div>
     
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
-            <div class="col">IT comments</div>
+            <div class="col" style="font-weight:bold">IT comments</div>
         </div>
         <div class="row">
-            <div class="col" style="white-space: normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, dolorem animi temporibus velit vitae, ab molestiae veritatis incidunt ipsam. Temporibus ipsam perspiciatis eius odio praesentium harum accusamus eos deleniti dolores laboriosam natus mollitia repellat saepe cupiditate sapiente earum, eum adipisci rem labore quasi vitae rerum culpa atque iusto. Earum dignissimos accusamus veritatis molestias porro, officiis doloribus ipsum consectetur, iure sed eius? Officia temporibus, expedita saepe nostrum ipsa ratione animi illum hic totam dolorem illo architecto veritatis ducimus, iure ipsam eum modi molestiae obcaecati reiciendis eaque iste magnam odit. Quisquam aut non totam, eligendi ea recusandae dolores veritatis adipisci magni voluptatum!</div>
+            <div class="col" style="white-space: normal">
+                <ul class="list">
+                    <li class="item" style="padding:0;">
+                        <div class="row" style="font-size:12px; white-space:normal">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, repellendus.
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col" style="font-size:12px; font-weight:bold; text-align: right">2015-12-03 23:34</div>
+                        </div>
+                    </li>
+                    <li class="item" style="padding:0;">
+                        <div class="row" style="font-size:12px; white-space:normal">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, repellendus.
+                        </div>
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col" style="font-size:12px; font-weight:bold; text-align: right">2015-12-03 23:34</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
