@@ -14,7 +14,7 @@
                 ticket: '=',
                 assign: '@'
             },
-            templateUrl: 'js/common/detail.html',
+            templateUrl: 'js/common/detail/detail.html',
         };
         
             //call ang-link if needed
@@ -22,7 +22,6 @@
             function controller(myUsers) {
                 var vmd = this;
 
-                vmd.evaluate = null;
                 vmd.showEvaluation = showEvaluation;
                 vmd.evaluateTicket = evaluateTicket;
                 vmd.assignTicket = assignTicket;

@@ -2,18 +2,18 @@
     'use strict';
 
     angular.module("ticketing")
-    .directive('stars',[stars]);
+    .directive('badge',[badge]);
 
-    function stars() {
+    function badge() {
         return {
             restrict: 'E',
             bindToController: true,
             controllerAs: 'vmd',
             controller: controller,
             scope:{
-                stars: '@'
+                ticket: '='
             },
-            templateUrl: 'js/common/stars.html',
+            templateUrl: 'js/common/badge/badge.html',
         };
         
             //call ang-link if needed
@@ -21,20 +21,22 @@
             function controller() {
                 var vmd = this;
 
-                vmd.getStars = getStars;
-
+                vmd.badgeColor = badgeColor;
+                
                 activate();
                 
                 function activate() {
                 }
 
-                function getStars() {
-                    var html = [];
-
-                    for(var i=0; i<parseInt(vmd.stars); i++) {
-                        html.push('<i class="icon ion-star"></i>');
+                function badgeColor() {
+                    if(vmd.ticket){
+                        if(vmd.ticket.status === 'open'){
+                            return 'badge-balanced';
+                        } else if (vmd.ticket.status === 'closed') {
+                            return 'badge-assertive';
+                        }    
                     }
-                    return html.join('');
+                    
                 }
             }
         }
