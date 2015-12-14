@@ -20,7 +20,6 @@
         function activate() {
             myUsers.isLogged();
 
-            console.log($state.params);
             vm.view = $state.params.view; 
             if(myUsers.getCurrentUser()){
                 var data = myTickets.getUserTickets(myUsers.getCurrentUser().id);
