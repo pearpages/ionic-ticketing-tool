@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module("ticketing")
-    .directive('detail',['$state',detail]);
+    .directive('detail',['$state','myUsers',detail]);
 
     function detail($state) {
         return {
@@ -19,14 +19,32 @@
         
             //call ang-link if needed
             
-            function controller() {
+            function controller(myUsers) {
                 var vmd = this;
 
+                vmd.evaluate = null;
+                vmd.showEvaluation = showEvaluation;
+                vmd.evaluateTicket = evaluateTicket;
                 vmd.assignTicket = assignTicket;
 
                 activate();
                 
                 function activate() {
+                    
+                }
+
+                function showEvaluation() {
+                    if(vmd.ticket !== null){
+                        if(vmd.ticket.who === myUsers.getCurrentUser().id && vmd.ticket.status === 'closed'){
+                            return true;
+                        }else{
+                            return false;
+                        }       
+                    }
+                }
+
+                function evaluateTicket() {
+
                 }
 
                 function assignTicket() {

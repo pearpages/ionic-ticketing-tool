@@ -1,13 +1,16 @@
 <div class="card">
+    
     <div style="font-size:12px;" class="item item-divider">
         {{vmd.ticket.issueDescription}} <badge ticket="vmd.ticket"></badge>
     </div>
+    
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col">Notified</div>
             <div class="col">{{vmd.ticket.notified | date : 'yyyy-MM-dd'}}</div>
         </div>
     </div>
+    
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col">Requested by </div>
@@ -18,14 +21,23 @@
             <div class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.who}}@company.com">{{vmd.ticket.who}}</a></div>
         </div>
     </div>
+
+    <div ng-show="vmd.showEvaluation() === true" style="font-size:12px; padding:0" class="item">
+        <div class="row">
+            <div class="col">Evaluation</div>
+            <div class="col"><button class="button button-small" ng-click="vmd.evaluateTicket()">EVALUATE</button></div>
+        </div>
+    </div>
+
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col">Assigned to</div>
             <div ng-show="vmd.ticket.it !==null" class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.it}}@company.com">{{vmd.ticket.it}}</a></div>
             <div ng-show="vmd.ticket.it === null && vmd.assign !== 'true'" class="col">Not Assigned</div>
-            <div ng-show="vmd.ticket.it === null && vmd.assign === 'true'" class="col"><button class="button" ng-click="vmd.assignTicket()">ASSIGN</button></div>
+            <div ng-show="vmd.ticket.it === null && vmd.assign === 'true'" class="col"><button class="button button-small" ng-click="vmd.assignTicket()">ASSIGN</button></div>
         </div>
     </div>
+    
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col">Description</div>
@@ -34,10 +46,12 @@
             <p style="display:block; white-space: normal">{{vmd.ticket.description}}</p>
          </div>
     </div>
+    
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col">IT comments</div>
             <div class="col"></div>
         </div>
     </div>
+
 </div>
