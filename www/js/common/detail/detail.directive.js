@@ -43,7 +43,7 @@
                 }
 
                 function evaluateTicket() {
-
+                    $state.go('tab.evaluate',{id: vmd.ticket.id});
                 }
 
                 function assignTicket() {

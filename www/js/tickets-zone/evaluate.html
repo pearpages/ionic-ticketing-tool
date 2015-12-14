@@ -1,0 +1,49 @@
+<ion-view view-title="My Tickets">
+
+<div class="bar bar-subheader bar-stable">
+    <button class="button" ng-click="vm.goBack()">Back</button>
+  	<h2 class="title">Evaluate Ticket {{vm.ticket.id}}</h2>
+  	<button class="button" ng-click="vm.submit()">Submit</button>
+</div>
+
+<ion-content class="has-subheader has-footer padding">
+
+	<ul class="list">
+
+		<li class="item" ng-click="vm.setMark(5)" ng-class="vm.isActive(5)">
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		</li>
+
+		<li class="item" ng-click="vm.setMark(4)" ng-class="vm.isActive(4)">
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		</li>
+
+		<li class="item" ng-click="vm.setMark(3)" ng-class="vm.isActive(3)">
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		</li>
+
+		<li class="item" ng-click="vm.setMark(2)" ng-class="vm.isActive(2)">
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		</li>
+
+		<li class="item" ng-click="vm.setMark(1)" ng-class="vm.isActive(1)">
+			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		</li>
+
+		<li class="item"  ng-click="vm.setMark(0)" ng-class="vm.isActive(0)">
+			<i style="font-size:50px" class="icon ion-ios-star-outline"></i>
+		</li>
+
+	</ul>
+</ion-content>
+</ion-view>
