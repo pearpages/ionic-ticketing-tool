@@ -67,7 +67,11 @@
                 }else {
                     ticket.it = myUsers.getCurrentUser().id;
                 }
-            } 
+            }
+            if(ticket.it !== null){
+                ticket.addComment('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio.');
+                ticket.addComment('Lorem ipsum dolor sit amet.');
+            }
             ticket.office = 'bcn';
             ticket.description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, pariatur?';
 		}

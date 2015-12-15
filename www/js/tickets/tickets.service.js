@@ -130,6 +130,7 @@
                 self.it;
                 self.office; //office comes given by the who 'user'
                 self.isCompleted = isCompleted;
+                self.addComment = addComment;
                 self.save = save;
                 self.close = close;
 
@@ -140,7 +141,7 @@
                     self.closed = null;
                     self.requested = userid;
                     self.id = -1;
-                    self.comments = null;
+                    self.comments = [];
                     self.it = null;
                     self.evaluation = null;
                     self.notified = null;
@@ -150,6 +151,13 @@
                     self.issue = -1;
                     self.description = null;
                     self.photo = null;
+                }
+
+                function addComment(text) {
+                    var std = {};
+                    std.comment = text;
+                    std.date = new Date();
+                    self.comments.push(std);
                 }
 
                 function isCompleted() {
