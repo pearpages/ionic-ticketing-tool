@@ -2,9 +2,9 @@
 	'use strict';
 
 	angular.module("ticketing-account")
-	.controller('AccountController',['$state','myUsers','myTicketsMocks',AccountController]);
+	.controller('AccountController',['$state','myUsers','myTickets','myTicketsMocks',AccountController]);
 
-	function AccountController($state,myUsers,myTicketsMocks) {
+	function AccountController($state,myUsers,myTickets,myTicketsMocks) {
 
 		var vm = this;
 

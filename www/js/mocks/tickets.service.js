@@ -2,9 +2,9 @@
 	'use strict';
 
 	angular.module("tickets-mocks")
-	.factory('myTicketsMocks',[myTicketsMocks]);
+	.factory('myTicketsMocks',['myUsers','CategoriesMocks',myTicketsMocks]);
 
-	function myTicketsMocks() {
+	function myTicketsMocks(myUsers,CategoriesMocks) {
 
 		var self = this;
 
