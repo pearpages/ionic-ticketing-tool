@@ -415,6 +415,25 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "<div class=\"card\">\n    \n    <div style=\"font-size:12px;\" class=\"item item-divider\">\n        {{vmd.ticket.issueDescription}} \n        <badge ticket=\"vmd.ticket\"></badge>\n    </div>\n\n    <div style=\"font-size:12px; padding:0\" class=\"item\">\n        <div class=\"row\">\n            <div class=\"col\" style=\"font-weight:bold\">Notified</div>\n            <div class=\"col\">{{vmd.ticket.notified | date : 'yyyy-MM-dd'}}</div>\n        </div>\n    </div>\n    \n    <div style=\"font-size:12px; padding:0\" class=\"item\">\n        <div class=\"row\">\n            <div class=\"col\"  style=\"font-weight:bold\">Requested by </div>\n            <div class=\"col\"><i class=\"icon ion-ios-email\" style=\"font-size:20px; \"></i> <a style=\"position:relative; top:-4px\" href=\"mailto:{{vmd.ticket.requested}}@company.com\">{{vmd.ticket.requested}}</a></div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col\" style=\"font-weight:bold\">For</div>\n            <div class=\"col\"><i class=\"icon ion-ios-email\" style=\"font-size:20px; \"></i> <a style=\"position:relative; top:-4px\" href=\"mailto:{{vmd.ticket.who}}@company.com\">{{vmd.ticket.who}}</a></div>\n        </div>\n    </div>\n\n    <div ng-show=\"vmd.showEvaluation() === true\" style=\"font-size:12px; padding:0\" class=\"item\">\n        <div class=\"row\">\n            <div class=\"col\" style=\"font-weight:bold\">Evaluation</div>\n            <div ng-show=\"vmd.ticket.evaluation === null\" class=\"col\"><button class=\"button button-small\" ng-click=\"vmd.evaluateTicket()\">EVALUATE</button></div>\n            <div ng-show=\"vmd.ticket.evaluation !== null\" class=\"col\"><stars stars=\"{{vmd.ticket.evaluation}}\"></stars></div>\n        </div>\n    </div>\n\n    <div style=\"font-size:12px; padding:0\" class=\"item\">\n        <div class=\"row\">\n            <div class=\"col\" style=\"font-weight:bold\">Assigned to</div>\n            <div ng-show=\"vmd.ticket.it !==null\" class=\"col\"><i class=\"icon ion-ios-email\" style=\"font-size:20px; \"></i> <a style=\"position:relative; top:-4px\" href=\"mailto:{{vmd.ticket.it}}@company.com\">{{vmd.ticket.it}}</a></div>\n            <div ng-show=\"vmd.ticket.it === null && vmd.assign !== 'true'\" class=\"col\">Not Assigned</div>\n            <div ng-show=\"vmd.ticket.it === null && vmd.assign === 'true'\" class=\"col\"><button class=\"button button-small\" ng-click=\"vmd.assignTicket()\">ASSIGN</button></div>\n        </div>\n    </div>\n    \n    <div style=\"font-size:12px; padding:0\" class=\"item\">\n        <div class=\"row\">\n            <div class=\"col\"  style=\"font-weight:bold\">Description</div>\n         </div>\n         <div class=\"row\">\n            <div class=\"col\" ng-show=\"vmd.ticket.description !== null\" style=\"display:block; white-space: normal\">{{vmd.ticket.description}}</div>\n            <div class=\"col\" ng-show=\"vmd.ticket.description === null\" style=\"display:block; white-space: normal\">Non given</div>\n         </div>\n    </div>\n\n    <div ng-show=\"vmd.ticket.image !== null\" style=\"font-size:12px; padding:0\" class=\"item\">\n        <div class=\"row\" style=\"font-weight: bold;\"><div class=\"col\">Picture</div></div>\n        <div class=\"row\">\n            <div class=\"col\" style=\"text-align:center\"><img src=\"img/ionic.png\"></div>\n        </div>\n    </div>\n    \n    <div ng-show=\"vmd.ticket\" style=\"font-size:12px; padding:0\" class=\"item\">\n        <div class=\"row\">\n            <div class=\"col\" style=\"font-weight:bold\">IT comments</div>\n        </div>\n        <div class=\"row\">\n            <div class=\"col\" style=\"white-space: normal\">\n                <ul class=\"list\">\n                    <li class=\"item\" style=\"padding:0;\">\n                        <div class=\"row\" style=\"font-size:12px; white-space:normal\">\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, repellendus.\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col\"></div>\n                            <div class=\"col\" style=\"font-size:12px; font-weight:bold; text-align: right\">2015-12-03 23:34</div>\n                        </div>\n                    </li>\n                    <li class=\"item\" style=\"padding:0;\">\n                        <div class=\"row\" style=\"font-size:12px; white-space:normal\">\n                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, repellendus.\n                        </div>\n                        <div class=\"row\">\n                            <div class=\"col\"></div>\n                            <div class=\"col\" style=\"font-size:12px; font-weight:bold; text-align: right\">2015-12-03 23:34</div>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n\n    <div style=\"font-size:12px; padding:0\" class=\"item\">\n        <ion-toggle toggle-class=\"toggle-assertive\">Close Ticket</ion-toggle>\n    </div>\n\n</div>",
+			"file": "www/js/common/detail/detail.html",
+			"file_size": 4948,
+			"file_write_time": 130946462239302154,
+			"settings":
+			{
+				"buffer_size": 4837,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/tickets/tickets.service.js",
+			"settings":
+			{
+				"buffer_size": 6180,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -554,10 +573,15 @@
 	[
 		"/C/Users/ppages/Desktop/ticketing-tool",
 		"/C/Users/ppages/Desktop/ticketing-tool/www",
-		"/C/Users/ppages/Desktop/ticketing-tool/www/js"
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js/common",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js/common/detail",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js/tickets"
 	],
 	"file_history":
 	[
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js/tickets/tickets.service.js",
+		"/C/Users/ppages/Desktop/ticketing-tool/www/js/new-ticket/form.html",
 		"/C/Users/ppages/Desktop/ticketing-tool/gulpfile.js",
 		"/C/Users/ppages/Desktop/ticketing-tool/www/js/app.js",
 		"/C/Users/ppages/Desktop/ticketing-tool/README.md",
@@ -683,9 +707,7 @@
 		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/droid/droid.directive.js",
 		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/droid/droid.html",
 		"/C/Users/ppages/Desktop/angular_directives_examples/app/userCards/directives/stateDisplay/state-display.directive.js",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/userCards/directives/advUserCard/advUserCard.html",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/userCards/directives/userInfoCard/userInfoCard.directive.js",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/droid/directives/droid.html"
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userCards/directives/advUserCard/advUserCard.html"
 	],
 	"find":
 	{
@@ -916,8 +938,69 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/js/common/detail/detail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4837,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3217,
+								3217
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/js/tickets/tickets.service.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5351,
+								5351
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2385.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

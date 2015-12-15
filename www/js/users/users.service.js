@@ -1,11 +1,3 @@
-        // User:
-        // {
-        //     id: '',
-        //     name: '',
-        //     password: '',
-        //     role: '',
-        //     office: ''
-        // }
 (function() {
     'use strict';
 
@@ -15,7 +7,6 @@
     function myUsers(CacheFactory) {
         var self = this;
 
-        self.logged = null;
         self.currentUser = null;
         self.cache = null;
 
@@ -31,7 +22,7 @@
         };
 
         function activate() {
-                self.logged = false;
+            //...
         }
 
         function isAdmin() {
@@ -51,37 +42,35 @@
         }
 
         function isLogged() {
-            if(!self.logged){
+            if(self.currentUser === null){
                 return false;
             }
             return true;
         }
 
         function logout() {
-            self.logged = false;
             self.currentUser = null;
         }
 
-        function validateUser(user) {
+        function validateUser(userid, password) {
 
-            if(user.name !== user.password){
-                return false;
+            if(userid !== password){
+                return null;
             } else {
-                if (user.name === 'helpdesk'){
-                    user.role = 'helpdesk';
-                } else if (user.name === 'admin') {
-                    user.role = 'admin';
+                self.currentUser = {};
+                self.currentUser.id = userid;
+                self.currentUser.name = userid;
+                self.currentUser.office = 'bcn';
+
+                if (userid === 'helpdesk'){
+                    self.currentUser.role = 'helpdesk';
+                } else if (userid === 'admin') {
+                    self.currentUser.role = 'admin';
                 } else {
-                    user.role = 'user';
+                    self.currentUser.role = 'user';
                 }
 
-                user.id = user.name;
-                user.office = 'bcn';
-
-                self.currentUser = user;
-                self.logged = true;
-
-                return true;
+                return self.currentUser;
             }
         }
 

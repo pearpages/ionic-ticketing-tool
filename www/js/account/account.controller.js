@@ -2,46 +2,39 @@
 	'use strict';
 
 	angular.module("ticketing-account")
-	.controller('AccountController',['$state','myUsers','myTickets',AccountController]);
+	.controller('AccountController',['$state','myUsers','myTicketsMocks',AccountController]);
 
-	function AccountController($state,myUsers,myTickets) {
+	function AccountController($state,myUsers,myTicketsMocks) {
 
 		var vm = this;
 
-		vm.logged = null;
 		vm.user = null;
+		vm.form = null;
 		vm.validateUser = validateUser;
 		vm.logout = logout;
 		vm.mock = mock;
-		vm.mockButton = null;
 
 		activate();
 
-		function mock() {
-			myTickets.mockTickets(100,myTickets,vm.user.id); 
-			vm.mockButton = false;
-		}
-
 		function activate() 
 		{	
-			vm.mockButton = true;
+			vm.form = {};
+			vm.form.userid = null;
+			vm.form.password = null;
 			vm.user = myUsers.getCurrentUser();
-			if(vm.user){
-				vm.logged = true;
-			}else{
-				vm.logged = false;
-			}
+		}
+
+		function mock() {
+			myTicketsMocks.mockTickets(100,myTickets,vm.user.id); 
 		}
 
 		function validateUser() {
-			vm.logged = myUsers.validateUser(vm.user);
-			vm.user = myUsers.getCurrentUser();
+			vm.user = myUsers.validateUser(vm.form.userid,vm.form.password);
 			$state.reload();
 		}
 
 		function logout() {
 			myUsers.logout();
-			vm.logged = false;
 			vm.user = null;
 			$state.reload();
 		}
