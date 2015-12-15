@@ -73,9 +73,8 @@
 
         function mockTickets(howMany,factory,userid) {
             var ticket;
-            var options = {};
             for(var i = 0; i < howMany; i++) {
-                ticket = factory.make(factory,userid, options);
+                ticket = factory.make(factory,userid);
                 ticket.save(true);
             }
         }
