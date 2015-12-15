@@ -18,7 +18,7 @@
         }
         
         function gotoDetail(ticket) {
-            var params = {id: ticket.id, assign: true};
+            var params = {id: ticket.id};
             $state.go('tab.ticket-detail', params);
         }
     }

@@ -33,8 +33,8 @@
 			vm.ticket.evaluation = mark;
 		}
 
-		function isActive(mark) {
-			if(mark === vm.ticket.evaluation){
+		function isActive() {
+			if(vm.ticket.evaluation){
 				return 'positive';
 			} else {
 				return '';

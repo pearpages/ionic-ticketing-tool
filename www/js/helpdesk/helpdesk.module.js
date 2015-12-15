@@ -19,7 +19,6 @@
                 controllerAs: 'vm',
                 params: {
                   'id' : -1,
-                  'assign' : false,
                   'back' : 'tab.inbox'
                 }
       })

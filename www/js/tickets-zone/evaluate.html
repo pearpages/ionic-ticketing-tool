@@ -10,38 +10,58 @@
 
 	<ul class="list">
 
-		<li class="item" ng-click="vm.setMark(5)" ng-class="vm.isActive(5)">
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		<li class="item" ng-show="vm.ticket.evaluation === 5" ng-class="vm.isActive()">
+			<i ng-click="vm.setMark(0)" style="font-size:50px" class="icon">&nbsp;</i>
+			<i ng-click="vm.setMark(1)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(2)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(3)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(4)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(5)" style="font-size:50px" class="icon ion-ios-star"></i>
 		</li>
 
-		<li class="item" ng-click="vm.setMark(4)" ng-class="vm.isActive(4)">
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		<li class="item" ng-show="vm.ticket.evaluation === 4" ng-class="vm.isActive()">
+			<i ng-click="vm.setMark(0)" style="font-size:50px" class="icon">&nbsp;</i>
+			<i ng-click="vm.setMark(1)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(2)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(3)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(4)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(5)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
 		</li>
 
-		<li class="item" ng-click="vm.setMark(3)" ng-class="vm.isActive(3)">
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		<li class="item" ng-show="vm.ticket.evaluation === 3" ng-class="vm.isActive()">
+			<i ng-click="vm.setMark(0)" style="font-size:50px" class="icon">&nbsp;</i>
+			<i ng-click="vm.setMark(1)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(2)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(3)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(4)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(5)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
 		</li>
 
-		<li class="item" ng-click="vm.setMark(2)" ng-class="vm.isActive(2)">
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		<li class="item" ng-show="vm.ticket.evaluation === 2" ng-class="vm.isActive()">
+			<i ng-click="vm.setMark(0)" style="font-size:50px" class="icon">&nbsp;</i>
+			<i ng-click="vm.setMark(1)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(2)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(3)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(4)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(5)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
 		</li>
 
-		<li class="item" ng-click="vm.setMark(1)" ng-class="vm.isActive(1)">
-			<i style="font-size:50px" class="icon ion-ios-star"></i>
+		<li class="item" ng-show="vm.ticket.evaluation === 1" ng-class="vm.isActive()">
+			<i ng-click="vm.setMark(0)" style="font-size:50px" class="icon">&nbsp;</i>
+			<i ng-click="vm.setMark(1)" style="font-size:50px" class="icon ion-ios-star"></i>
+			<i ng-click="vm.setMark(2)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(3)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(4)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(5)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
 		</li>
 
-		<li class="item"  ng-click="vm.setMark(0)" ng-class="vm.isActive(0)">
-			<i style="font-size:50px" class="icon ion-ios-star-outline"></i>
+		<li class="item"  ng-show="vm.ticket.evaluation === 0 || vm.ticket.evaluation === null" ng-class="vm.isActive()">
+			<i ng-click="vm.setMark(0)" style="font-size:50px" class="icon">&nbsp;</i>
+			<i ng-click="vm.setMark(1)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(2)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(3)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(4)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
+			<i ng-click="vm.setMark(5)" style="font-size:50px" class="icon ion-ios-star-outline"></i>
 		</li>
 
 	</ul>

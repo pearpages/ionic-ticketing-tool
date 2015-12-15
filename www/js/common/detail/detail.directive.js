@@ -11,8 +11,7 @@
             controllerAs: 'vmd',
             controller: controller,
             scope:{
-                ticket: '=',
-                assign: '@'
+                ticket: '='
             },
             templateUrl: 'js/common/detail/detail.html',
         };

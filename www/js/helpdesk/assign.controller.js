@@ -25,7 +25,7 @@
         }
 
         function goBack() {
-            $state.go('tab.ticket-detail', {id: vm.ticket.id, assign: true});
+            $state.go('tab.ticket-detail', {id: vm.ticket.id});
         }
 
         function transformName(name) {
