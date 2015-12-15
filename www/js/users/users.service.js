@@ -28,7 +28,7 @@
 
         function isAdmin() {
             if(self.currentUser){
-                return (self.currentUser === 'admin') ? true: false;
+                return (self.currentUser.role === 'admin') ? true: false;
             } else {
                 return false;
             }
@@ -43,7 +43,7 @@
 
         function isHelpdesk() {
             if(self.currentUser){
-                return (self.currentUser === 'helpdesk') ? true: false;
+                return (self.currentUser.role === 'helpdesk') ? true: false;
             } else {
                 return false;
             }

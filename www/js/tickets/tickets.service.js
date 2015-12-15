@@ -89,6 +89,7 @@
                     res.evaluate.push(ticket);
                 }
             }
+            console.log(res.evaluate);
             return res;
         }
 
@@ -122,6 +123,7 @@
                 self.description;
                 self.photo;
                 self.closed;
+                self.evaluation;
                 self.image;
                 self.comments;
                 self.requested;
@@ -129,6 +131,7 @@
                 self.office; //office comes given by the who 'user'
                 self.isCompleted = isCompleted;
                 self.save = save;
+                self.close = close;
 
                 activate();
 
@@ -139,6 +142,7 @@
                     self.id = -1;
                     self.comments = null;
                     self.it = null;
+                    self.evaluation = null;
                     self.notified = null;
                     self.status = 'open';    
                     self.express = false;

@@ -22,10 +22,14 @@
             function controller(myUsers) {
                 var vmd = this;
 
+                vmd.form = {};
+                vmd.form.close = false;
                 vmd.showEvaluation = showEvaluation;
                 vmd.isIT = isIT;
+                vmd.save = save;
                 vmd.evaluateTicket = evaluateTicket;
                 vmd.assignTicket = assignTicket;
+                vmd.isClosable = isClosable;
 
                 activate();
                 
@@ -43,6 +47,16 @@
                     }
                 }
 
+                function save() {
+                    console.log('save',vmd.form.close);
+                    if(vmd.form.close){
+                        vmd.ticket.close();
+                        vmd.form.close = false;
+                    }
+                    vmd.ticket.save();
+                    console.log(vmd.ticket);
+                }
+
                 function isIT() {
                     return myUsers.isIT();
                 }
@@ -53,6 +67,13 @@
 
                 function assignTicket() {
                     $state.go('tab.assign',{id: vmd.ticket.id});
+                }
+
+                function isClosable() {
+                    if(vmd.ticket.it === myUsers.getCurrentUser().id && vmd.ticket.status === 'open'){
+                        return true;
+                    }
+                    return false;
                 }
 
             }

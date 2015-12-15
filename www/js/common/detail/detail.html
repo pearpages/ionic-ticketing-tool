@@ -106,8 +106,10 @@
     </div>
 
     <!-- close ticket -->
-    <div ng-show="vmd.isIT()" style="font-size:12px; padding:0" class="item">
-        <ion-toggle toggle-class="toggle-assertive">Close Ticket</ion-toggle>
+    <div ng-show="vmd.isClosable() && vmd.ticket.status === 'open'" style="font-size:12px; padding:0" class="item">
+        <ion-toggle toggle-class="toggle-assertive" ng-model="vmd.form.close">Close Ticket</ion-toggle>
     </div>
 
 </div>
+
+<button ng-show="vmd.isIT() && vmd.ticket.status === 'open'" ng-click="vmd.save()" class="button button-block">Save</button>

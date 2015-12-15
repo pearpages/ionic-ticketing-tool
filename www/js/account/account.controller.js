@@ -25,7 +25,7 @@
 		}
 
 		function mock() {
-			myTicketsMocks.mockTickets(100,myTickets,vm.user.id); 
+			myTicketsMocks.mockTickets(50,myTickets,vm.user.id); 
 		}
 
 		function validateUser() {
