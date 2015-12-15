@@ -45,18 +45,19 @@
             <div class="col"  style="font-weight:bold">Description</div>
          </div>
          <div class="row">
-            <div class="col" style="display:block; white-space: normal">{{vmd.ticket.description}}</div>
+            <div class="col" ng-show="vmd.ticket.description !== null" style="display:block; white-space: normal">{{vmd.ticket.description}}</div>
+            <div class="col" ng-show="vmd.ticket.description === null" style="display:block; white-space: normal">Non given</div>
          </div>
     </div>
 
-    <div style="font-size:12px; padding:0" class="item">
+    <div ng-show="vmd.ticket.image !== null" style="font-size:12px; padding:0" class="item">
         <div class="row" style="font-weight: bold;"><div class="col">Picture</div></div>
         <div class="row">
             <div class="col" style="text-align:center"><img src="img/ionic.png"></div>
         </div>
     </div>
     
-    <div style="font-size:12px; padding:0" class="item">
+    <div ng-show="vmd.ticket.comments !== null" style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col" style="font-weight:bold">IT comments</div>
         </div>

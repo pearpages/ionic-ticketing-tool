@@ -161,6 +161,7 @@
                 self.photo;
                 self.completed;
                 self.image;
+                self.comments;
                 self.requested;
                 self.it;
                 self.office; //office comes given by the who 'user'
@@ -173,6 +174,7 @@
                     self.image = null;
                     self.requested = userid;
                     self.id = -1;
+                    self.comments = null;
                     self.it = null;
                     self.notified = null;
                     self.status = 'open';    
@@ -191,7 +193,7 @@
                     if(options.issue){
                         self.issue = options.issue;
                     }
-                    self.description = '';
+                    self.description = null;
                     self.photo = null;
                 }
 
