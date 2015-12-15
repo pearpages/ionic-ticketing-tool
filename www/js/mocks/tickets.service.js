@@ -42,6 +42,7 @@
                 if(ticket.evaluation === 0){
                     ticket.evaluation = null;
                 }
+                ticket.closed = ticket.notified;
             }
             if(ticket.status === 'open'){
                 ticket.it = null;                        

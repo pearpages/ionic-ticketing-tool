@@ -1,10 +1,12 @@
 <div class="card">
     
+    <!-- Category -->
     <div style="font-size:12px;" class="item item-divider">
         {{vmd.ticket.issueDescription}} 
         <badge ticket="vmd.ticket"></badge>
     </div>
 
+    <!-- Notified Date -->
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col" style="font-weight:bold">Notified</div>
@@ -12,6 +14,7 @@
         </div>
     </div>
 
+    <!-- Closed Date -->
     <div ng-show="vmd.ticket.closed !== null" style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col" style="font-weight:bold">Closed</div>
@@ -19,17 +22,21 @@
         </div>
     </div>
     
+    <!-- Users -->
     <div style="font-size:12px; padding:0" class="item">
+        <!-- User Requested -->
         <div class="row">
             <div class="col"  style="font-weight:bold">Requested by </div>
             <div class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.requested}}@company.com">{{vmd.ticket.requested}}</a></div>
         </div>
+        <!-- User Who Needs help -->
         <div class="row">
             <div class="col" style="font-weight:bold">For</div>
             <div class="col"><i class="icon ion-ios-email" style="font-size:20px; "></i> <a style="position:relative; top:-4px" href="mailto:{{vmd.ticket.who}}@company.com">{{vmd.ticket.who}}</a></div>
         </div>
     </div>
 
+    <!-- Evaluation -->
     <div ng-show="vmd.showEvaluation() === true" style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col" style="font-weight:bold">Evaluation</div>
@@ -38,6 +45,7 @@
         </div>
     </div>
 
+    <!-- IT member -->
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col" style="font-weight:bold">Assigned to</div>
@@ -47,6 +55,7 @@
         </div>
     </div>
     
+    <!-- User Description of the Issue -->
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col"  style="font-weight:bold">Description</div>
@@ -57,13 +66,15 @@
          </div>
     </div>
 
+    <!-- Screenshot -->
     <div ng-show="vmd.ticket.image !== null" style="font-size:12px; padding:0" class="item">
         <div class="row" style="font-weight: bold;"><div class="col">Picture</div></div>
         <div class="row">
-            <div class="col" style="text-align:center"><img src="img/ionic.png"></div>
+            <div class="col" style="text-align:center"><img src="{{vmd.ticket.image}}"></div>
         </div>
     </div>
     
+    <!-- IT Comments -->
     <div ng-show="vmd.ticket.comments !== null" style="font-size:12px; padding:0" class="item">
         <div class="row">
             <div class="col" style="font-weight:bold">IT comments</div>
@@ -94,6 +105,7 @@
         </div>
     </div>
 
+    <!-- close ticket -->
     <div ng-show="vmd.isIT()" style="font-size:12px; padding:0" class="item">
         <ion-toggle toggle-class="toggle-assertive">Close Ticket</ion-toggle>
     </div>
