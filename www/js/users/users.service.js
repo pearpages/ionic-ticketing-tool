@@ -17,6 +17,7 @@
             validateUser: validateUser,
             getCurrentUser: getCurrentUser,
             isAdmin: isAdmin,
+            isIT: isIT,
             isHelpdesk: isHelpdesk,
             logout: logout
         };
@@ -31,6 +32,13 @@
             } else {
                 return false;
             }
+        }
+
+        function isIT() {
+            if(isAdmin() || isHelpdesk()){
+                return true;
+            }
+            return false;
         }
 
         function isHelpdesk() {

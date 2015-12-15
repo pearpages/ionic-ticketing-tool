@@ -11,6 +11,13 @@
             <div class="col">{{vmd.ticket.notified | date : 'yyyy-MM-dd'}}</div>
         </div>
     </div>
+
+    <div ng-show="vmd.ticket.closed !== null" style="font-size:12px; padding:0" class="item">
+        <div class="row">
+            <div class="col" style="font-weight:bold">Closed</div>
+            <div class="col">{{vmd.ticket.closed | date : 'yyyy-MM-dd'}}</div>
+        </div>
+    </div>
     
     <div style="font-size:12px; padding:0" class="item">
         <div class="row">
@@ -87,7 +94,7 @@
         </div>
     </div>
 
-    <div style="font-size:12px; padding:0" class="item">
+    <div ng-show="vmd.isIT()" style="font-size:12px; padding:0" class="item">
         <ion-toggle toggle-class="toggle-assertive">Close Ticket</ion-toggle>
     </div>
 

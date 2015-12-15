@@ -121,6 +121,7 @@
                 self.issueDescription; //description copied from the issue object
                 self.description;
                 self.photo;
+                self.closed;
                 self.image;
                 self.comments;
                 self.requested;
@@ -133,6 +134,7 @@
 
                 function activate() {
                     self.image = null;
+                    self.closed = null;
                     self.requested = userid;
                     self.id = -1;
                     self.comments = null;
@@ -156,9 +158,13 @@
                     return res;
                 }
 
-                function save(mock) {
-                    mock = mock || false;
-                    factory.save(self,mock);
+                function save() {
+                    factory.save(self);
+                }
+
+                function close(){
+                    self.status = 'closed';
+                    self.closed = new Date();
                 }
 
             };

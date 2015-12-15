@@ -4,7 +4,7 @@
     angular.module("ticketing")
     .directive('detail',['$state','myUsers',detail]);
 
-    function detail($state) {
+    function detail($state,myUsers) {
         return {
             restrict: 'E',
             bindToController: true,
@@ -23,6 +23,7 @@
                 var vmd = this;
 
                 vmd.showEvaluation = showEvaluation;
+                vmd.isIT = isIT;
                 vmd.evaluateTicket = evaluateTicket;
                 vmd.assignTicket = assignTicket;
 
@@ -40,6 +41,10 @@
                             return false;
                         }       
                     }
+                }
+
+                function isIT() {
+                    return myUsers.isIT();
                 }
 
                 function evaluateTicket() {
