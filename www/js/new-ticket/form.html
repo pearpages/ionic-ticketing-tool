@@ -32,7 +32,10 @@
         </label>
         </div>
 
-        {{vm.ticket.image}}
+        <div ng-show="vm.ticket.image !== null" class="item">
+            <img src="{{vm.ticket.image}}">
+        </div>
+        
 
         <button class="ion-button button button-block" ng-click="vm.getPicture()"><i class="icon ion-camera"></i></button>
         </ion-content>

@@ -160,6 +160,7 @@
                 self.description;
                 self.photo;
                 self.completed;
+                self.image;
                 self.requested;
                 self.it;
                 self.office; //office comes given by the who 'user'
@@ -169,6 +170,7 @@
                 activate();
 
                 function activate() {
+                    self.image = null;
                     self.requested = userid;
                     self.id = -1;
                     self.it = null;
