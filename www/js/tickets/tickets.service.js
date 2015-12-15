@@ -141,9 +141,7 @@
             }
         }
 
-        function make(aFactory,userid,options) {
-
-            options = options || {};
+        function make(aFactory,userid) {
 
             var Ticket = function (aFactory,userid,options){
 
@@ -156,10 +154,9 @@
                 self.notified;
                 self.who;
                 self.issue;
-                self.issueDescription;
+                self.issueDescription; //description copied from the issue object
                 self.description;
                 self.photo;
-                self.completed;
                 self.image;
                 self.comments;
                 self.requested;
@@ -178,21 +175,9 @@
                     self.it = null;
                     self.notified = null;
                     self.status = 'open';    
-                    if(options.status) {
-                        self.status =  options.status;
-                    }
                     self.express = false;
-                    if(options.express){
-                        self.express = options.express;
-                    }
                     self.who = null;
-                    if(options.who){
-                        self.who = options.who;
-                    }
                     self.issue = -1;
-                    if(options.issue){
-                        self.issue = options.issue;
-                    }
                     self.description = null;
                     self.photo = null;
                 }
