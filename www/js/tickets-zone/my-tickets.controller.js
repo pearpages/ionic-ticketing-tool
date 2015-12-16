@@ -22,17 +22,20 @@
 
             setView($state.params.view); 
             if(myUsers.getCurrentUser()){
-                var data = myTickets.getUserTickets(myUsers.getCurrentUser().id);
-
-                vm.who = new NgTableParams({count:data.who.length, sorting: {status:'desc',notified:'desc'}},{data: data.who, counts: []});
-                vm.requested = new NgTableParams({count:data.requested.length, sorting: {status:'desc',notified:'desc'}},{data: data.requested, counts: []});
-                vm.evaluate = new NgTableParams({count:data.evaluate.length, sorting: {notified:'asc'}},{data: data.evaluate, counts: []});
+                setView('my');
             }
             
         }
 
         function setView(view) {
-            myLoading.loading(function() {vm.view = view;});
+            myLoading.loading(function() {
+                var data = myTickets.getUserTickets(myUsers.getCurrentUser().id);
+
+                vm.who = new NgTableParams({count:data.who.length, sorting: {status:'desc',notified:'desc'}},{data: data.who, counts: []});
+                vm.requested = new NgTableParams({count:data.requested.length, sorting: {status:'desc',notified:'desc'}},{data: data.requested, counts: []});
+                vm.evaluate = new NgTableParams({count:data.evaluate.length, sorting: {notified:'asc'}},{data: data.evaluate, counts: []});
+                vm.view = view;
+            });
         }
 
         function viewDetail(ticketId,backButton) {
