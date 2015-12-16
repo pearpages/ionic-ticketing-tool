@@ -1,11 +1,13 @@
+<div ng-show="vm.form.message !== null " style="padding:4px;border-radius:4px; background-color:#fcbaba; color: #a00101; margin:8px 0;">{{vm.form.message}}</div>
+
 <label class="item item-input">
   <span class="input-label">Username</span>
-  <input type="text" ng-model="vm.form.userid">
+  <input ng-change="vm.hideErrorMessage()" type="text" ng-model="vm.form.userid">
 </label>
 
 <label class="item item-input">
   <span class="input-label">Password</span>
-  <input type="password" ng-model="vm.form.password">
+  <input ng-change="vm.hideErrorMessage()" type="password" ng-model="vm.form.password">
 </label>
 
 <button class="button button-block button-stable" ng-click="vm.validateUser()">
