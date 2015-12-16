@@ -89,7 +89,7 @@
                     res.evaluate.push(ticket);
                 }
             }
-            console.log(res.evaluate);
+
             return res;
         }
 

@@ -12,7 +12,9 @@ angular.module('ticketing', [
   'tickets-mocks',
   'helpdesk'
   ])
-
+.config(function($ionicConfigProvider) {
+  $ionicConfigProvider.views.transition('none');
+})
 .run(function($ionicPlatform,$state,myUsers) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

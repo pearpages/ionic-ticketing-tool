@@ -47,13 +47,13 @@
                 }
 
                 function save() {
-                    console.log('save',vmd.form.close);
+
                     if(vmd.form.close){
                         vmd.ticket.close();
                         vmd.form.close = false;
                     }
                     vmd.ticket.save();
-                    console.log(vmd.ticket);
+
                 }
 
                 function isIT() {
