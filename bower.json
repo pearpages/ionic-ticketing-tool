@@ -4,7 +4,8 @@
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.1.1",
     "ionic-platform-web-client": "~0.2.1",
-    "ng-table": "~0.8.3"
+    "ng-table": "~0.8.3",
+    "angular-mocks": "~1.4.8"
   },
   "dependencies": {
     "angular": "~1.4.3",
