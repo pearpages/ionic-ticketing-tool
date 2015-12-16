@@ -7,7 +7,7 @@
           .state(
             'tab.my-tickets' , {
                 url: '/my-tickets',
-                templateUrl: 'js/tickets-zone/my-tickets.html',
+                templateUrl: 'js/my-tickets/my-tickets.html',
                 controller: 'MyTicketsController',
                 controllerAs: 'vm',
                 params: {
@@ -17,7 +17,7 @@
           .state(
             'tab.evaluate' , {
                 url: '/my-tickets/eval/:id',
-                templateUrl: 'js/tickets-zone/evaluate.html',
+                templateUrl: 'js/my-tickets/evaluate.html',
                 controller: 'EvaluateController',
                 controllerAs: 'vm'
         });

@@ -1,0 +1,7 @@
+<ion-view view-title="My Tickets">
+        
+    <ng-include ng-show="vm.view === 'my' || vm.view === 'others' || vm.view === 'evaluate'" src="'js/my-tickets/lists.html'"></ng-include>
+
+    <ng-include ng-if="vm.view === 'detail' && vm.ticket !== null" src="'js/my-tickets/detail.html'"></ng-include>
+
+</ion-view>
