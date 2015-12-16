@@ -1,3 +1,10 @@
+/**
+ * 
+ * Account functionality:
+ * + validate user
+ * + show public user information
+ * + mock tickets
+ */
 (function() {
 	'use strict';
 

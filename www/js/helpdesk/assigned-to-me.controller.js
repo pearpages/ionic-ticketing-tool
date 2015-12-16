@@ -1,3 +1,6 @@
+/**
+ * Tickets assigned to the current IT member who is logged.
+ */
 (function() {
     'use strict';
 

@@ -1,3 +1,6 @@
+/**
+ * All User functionality
+ */
 (function() {
     'use strict';
     angular.module("ticketing-users",['angular-cache'])

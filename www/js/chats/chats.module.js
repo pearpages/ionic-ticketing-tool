@@ -1,3 +1,9 @@
+/**
+ *
+ * Unused module. Only for learning purposes.
+ * It is a good example for tabs and view inheritance.
+ * @see  js/chats/README.md
+ */
 (function() {
 	'use strict';
 

@@ -1,3 +1,7 @@
+/**
+ * Shows the IT Comments from a ticket <comments ticket="ticket"></comment>
+ * Also allows you to insert new comment if you are the IT member whose been assigned to the task.
+ */
 (function() {
 	'use strict';
 

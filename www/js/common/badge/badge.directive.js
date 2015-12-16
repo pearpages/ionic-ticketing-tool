@@ -1,3 +1,8 @@
+/**
+ *
+ * Given a ticket: <badge ticket="ticket"></badge>
+ * Renders an html badge with the appropiate color for its state
+ */
 (function() {
     'use strict';
 
@@ -26,6 +31,7 @@
                 activate();
                 
                 function activate() {
+                    //directives only activate once
                 }
 
                 function badgeColor() {

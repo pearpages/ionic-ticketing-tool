@@ -1,3 +1,6 @@
+/**
+ * Generates mock tickets
+ */
 (function() {
 	'use strict';
 

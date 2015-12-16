@@ -1,3 +1,7 @@
+/**
+ *
+ * Loading message that can execute a callback
+ */
 (function() {
 	'use strict';
 

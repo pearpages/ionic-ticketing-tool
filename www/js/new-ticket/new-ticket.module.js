@@ -1,3 +1,6 @@
+/**
+ * Creates a new ticket
+ */
 (function() {
 	'use strict';
 	angular.module("new-ticket",['my-tickets'])
