@@ -3,5 +3,5 @@
  */
 (function() {
     'use strict';
-    angular.module("my-tickets",[]);
+    angular.module("my-tickets",['ticketing-users','tickets-mocks']);
 })();
