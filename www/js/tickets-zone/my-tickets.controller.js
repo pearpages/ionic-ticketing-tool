@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module("tickets-zone")
-    .controller('MyTicketsController',['myUsers','myTickets','NgTableParams','$state',MyTicketsController]);
+    .controller('MyTicketsController',['myUsers','myTickets','NgTableParams','$state','myLoading',MyTicketsController]);
 
-    function MyTicketsController(myUsers,myTickets,NgTableParams,$state) {
+    function MyTicketsController(myUsers,myTickets,NgTableParams,$state,myLoading) {
         var vm = this;
 
         vm.who = null;
@@ -20,7 +20,7 @@
         function activate() {
             myUsers.isLogged();
 
-            vm.view = $state.params.view; 
+            setView($state.params.view); 
             if(myUsers.getCurrentUser()){
                 var data = myTickets.getUserTickets(myUsers.getCurrentUser().id);
 
@@ -32,7 +32,7 @@
         }
 
         function setView(view) {
-            vm.view = view;
+            myLoading.loading(function() {vm.view = view;});
         }
 
         function viewDetail(ticketId,backButton) {

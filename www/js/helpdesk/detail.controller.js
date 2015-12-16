@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module("helpdesk")
-    .controller('DetailController',['$state','myTickets',DetailController]);
+    .controller('DetailController',['$state','myTickets','myLoading',DetailController]);
 
-    function DetailController($state,myTickets) {
+    function DetailController($state,myTickets,myLoading) {
         var vm = this;
 
         vm.ticket = null;
@@ -14,8 +14,10 @@
         activate();
 
         function activate() {
-            vm.backTo = $state.params.back;
-            vm.ticket = myTickets.find($state.params.id);
+            myLoading.loading(function() {
+                vm.backTo = $state.params.back;
+                vm.ticket = myTickets.find($state.params.id);
+            });
         }
 
         function goBack() {

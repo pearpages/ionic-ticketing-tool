@@ -69,6 +69,9 @@
                 }
 
                 function isClosable() {
+                    if(vmd.ticket === null){
+                        return false;
+                    }
                     if(vmd.ticket.it === myUsers.getCurrentUser().id && vmd.ticket.status === 'open'){
                         return true;
                     }

@@ -33,6 +33,9 @@
 				}
 
 				function canAdd() {
+					if(vmd.ticket === null){
+						return null;
+					}
 					if(myUsers.getCurrentUser().id === vmd.ticket.it && vmd.ticket.status === 'open'){
 						return true;
 					}

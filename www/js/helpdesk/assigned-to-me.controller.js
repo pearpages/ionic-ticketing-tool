@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module("helpdesk")
-    .controller('AssignedToMeController',['myTickets','NgTableParams','$state',AssignedToMeController]);
+    .controller('AssignedToMeController',['myTickets','NgTableParams','$state','myLoading',AssignedToMeController]);
 
-    function AssignedToMeController(myTickets,NgTableParams,$state) {
+    function AssignedToMeController(myTickets,NgTableParams,$state,myLoading) {
         var vm = this;
 
         vm.myTickets = null;
@@ -13,8 +13,11 @@
         activate();
 
         function activate() {
-            var data = myTickets.getMine();
-            vm.notAssigned = new NgTableParams({count:data.length, sorting: {notified:'desc'}},{data: data, counts: []});
+            myLoading.loading(function() {
+                var data = myTickets.getMine();
+                vm.notAssigned = new NgTableParams({count:data.length, sorting: {notified:'desc'}},{data: data, counts: []});    
+            });
+            
         }
 
         function gotoDetail(ticket) {

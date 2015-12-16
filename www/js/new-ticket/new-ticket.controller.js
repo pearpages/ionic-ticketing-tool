@@ -10,9 +10,10 @@
         'UserMocks',
         '$cordovaCamera',
         '$ionicPlatform',
+        'myLoading',
         NewTicketController]);
 
-	function NewTicketController(myUsers,myTickets,$state,CategoriesMocks,UserMocks,$cordovaCamera,$ionicPlatform) {
+	function NewTicketController(myUsers,myTickets,$state,CategoriesMocks,UserMocks,$cordovaCamera,$ionicPlatform,myLoading) {
 		var vm = this;
 
 		vm.ticket = null;
@@ -33,20 +34,22 @@
         function activate() {
 
             if(myUsers.getCurrentUser()!== null){
-                vm.ticket = myTickets.make(myTickets,myUsers.getCurrentUser().id);
-                vm.me = myUsers.getCurrentUser().id;
-                vm.ticket.office = myUsers.getCurrentUser().office;    
+                myLoading.loading(function() {
+                    vm.ticket = myTickets.make(myTickets,myUsers.getCurrentUser().id);
+                    vm.me = myUsers.getCurrentUser().id;
+                    vm.ticket.office = myUsers.getCurrentUser().office;    
 
-                vm.seeExpress = (myUsers.getCurrentUser().role === 'admin' ||
-                myUsers.getCurrentUser().role === 'helpdesk') ? true : false;
+                    vm.seeExpress = (myUsers.getCurrentUser().role === 'admin' ||
+                        myUsers.getCurrentUser().role === 'helpdesk') ? true : false;
 
-                vm.view = 'form';
-                vm.users = UserMocks.getAllOffices();
-                vm.issues = CategoriesMocks.getAll();
+                    vm.view = 'form';
+                    vm.users = UserMocks.getAllOffices();
+                    vm.issues = CategoriesMocks.getAll();
+                });
             } else {
                 $state.go('tab.account');
             }
-                        
+            
         }
 
         function getIssueDescription(id) {
@@ -78,15 +81,15 @@
                   popoverOptions: CameraPopoverOptions,
                   saveToPhotoAlbum: false,
                   correctOrientation:true
-                };
+              };
 
-                $cordovaCamera.getPicture(options).then(function(imageData) {
+              $cordovaCamera.getPicture(options).then(function(imageData) {
                   
                   vm.ticket.image = "data:image/jpeg;base64," + imageData;
-                }, function(err) {
+              }, function(err) {
                   // error
-                });
-            });
+              });
+          });
         }
 
         function submit() {
@@ -95,5 +98,5 @@
             $state.go('tab.my-tickets');
         }
 
-	}
+    }
 })();
