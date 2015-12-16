@@ -1,3 +1,6 @@
+/**
+ * Creates a new ticket through a form
+ */
 (function() {
 	'use strict';
 

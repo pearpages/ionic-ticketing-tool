@@ -1,3 +1,6 @@
+/**
+ * Adds an evaluation mark to a ticket.
+ */
 (function() {
 	'use strict';
 

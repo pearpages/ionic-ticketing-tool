@@ -1,3 +1,6 @@
+/**
+ * Generates mock users
+ */
 (function() {
     'use strict';
 

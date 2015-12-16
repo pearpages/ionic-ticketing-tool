@@ -1,3 +1,6 @@
+/**
+ * Changes the tabs of the main menu depending on the user logged profile.
+ */
 (function() {
     'use strict';
 

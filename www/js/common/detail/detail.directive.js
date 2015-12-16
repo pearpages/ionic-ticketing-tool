@@ -1,3 +1,8 @@
+/**
+ * Displays all the information concerning a detail.
+ *
+ * The information varies depending on the user profile who's seeing it.
+ */
 (function() {
     'use strict';
 

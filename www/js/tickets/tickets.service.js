@@ -1,3 +1,11 @@
+/**
+ * Almost al the ticket logic is here:
+ * + create a new ticket
+ * + filter tickets
+ * + find ticket by id
+ *
+ * ...
+ */
 (function() {
     angular.module("my-tickets")
     .factory('myTickets',['CategoriesMocks','myUsers',myTickets]);

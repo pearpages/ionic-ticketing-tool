@@ -1,3 +1,6 @@
+/**
+ * Mocks all the Issue Categories
+ */
 (function() {
     'use strict';
 

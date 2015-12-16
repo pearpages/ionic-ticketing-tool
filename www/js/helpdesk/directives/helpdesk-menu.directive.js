@@ -1,3 +1,7 @@
+/**
+ *
+ * Menu for hepdesk functionality.
+ */
 (function() {
     'use strict';
 

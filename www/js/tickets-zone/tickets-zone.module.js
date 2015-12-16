@@ -1,3 +1,6 @@
+/**
+ * Functionality related to the tickets of the current logged user.
+ */
 (function() {
     'use strict';
     angular.module("tickets-zone",[])
