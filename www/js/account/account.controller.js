@@ -31,7 +31,15 @@
 		}
 
 		function mock() {
-			myTicketsMocks.mockTickets(50,myTickets,vm.user.id); 
+			$ionicLoading.show({
+				template: 'Mocking...'
+			});
+
+			$timeout(function() {
+				myTicketsMocks.mockTickets(50,myTickets,vm.user.id); 
+				$ionicLoading.hide();				
+			},1000);
+			
 		}
 
 		function showLoading() {
@@ -45,7 +53,6 @@
 				vm.user = myUsers.validateUser(vm.form.userid,vm.form.password);
 				if(vm.user === null){
 					vm.form.message = 'Wrong password';
-					console.log(vm.user,vm.form.message);
 				}else{
 					$state.reload();
 				}
