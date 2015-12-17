@@ -18,6 +18,15 @@ You can run it in local just using the ionic command serve:
 ionic serve
 ```
 
+## Mock Users
+
+The following users can be used to test the **app**. User: Password.
+
+```
+user: user
+helpdesk: helpdesk
+```
+
 ## Models
 
 ### Users
