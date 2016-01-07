@@ -1,12 +1,10 @@
+var tickets = require('../controllers/tickets');
+
 module.exports = function(app) {
 
-    app.get('/ticket/id/:id', function(req,res) {
-        res.send(req.params.id);
-    });
+    app.get('/ticket/id/:id', tickets.getTicket);
 
-    app.get('/tickets/status/:status/userid/:userid', function(req,res) {
-    	res.send(req.params);
-    });
+    app.get('/tickets/status/:status/userid/:userid', tickets.getTickets);
 
     app.get('*', function(req, res) {
         res.status(404);
