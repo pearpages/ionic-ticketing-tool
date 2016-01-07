@@ -1,3 +1,7 @@
+/**
+ * 
+ * Logging a User and mocking tickets
+ */
 (function() {
 	'use strict';
 
@@ -9,7 +13,10 @@
 		var vm = this;
 
 		vm.user = null;
-		vm.form = null;
+		vm.form = {};
+		vm.form.userid = null;
+		vm.form.password = null;
+		vm.form.message = null;
 		vm.validateUser = validateUser;
 		vm.hideErrorMessage = hideErrorMessage;
 		vm.logout = logout;
@@ -19,10 +26,6 @@
 
 		function activate() 
 		{	
-			vm.form = {};
-			vm.form.userid = null;
-			vm.form.password = null;
-			vm.form.message = null;
 			vm.user = myUsers.getCurrentUser();
 		}
 

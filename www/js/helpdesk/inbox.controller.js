@@ -1,3 +1,6 @@
+/**
+ * New tickets not assigned yet
+ */
 (function() {
     'use strict';
 

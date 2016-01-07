@@ -1,3 +1,6 @@
+/**
+ * Ticket detail information for a given :id
+ */
 (function() {
     'use strict';
 

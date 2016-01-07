@@ -1,3 +1,6 @@
+/**
+ * Changes the menus, highlights the tabs we navigate.
+ */
 (function() {
 	'use strict';
 	angular.module("ticketing-layout",[])

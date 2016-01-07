@@ -1,3 +1,6 @@
+/**
+ * Shows the tickets that are related to the current logged user
+ */
 (function() {
     'use strict';
 

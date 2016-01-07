@@ -1,3 +1,6 @@
+/**
+ * It's used to show stars for the evaluation mark.
+ */
 (function() {
     'use strict';
 
@@ -16,8 +19,6 @@
             templateUrl: 'js/common/stars/stars.html',
         };
         
-            //call ang-link if needed
-            
             function controller() {
                 var vmd = this;
 
@@ -26,6 +27,7 @@
                 activate();
                 
                 function activate() {
+                    //directives only activate once
                 }
 
                 function getStars() {

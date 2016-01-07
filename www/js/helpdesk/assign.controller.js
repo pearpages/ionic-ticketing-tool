@@ -1,3 +1,6 @@
+/**
+ * Assign an IT member to a ticket.
+ */
 (function() {
     'use strict';
 

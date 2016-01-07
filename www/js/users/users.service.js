@@ -1,3 +1,6 @@
+/**
+ * Information about the user who is using the app
+ */
 (function() {
     'use strict';
 

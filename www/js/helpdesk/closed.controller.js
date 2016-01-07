@@ -1,3 +1,6 @@
+/**
+ * All closed tickets.
+ */
 (function() {
     'use strict';
 

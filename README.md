@@ -10,6 +10,23 @@ I usually put in the .git-ignore the sublime project file. But this time I've ju
 After updating dependencies via **bower update** you have to do **ionic io init** again in order to set the current settings for your services.
 ```
 
+## Usage
+
+You can run it in local just using the ionic command serve:
+
+```bash
+ionic serve
+```
+
+## Mock Users
+
+The following users can be used to test the **app**. User: Password.
+
+```
+user: user
+helpdesk: helpdesk
+```
+
 ## Models
 
 ### Users
@@ -28,25 +45,26 @@ After updating dependencies via **bower update** you have to do **ionic io init*
 
 + Helpdesk
 	+ See the total of tickets
-	+ Flag a ticket
+	+ Flag a ticket*
 	+ Send an email (only link to an email)
-	+ See the number of currently opened tickets
+	+ See the number of currently opened tickets*
 	+ Create an express ticket*
 	+ Assign a ticket
 	+ Comment a ticket
 	+ Close a ticket
-	+ Re-open a ticket
-	+ Send follow-up message
+	+ Send follow-up message*
 	+ See detail of a ticket
 	+ See tickets
-		+ Filter by office
+		+ Filter by office*
 		+ Filter by my assigned tickets
 		+ Closed Tickets 
-	
+
 + Admin
-	+ See statistics
-	+ CRUD Categories
+	+ See statistics*
+	+ CRUD Categories*
 	+ Delete a ticket
+
+*pending
 
 ### Helpdesk
 
