@@ -13,15 +13,15 @@ var ticketSchema = new Schema({
     express: {
         type: Boolean,
         default: false
-    }
+    },
     status: {
         type: String,
         default: 'open'
-    }
+    },
     notified: {
         type: Date,
         default: Date.now
-    }
+    },
     who: {
         type: String,
         required: true
@@ -37,17 +37,17 @@ var ticketSchema = new Schema({
     },
     description: {
         type: String
-    }
+    },
     closed: {
         type: Date
-    }
+    },
     evaluation: Number,
     image: String,
-    comments: [commentSchema]
+    comments: [commentSchema],
     requested: {
         type: String,
         required: true
-    }
+    },
     it: String,
     office: String //office comes given by the who 'user'
 });
@@ -55,9 +55,9 @@ var ticketSchema = new Schema({
 ticketSchema.methods.isCompleted = function() {
     var res;
     if (this.who !== null && this.issue > -1) {
-        return res = true;
+        res = true;
     } else {
-        return res = false;
+        res = false;
     }
     return res;
 };
@@ -79,5 +79,9 @@ var Ticket = mongoose.model('Ticket',ticketSchema);
 exports.Ticket = Ticket;
 
 exports.getTicket = function(ticketid) {
-    return Ticket.find({_id: ticketid});
-}
+    var ticket;
+    Ticket.findOne({_id: ticketid}, function (err, res) {
+        ticket = res;
+    });
+    return ticket;
+};
