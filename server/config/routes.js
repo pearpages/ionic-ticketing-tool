@@ -1,7 +1,11 @@
 module.exports = function(app) {
 
-    app.get('/ticket/:id', function(req,res) {
-        res.send(req.id);
+    app.get('/ticket/id/:id', function(req,res) {
+        res.send(req.params.id);
+    });
+
+    app.get('/tickets/status/:status/userid/:userid', function(req,res) {
+    	res.send(req.params);
     });
 
     app.get('*', function(req, res) {
