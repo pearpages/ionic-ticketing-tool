@@ -77,11 +77,3 @@ ticketSchema.methods.addComment = function(text) {
 var Ticket = mongoose.model('Ticket',ticketSchema);
 
 exports.Ticket = Ticket;
-
-exports.getTicket = function(ticketid) {
-    var ticket;
-    Ticket.findOne({_id: ticketid}, function (err, res) {
-        ticket = res;
-    });
-    return ticket;
-};

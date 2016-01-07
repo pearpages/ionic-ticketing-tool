@@ -6,6 +6,8 @@ module.exports = function(app) {
 
     app.get('/tickets/status/:status/userid/:userid', tickets.getTickets);
 
+    app.get('/tickets', tickets.getAll);
+
     app.get('/tickets/remove', tickets.remove);
 
     app.post('/ticket', tickets.saveTicket);
