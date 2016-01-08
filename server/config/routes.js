@@ -10,6 +10,8 @@ module.exports = function(app) {
 
     app.get('/ticket/id/:id', tickets.getTicket);
 
+    app.post('/ticket', tickets.saveTicket);
+
     app.get('/tickets/status/:status/userid/:userid', tickets.getTickets);
 
     app.get('/tickets', tickets.getAll);

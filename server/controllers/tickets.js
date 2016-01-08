@@ -69,3 +69,10 @@ exports.getAllUserTickets = function(req,res) {
     });
     
 };
+exports.saveTicket = function(req,res) {
+    var data = req.body;
+    var ticket = new Ticket.Ticket(data);
+    ticket.save(function success(){
+        res.send(ticket);
+    });
+};

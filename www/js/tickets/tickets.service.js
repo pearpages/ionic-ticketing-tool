@@ -136,11 +136,23 @@
         }
 
         function save(ticket) {
-            if (ticket._id === undefined) {
-                ticket.notified = new Date();
-                lastId++;
-                ticket._id = lastId;
-                tickets[lastId] = ticket;
+            if (server === false) {
+                if (ticket._id === undefined) {
+                    ticket.notified = new Date();
+                    lastId++;
+                    ticket._id = lastId;
+                    tickets[lastId] = ticket;
+                }
+            } else {
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost:3030/ticket',
+                    data: ticket
+                }, function success(response) {
+                    console.log(response);
+                }, function error(response) {
+                    console.log(response);
+                });
             }
         }
 
