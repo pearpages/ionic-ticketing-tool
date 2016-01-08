@@ -72,8 +72,9 @@
 
         function viewDetail(ticketId, backButton) {
 
-            vm.ticketDetail = myTickets.find(ticketId).then(function success(response) {
-                return response.data;
+            myTickets.find(ticketId).then(function success(response) {
+                vm.ticketDetail = response.data;
+                console.log(vm.ticketDetail);
             }, function error(response) {
                 console.log(response);
             });

@@ -121,7 +121,7 @@
         }
 
         function find(id) {
-            deferred = $q.defer;
+            deferred = $q.defer();
             if (server === false) {
                 deferred.resolve({
                     data: tickets[id]
@@ -129,8 +129,8 @@
                 return deferred.promise;
             } else {
                 return $http({
-                    method: GET,
-                    url: 'http://localhost:3030/ticket/' + id
+                    method: 'GET',
+                    url: 'http://localhost:3030/ticket/id/' + id
                 });
             }
         }
