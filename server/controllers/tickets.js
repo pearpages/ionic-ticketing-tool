@@ -50,3 +50,22 @@ exports.saveTicket = function(req, res) {
         res.send(ticket);
     });
 };
+exports.getAllUserTickets = function(req,res) {
+    var userid = req.params.userid;
+
+    var json = {};
+    json.evaluate = [];
+    Ticket.Ticket.find({who: userid}, function (err,result) {
+        json.who = result;
+        for(var i = 0; i < json.who.length; i++){
+            if(json.who[i].evaluation === null){
+                json.evaluate.push(json.who[i]);
+            }
+        }
+        Ticket.Ticket.find({requested: userid}, function (err,result) {
+            json.requested = result;
+            res.send(json);
+        });
+    });
+    
+};

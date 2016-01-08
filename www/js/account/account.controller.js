@@ -6,9 +6,9 @@
 	'use strict';
 
 	angular.module("ticketing-account")
-	.controller('AccountController',['$state','myUsers','myTickets','myTicketsMocks','$ionicLoading','$timeout',AccountController]);
+	.controller('AccountController',['$state','myUsers','myTickets','myTicketsMocks','$ionicLoading','$timeout','$http',AccountController]);
 
-	function AccountController($state,myUsers,myTickets,myTicketsMocks,$ionicLoading,$timeout) {
+	function AccountController($state,myUsers,myTickets,myTicketsMocks,$ionicLoading,$timeout,$http) {
 
 		var vm = this;
 
@@ -21,6 +21,7 @@
 		vm.hideErrorMessage = hideErrorMessage;
 		vm.logout = logout;
 		vm.mock = mock;
+		vm.mockServer = mockServer;
 
 		activate();
 
@@ -43,6 +44,21 @@
 				$ionicLoading.hide();				
 			},1000);
 			
+		}
+
+		function mockServer() {
+			$ionicLoading.show({
+				template: 'Mocking...'
+			});
+
+			$http({method: 'GET', url: 'http://localhost:3030/tickets/status/all/userid/'+vm.user.id})
+			.then(function (success) {
+				console.log(success);
+				myTickets.serverOn();
+				$ionicLoading.hide();
+			}, function(err){
+				console.log(err);
+			});
 		}
 
 		function showLoading() {

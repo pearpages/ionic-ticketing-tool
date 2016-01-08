@@ -8,13 +8,14 @@
  */
 (function() {
     angular.module("my-tickets")
-    .factory('myTickets',['CategoriesMocks','myUsers',myTickets]);
+        .factory('myTickets', ['CategoriesMocks', 'myUsers','$http', '$q',myTickets]);
 
-    function myTickets(CategoriesMocks,myUsers) {
+    function myTickets(CategoriesMocks, myUsers, $http, $q) {
 
         var self = this;
         var lastId = 0;
         var tickets = {};
+        var server = false;
 
         activate();
 
@@ -26,7 +27,8 @@
             size: size,
             getNotAssigned: getNotAssigned,
             getClosed: getClosed,
-            getMine: getMine
+            getMine: getMine,
+            serverOn: serverOn
         };
 
 
@@ -34,14 +36,18 @@
 
         }
 
+        function serverOn() {
+            server = true;
+        }
+
         function getMine() {
             var mine = [];
             var me = myUsers.getCurrentUser().id;
 
             var ticket;
-            for(var id in tickets){
+            for (var id in tickets) {
                 ticket = tickets[id];
-                if(ticket.it === me && ticket.status === 'open'){
+                if (ticket.it === me && ticket.status === 'open') {
                     mine.push(ticket);
                 }
             }
@@ -53,9 +59,9 @@
             var closed = [];
 
             var ticket;
-            for(var id in tickets){
+            for (var id in tickets) {
                 ticket = tickets[id];
-                if(ticket.status === 'closed'){
+                if (ticket.status === 'closed') {
                     closed.push(ticket);
                 }
             }
@@ -66,8 +72,8 @@
 
         function getNotAssigned() {
             var notAssigned = [];
-            for(var id in tickets){
-                if(tickets[id].it === null){
+            for (var id in tickets) {
+                if (tickets[id].it === null) {
                     notAssigned.push(tickets[id]);
                 }
             }
@@ -80,25 +86,36 @@
 
         function getUserTickets(userid) {
 
-            var res = {};
-            res.who = [];
-            res.evaluate = [];
-            res.requested = [];
-            var ticket;
-            for(var id in tickets){
-                ticket = tickets[id];
-                if(ticket.who === userid){
-                    res.who.push(ticket);
+            if (server === false) {
+                var deferred = $q.defer();
+                var res = {};
+                res.who = [];
+                res.evaluate = [];
+                res.requested = [];
+                var ticket;
+                for (var id in tickets) {
+                    ticket = tickets[id];
+                    if (ticket.who === userid) {
+                        res.who.push(ticket);
+                    }
+                    if (ticket.requested === userid && ticket.who !== userid) {
+                        res.requested.push(ticket);
+                    }
+                    if (ticket.evaluation === null && ticket.status === 'closed' && ticket.who === userid) {
+                        res.evaluate.push(ticket);
+                    }
                 }
-                if(ticket.requested === userid && ticket.who !== userid){
-                    res.requested.push(ticket);
-                }
-                if(ticket.evaluation === null && ticket.status === 'closed' && ticket.who === userid) {
-                    res.evaluate.push(ticket);
-                }
+
+                deferred.resolve({data: res});
+
+                return deferred.promise;
+            } else {
+                return $http({
+                    method: 'GET',
+                    url: 'http://localhost:3030/tickets/user/'+userid
+                });
             }
 
-            return res;
         }
 
         function find(id) {
@@ -106,17 +123,17 @@
         }
 
         function save(ticket) {
-            if(ticket.id === -1){
-                ticket.notified = new Date();    
+            if (ticket.id === -1) {
+                ticket.notified = new Date();
                 lastId++;
                 ticket.id = lastId;
                 tickets[lastId] = ticket;
             }
         }
 
-        function make(aFactory,userid) {
+        function make(aFactory, userid) {
 
-            return new myModels.Ticket(aFactory,userid);
+            return new myModels.Ticket(aFactory, userid);
         }
     }
 
