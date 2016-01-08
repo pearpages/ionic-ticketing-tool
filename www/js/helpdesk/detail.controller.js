@@ -19,7 +19,11 @@
         function activate() {
             myLoading.loading(function() {
                 vm.backTo = $state.params.back;
-                vm.ticket = myTickets.find($state.params.id);
+                myTickets.find($state.params.id).then(function success(response) {
+                    vm.ticket = response.data;
+                },function error(response) {
+                    console.log(response);
+                });
             });
         }
 

@@ -130,18 +130,19 @@
             } else {
                 return $http({
                     method: 'GET',
-                    url: 'http://localhost:3030/ticket/id/' + id
+                    url: 'http://localhost:3030/ticket/id/' + id + '?random=' + Math.random()
                 });
             }
         }
 
-        function save(ticket) {
+        function save(ticket, callback) {
             if (server === false) {
                 if (ticket._id === undefined) {
                     ticket.notified = new Date();
                     lastId++;
                     ticket._id = lastId;
                     tickets[lastId] = ticket;
+                    callback();
                 }
             } else {
                 $http({
@@ -152,6 +153,8 @@
                     console.log(response);
                 }, function error(response) {
                     console.log(response);
+                }).then(function (){
+                    callback();
                 });
             }
         }

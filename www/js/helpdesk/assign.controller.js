@@ -19,7 +19,12 @@
 
         function activate() {
             vm.currentUser = myUsers.getCurrentUser();
-            vm.ticket = myTickets.find($state.params.id);
+            myTickets.find($state.params.id)
+            .then(function success(response) {
+                vm.ticket = response.data;
+            },function error(response){
+                console.log(response);
+            });
             if(vm.ticket === undefined){
                 vm.ticket = {};
                 vm.ticket.it = null;
@@ -28,7 +33,9 @@
         }
 
         function goBack() {
-            $state.go('tab.ticket-detail', {id: vm.ticket._id});
+            myTickets.save(vm.ticket, function() {
+                $state.go('tab.ticket-detail', {id: vm.ticket._id});    
+            });
         }
 
         function transformName(name) {
