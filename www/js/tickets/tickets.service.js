@@ -8,7 +8,7 @@
  */
 (function() {
     angular.module("my-tickets")
-        .factory('myTickets', ['CategoriesMocks', 'myUsers','$http', '$q',myTickets]);
+        .factory('myTickets', ['CategoriesMocks', 'myUsers', '$http', '$q', myTickets]);
 
     function myTickets(CategoriesMocks, myUsers, $http, $q) {
 
@@ -106,27 +106,40 @@
                     }
                 }
 
-                deferred.resolve({data: res});
+                deferred.resolve({
+                    data: res
+                });
 
                 return deferred.promise;
             } else {
                 return $http({
                     method: 'GET',
-                    url: 'http://localhost:3030/tickets/user/'+userid
+                    url: 'http://localhost:3030/tickets/user/' + userid
                 });
             }
 
         }
 
         function find(id) {
-            return tickets[id];
+            deferred = $q.defer;
+            if (server === false) {
+                deferred.resolve({
+                    data: tickets[id]
+                });
+                return deferred.promise;
+            } else {
+                return $http({
+                    method: GET,
+                    url: 'http://localhost:3030/ticket/' + id
+                });
+            }
         }
 
         function save(ticket) {
-            if (ticket.id === -1) {
+            if (ticket._id === undefined) {
                 ticket.notified = new Date();
                 lastId++;
-                ticket.id = lastId;
+                ticket._id = lastId;
                 tickets[lastId] = ticket;
             }
         }

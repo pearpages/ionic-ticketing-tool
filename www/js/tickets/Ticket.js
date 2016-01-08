@@ -5,7 +5,7 @@ myModels.Ticket = function (aFactory,userid){
                 var self = this;
                 var factory = aFactory;
 
-                self.id;
+                self._id;
                 self.express;
                 self.status;
                 self.notified;
@@ -32,7 +32,7 @@ myModels.Ticket = function (aFactory,userid){
                     self.image = null;
                     self.closed = null;
                     self.requested = userid;
-                    self.id = -1;
+                    self._id = undefined;
                     self.comments = [];
                     self.it = null;
                     self.evaluation = null;

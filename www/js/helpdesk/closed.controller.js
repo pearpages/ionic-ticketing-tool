@@ -22,7 +22,7 @@
         }
 
         function gotoDetail(ticket) {
-            $state.go('tab.ticket-detail', {id: ticket.id, back: 'tab.last-closed'});
+            $state.go('tab.ticket-detail', {id: ticket._id, back: 'tab.last-closed'});
         }
     }
 })();

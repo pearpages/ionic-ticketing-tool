@@ -66,11 +66,11 @@
                 }
 
                 function evaluateTicket() {
-                    $state.go('tab.evaluate',{id: vmd.ticket.id});
+                    $state.go('tab.evaluate',{id: vmd.ticket._id});
                 }
 
                 function assignTicket() {
-                    $state.go('tab.assign',{id: vmd.ticket.id});
+                    $state.go('tab.assign',{id: vmd.ticket._id});
                 }
 
                 function isClosable() {

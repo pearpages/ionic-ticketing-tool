@@ -28,7 +28,7 @@ describe('tickets service',function () {
     it('should find a ticket by id in the struct of tickets', function() {
         var ticket = myTickets.make(myTickets,'ppages');
         myTickets.save(ticket);
-        expect(myTickets.find(ticket.id)).toBe(ticket);
+        expect(myTickets.find(ticket._id)).toBe(ticket);
     });
 
     it('should get the tickets from the tickets struct for a given userid', function() {
