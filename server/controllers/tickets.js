@@ -59,12 +59,12 @@ exports.getAllUserTickets = function(req, res) {
     }, function(err, result) {
         json.who = result;
         for (var i = 0; i < json.who.length; i++) {
-            if (json.who[i].evaluation === null) {
+            if (json.who[i].evaluation === null && json.who[i].status === 'closed') {
                 json.evaluate.push(json.who[i]);
             }
         }
         Ticket.Ticket.find({
-            requested: userid
+            requested: userid,who:{$ne:userid}
         }, function(err, result) {
             json.requested = result;
             res.send(json);
