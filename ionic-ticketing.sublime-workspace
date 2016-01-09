@@ -557,34 +557,31 @@
 	"expanded_folders":
 	[
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/hooks/after_prepare",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/config",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/controllers",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/models",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/new-ticket",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/tickets"
+		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/common/detail"
 	],
 	"file_history":
 	[
+		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/tickets/tickets.service.js",
+		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/assign.controller.js",
+		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/controllers/tickets.js",
+		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/detail.controller.js",
+		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/detail.html",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/models/Ticket.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/tickets/Ticket.js",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/controllers/tickets.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/config/routes.js",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/tickets/tickets.service.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/my-tickets/my-tickets.controller.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/my-tickets/detail.html",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/my-tickets/evaluate.html",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/my-tickets/lists.html",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/tickets/tickets.service.spec.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/inbox.controller.js",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/detail.html",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/closed.controller.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/assigned-to-me.controller.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/assign.html",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/assign.controller.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/common/detail/detail.directive.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/account/account.controller.js",
@@ -695,8 +692,7 @@
 		"/C/Users/ppages/Desktop/gulp-examples/docs/gulp-api.md",
 		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/user-list.html",
 		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/user-list.controller.js",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/directives/user-list.directive.js",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/routing.js"
+		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/directives/user-list.directive.js"
 	],
 	"find":
 	{
@@ -720,6 +716,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"save",
 			".save",
 			".id",
 			"save",
@@ -846,8 +843,7 @@
 			"collapse",
 			"<select><option value='pending'>Pending</option><option value='na'>N/A</option><option value='Issued'>Issued</option></select><button>Upload</button>",
 			"<option>Status</option>",
-			"collapse",
-			"<td class=\"non-mandatory-section\"><select><option>Status</option></select><button>Upload</button></td>"
+			"collapse"
 		],
 		"highlight": true,
 		"in_selection": false,

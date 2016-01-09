@@ -142,7 +142,9 @@
                     lastId++;
                     ticket._id = lastId;
                     tickets[lastId] = ticket;
-                    callback();
+                    if(callback){
+                        callback();
+                    }
                 }
             } else {
                 $http({
