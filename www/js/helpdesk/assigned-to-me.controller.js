@@ -5,9 +5,9 @@
     'use strict';
 
     angular.module("helpdesk")
-    .controller('AssignedToMeController',['myTickets','NgTableParams','$state','myLoading',AssignedToMeController]);
+        .controller('AssignedToMeController', ['myTickets', 'NgTableParams', '$state', 'myLoading', AssignedToMeController]);
 
-    function AssignedToMeController(myTickets,NgTableParams,$state,myLoading) {
+    function AssignedToMeController(myTickets, NgTableParams, $state, myLoading) {
         var vm = this;
 
         vm.myTickets = null;
@@ -17,14 +17,29 @@
 
         function activate() {
             myLoading.loading(function() {
-                var data = myTickets.getMine();
-                vm.notAssigned = new NgTableParams({count:data.length, sorting: {notified:'desc'}},{data: data, counts: []});    
+                myTickets.getMine().then(function success(response) {
+                    var data = response.data;
+                    vm.notAssigned = new NgTableParams({
+                        count: data.length,
+                        sorting: {
+                            notified: 'desc'
+                        }
+                    }, {
+                        data: data,
+                        counts: []
+                    });
+                }, function error(response) {
+                    console.log(response);
+                });
             });
-            
+
         }
 
         function gotoDetail(ticket) {
-            var params = {id: ticket._id, back: 'tab.assigned-to-me'};
+            var params = {
+                id: ticket._id,
+                back: 'tab.assigned-to-me'
+            };
             $state.go('tab.ticket-detail', params);
         }
     }

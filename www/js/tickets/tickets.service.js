@@ -41,18 +41,29 @@
         }
 
         function getMine() {
-            var mine = [];
-            var me = myUsers.getCurrentUser().id;
+            if (server === false) {
+                var deferred = $q.defer();
+                var mine = [];
+                var me = myUsers.getCurrentUser().id;
 
-            var ticket;
-            for (var id in tickets) {
-                ticket = tickets[id];
-                if (ticket.it === me && ticket.status === 'open') {
-                    mine.push(ticket);
+                var ticket;
+                for (var id in tickets) {
+                    ticket = tickets[id];
+                    if (ticket.it === me && ticket.status === 'open') {
+                        mine.push(ticket);
+                    }
                 }
+
+                deferred.resolve({data:mine});
+
+                return deferred.promise;
+            } else {
+                return $http({
+                    method: 'GET',
+                    url: 'http://localhost:3030/helpdesk/assigned/'+ myUsers.getCurrentUser().id + '?random=' + Math.random()
+                });
             }
 
-            return mine;
         }
 
         function getClosed() {
