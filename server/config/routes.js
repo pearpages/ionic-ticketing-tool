@@ -14,6 +14,8 @@ module.exports = function(app) {
 
     app.get('/tickets/status/:status/userid/:userid', tickets.getTickets);
 
+    app.get('/tickets/mock/user/:userid', tickets.mock);
+
     app.get('/tickets', tickets.getAll);
 
     app.get('/tickets/user/:userid', tickets.getAllUserTickets);

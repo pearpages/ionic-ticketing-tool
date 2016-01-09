@@ -72,6 +72,11 @@ exports.getAllUserTickets = function(req, res) {
     });
 
 };
+exports.mock = function(req,res) {
+    var userid = req.params.userid;
+    require('../utilities/mock/tickets').mock(100,userid);
+    res.send('mocked');
+};
 exports.saveTicket = function(req, res) {
     var data = req.body;
     if (req.body._id === undefined) {
