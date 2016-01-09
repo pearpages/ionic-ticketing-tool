@@ -54,31 +54,46 @@
                     }
                 }
 
-                deferred.resolve({data:mine});
+                deferred.resolve({
+                    data: mine
+                });
 
                 return deferred.promise;
             } else {
                 return $http({
                     method: 'GET',
-                    url: 'http://localhost:3030/helpdesk/assigned/'+ myUsers.getCurrentUser().id + '?random=' + Math.random()
+                    url: 'http://localhost:3030/helpdesk/assigned/' + myUsers.getCurrentUser().id + '?random=' + Math.random()
                 });
             }
 
         }
 
         function getClosed() {
-            var closed = [];
+            if (server === false) {
+                var deferred = $q.defer();
 
-            var ticket;
-            for (var id in tickets) {
-                ticket = tickets[id];
-                if (ticket.status === 'closed') {
-                    closed.push(ticket);
+                var closed = [];
+
+                var ticket;
+                for (var id in tickets) {
+                    ticket = tickets[id];
+                    if (ticket.status === 'closed') {
+                        closed.push(ticket);
+                    }
                 }
+
+                deferred.resolve({
+                    data: closed
+                });
+
+                return deferred.promise;
+            } else {
+
+                return $http({
+                    method: 'GET',
+                    url: 'http://localhost:3030/helpdesk/closed?random=' + Math.random()
+                });
             }
-
-            return closed;
-
         }
 
         function getNotAssigned() {

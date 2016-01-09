@@ -5,9 +5,9 @@
     'use strict';
 
     angular.module("helpdesk")
-    .controller('ClosedController',['myTickets','NgTableParams','$state','myLoading',ClosedController]);
+        .controller('ClosedController', ['myTickets', 'NgTableParams', '$state', 'myLoading', ClosedController]);
 
-    function ClosedController(myTickets,NgTableParams,$state,myLoading) {
+    function ClosedController(myTickets, NgTableParams, $state, myLoading) {
         var vm = this;
 
         vm.closedTickets = null;
@@ -16,13 +16,28 @@
 
         function activate() {
             myLoading.loading(function() {
-                var data = myTickets.getClosed();
-                vm.closedTickets = new NgTableParams({count:data.length, sorting: {notified:'desc'}},{data: data, counts: []});
+                myTickets.getClosed().then(function success(response) {
+                    var data = response.data;
+                    vm.closedTickets = new NgTableParams({
+                        count: data.length,
+                        sorting: {
+                            notified: 'desc'
+                        }
+                    }, {
+                        data: data,
+                        counts: []
+                    });
+                }, function error(response) {
+                    console.log(response);
+                });
             });
         }
 
         function gotoDetail(ticket) {
-            $state.go('tab.ticket-detail', {id: ticket._id, back: 'tab.last-closed'});
+            $state.go('tab.ticket-detail', {
+                id: ticket._id,
+                back: 'tab.last-closed'
+            });
         }
     }
 })();
