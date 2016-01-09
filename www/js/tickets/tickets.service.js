@@ -196,7 +196,9 @@
                 }, function error(response) {
                     console.log(response);
                 }).then(function() {
-                    callback();
+                    if(typeof callback === 'function'){
+                        callback();    
+                    }
                 });
             }
         }
