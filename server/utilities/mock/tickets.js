@@ -2,22 +2,15 @@ var Ticket = require('../../models/Ticket');
 var CategoriesMocks = require('./categories');
 
 exports.mock = function(howMany, userid) {
-    var ticket = Ticket.Ticket;
-    var total;
-    ticket.find({}, function(err, results) {
-        if (results.length === 0) {
-            var ticket;
-            for (var i = 0; i < howMany; i++) {
-                ticket = new Ticket.Ticket(mock(userid));
-                ticket.save(function(err) {
-                    if (err) {
-                        console.log(err);
-                    }
-                });
+    var ticket;
+    for (var i = 0; i < howMany; i++) {
+        ticket = new Ticket.Ticket(mock(userid));
+        ticket.save(function(err) {
+            if (err) {
+                console.log(err);
             }
-        }
-    });
-
+        });
+    }
 };
 
 function mock(userid) {

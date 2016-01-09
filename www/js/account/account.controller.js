@@ -27,6 +27,7 @@
 
         function activate() {
             vm.user = myUsers.getCurrentUser();
+            myTickets.setServer(true);
         }
 
         function hideErrorMessage() {
@@ -38,6 +39,7 @@
                 template: 'Mocking...'
             });
 
+            myTickets.setServer(false);
             $timeout(function() {
                 myTicketsMocks.mockTickets(50, myTickets, vm.user.id);
                 $ionicLoading.hide();
@@ -54,19 +56,11 @@
                 method: 'GET',
                 url: 'http://localhost:3030/tickets/mock/user/' + vm.user.id
             }).then(function(success) {
-                $http({
-                        method: 'GET',
-                        url: 'http://localhost:3030/tickets/status/all/userid/' + vm.user.id
-                    })
-                    .then(function(success) {
-                        console.log(success);
-                        myTickets.serverOn();
-                        $ionicLoading.hide();
-                    }, function(err) {
-                        console.log(err);
-                    });
+                console.log(success);
+                $ionicLoading.hide();
+            }, function(err) {
+                console.log(err);
             });
-
         }
 
         function showLoading() {

@@ -28,7 +28,7 @@
             getNotAssigned: getNotAssigned,
             getClosed: getClosed,
             getMine: getMine,
-            serverOn: serverOn
+            setServer: setServer
         };
 
 
@@ -36,8 +36,8 @@
 
         }
 
-        function serverOn() {
-            server = true;
+        function setServer(status) {
+            server = status;
         }
 
         function getMine() {
@@ -71,13 +71,27 @@
         }
 
         function getNotAssigned() {
-            var notAssigned = [];
-            for (var id in tickets) {
-                if (tickets[id].it === null) {
-                    notAssigned.push(tickets[id]);
+            if (server === false) {
+                var deferred = $q.defer();
+
+                var notAssigned = [];
+                for (var id in tickets) {
+                    if (tickets[id].it === null) {
+                        notAssigned.push(tickets[id]);
+                    }
                 }
+                deferred.resolve({
+                    data: notAssigned
+                });
+
+                return deferred.promise;
+            } else {
+                return $http({
+                    method: 'GET',
+                    url: 'http://localhost:3030/helpdesk/not-assigned?remote=' + Math.random()
+                });
             }
-            return notAssigned;
+
         }
 
         function size() {
@@ -142,7 +156,7 @@
                     lastId++;
                     ticket._id = lastId;
                     tickets[lastId] = ticket;
-                    if(callback){
+                    if (callback) {
                         callback();
                     }
                 }
@@ -155,7 +169,7 @@
                     console.log(response);
                 }, function error(response) {
                     console.log(response);
-                }).then(function (){
+                }).then(function() {
                     callback();
                 });
             }

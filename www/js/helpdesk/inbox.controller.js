@@ -5,9 +5,9 @@
     'use strict';
 
     angular.module("helpdesk")
-    .controller('InboxController',['myTickets','NgTableParams','$state','myLoading',InboxController]);
+        .controller('InboxController', ['myTickets', 'NgTableParams', '$state', 'myLoading', InboxController]);
 
-    function InboxController(myTickets,NgTableParams,$state,myLoading) {
+    function InboxController(myTickets, NgTableParams, $state, myLoading) {
         var vm = this;
 
         vm.notAssigned = null;
@@ -17,13 +17,28 @@
 
         function activate() {
             myLoading.loading(function() {
-                var data = myTickets.getNotAssigned();
-                vm.notAssigned = new NgTableParams({count:data.length, sorting: {notified:'desc'}},{data: data, counts: []});
+                myTickets.getNotAssigned().then(function success(response) {
+                    var data = response.data;
+                    vm.notAssigned = new NgTableParams({
+                        count: data.length,
+                        sorting: {
+                            notified: 'desc'
+                        }
+                    }, {
+                        data: data,
+                        counts: []
+                    });
+                }, function error(response) {
+                    console.log(response);
+                });
+
             });
         }
-        
+
         function gotoDetail(ticket) {
-            var params = {id: ticket._id};
+            var params = {
+                id: ticket._id
+            };
             $state.go('tab.ticket-detail', params);
         }
     }

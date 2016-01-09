@@ -47,7 +47,14 @@
 				}
 
 				function addComment() {
-					vmd.ticket.addComment(vmd.form.comment);
+					if(typeof vmd.ticket.addComment !== 'function') {
+						var std = {};
+                    	std.comment = vmd.form.comment;
+                    	std.date = new Date();
+                    	vmd.ticket.comments.push(std);
+					} else {
+						vmd.ticket.addComment(vmd.form.comment);
+					}
 					vmd.form.comment = '';
 				}
 			}
