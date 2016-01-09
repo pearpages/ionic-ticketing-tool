@@ -16,11 +16,19 @@ module.exports = function(app) {
 
     app.get('/tickets/mock/user/:userid', tickets.mock);
 
+    app.get('/tickets/remove-all', tickets.removeAll);
+
     app.get('/tickets', tickets.getAll);
 
     app.get('/tickets/user/:userid', tickets.getAllUserTickets);
 
     app.get('/tickets/remove', tickets.remove);
+
+    app.get('/helpdesk/not-assigned', tickets.notAssigned);
+
+    app.get('/helpdesk/assigned/:it', tickets.assigned);
+
+    app.get('/helpdesk/closed', tickets.closed);
 
     app.post('/ticket', tickets.saveTicket);
 

@@ -93,5 +93,43 @@ exports.saveTicket = function(req, res) {
             }
         });
     }
-
 };
+exports.removeAll = function(req, res){
+    Ticket.Ticket.remove({}, function(err, result) {
+        if(err){
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+};
+exports.notAssigned = function(req, res) {
+    Ticket.Ticket.find({it:null}, function(err, result) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+};
+exports.closed = function(req, res) {
+    var it = req.params.it;
+        Ticket.Ticket.find({closed:{$ne:null}}, function(err, result) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+};
+exports.assigned = function(req, res) {
+    var it = req.params.it;
+        Ticket.Ticket.find({it:it}, function(err, result) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(result);
+        }
+    });
+};
+    
