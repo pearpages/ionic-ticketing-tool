@@ -124,7 +124,7 @@ exports.closed = function(req, res) {
 };
 exports.assigned = function(req, res) {
     var it = req.params.it;
-        Ticket.Ticket.find({it:it}, function(err, result) {
+        Ticket.Ticket.find({it:it,status:{$ne:'closed'}}, function(err, result) {
         if(err) {
             res.send(err);
         } else {
