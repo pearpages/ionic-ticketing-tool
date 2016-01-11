@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"not",
+				"notAssigned〔variable〕"
+			],
+			[
 				"ticket",
 				"ticketDetail"
 			],
@@ -419,6 +423,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/js/my-tickets/evaluate.controller.js",
+			"settings":
+			{
+				"buffer_size": 2000,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/my-tickets/evaluate.html",
+			"settings":
+			{
+				"buffer_size": 4139,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -556,15 +576,36 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/config",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/controllers",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/models",
-		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/common/detail"
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/server/controllers",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/account",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/common",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/common/detail",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/common/loading",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/my-tickets"
 	],
 	"file_history":
 	[
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/my-tickets/evaluate.html",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/common/detail/comments.directive.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/my-tickets/detail.html",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/server/controllers/tickets.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/helpdesk/detail.html",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/common/detail/detail.directive.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/tickets/Ticket.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/helpdesk/closed.controller.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/tickets/tickets.service.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/helpdesk/assigned-to-me.controller.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/account/account.controller.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/helpdesk/inbox.controller.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/server/utilities/mock/tickets.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/server/config/routes.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/helpdesk/detail.controller.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/server.js",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/account/account.html",
+		"/Users/mattmax/Documents/Coding/ionic-ticketing-tool/www/js/app.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/tickets/tickets.service.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js/helpdesk/assign.controller.js",
 		"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/server/controllers/tickets.js",
@@ -674,25 +715,7 @@
 		"/C/Users/ppages/Desktop/uar drill-down-title.txt",
 		"/C/Users/ppages/Desktop/knowledge-base/docs/Lipusm235/lpsum9878.md",
 		"/C/Users/ppages/Desktop/knowledge-base/docs/index.md",
-		"/C/Users/ppages/Desktop/gulp-examples/src/hello.js",
-		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/SublimeCodeIntel/Default (Windows).sublime-keymap",
-		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
-		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/ppages/AppData/Roaming/Sublime Text 3/Packages/User/javascript-iife.sublime-snippet",
-		"/C/Users/ppages/Desktop/gulp-examples/.jshintrc",
-		"/C/Users/ppages/Desktop/gulp-examples/.jscsrc",
-		"/C/Users/ppages/Desktop/gulp-examples/README.MD",
-		"/C/Users/ppages/Desktop/gulp-examples/gulpfile.js",
-		"/C/Users/ppages/Desktop/gulp-examples/package.json",
-		"/C/Users/ppages/Desktop/gulp-examples/docs/packages.md",
-		"/C/Users/ppages/Desktop/gulp-examples/.gitignore",
-		"/C/Users/ppages/Desktop/gulp-examples/docs/gulp-api.md",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/user-list.html",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/user-list.controller.js",
-		"/C/Users/ppages/Desktop/angular_directives_examples/app/userList/directives/user-list.directive.js"
+		"/C/Users/ppages/Desktop/gulp-examples/src/hello.js"
 	],
 	"find":
 	{
@@ -703,6 +726,7 @@
 		"height": 92.0,
 		"where_history":
 		[
+			"<open folders>",
 			"/Users/mattmax/Desktop/Coding/ionic-ticketing-tool/www/js",
 			"C:\\Users\\ppages\\.boxsync\\Box Sync\\PROJECTS\\in-progress\\LEARNING\\learning-angular-mock\\app",
 			"C:\\Users\\ppages\\.boxsync\\Box Sync\\PROJECTS\\in-progress\\LEARNING\\learning-angular-mock",
@@ -716,6 +740,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"vmd",
+			"Evaluate Ticket",
+			"Ticket",
+			"._id",
+			".id",
+			"serverOn",
+			"serveron",
+			"serverOn",
+			"getNotAssigned",
 			"save",
 			".save",
 			".id",
@@ -834,16 +867,7 @@
 			"<td ",
 			"pending ",
 			"<a class=\"uk-icon-close",
-			"a ",
-			"data-uk-modal href=\"#my-modal\"",
-			"<i ",
-			"</i>",
-			"Pending</td>",
-			"<td class=\"mandatory-section ",
-			"collapse",
-			"<select><option value='pending'>Pending</option><option value='na'>N/A</option><option value='Issued'>Issued</option></select><button>Upload</button>",
-			"<option>Status</option>",
-			"collapse"
+			"a "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -924,8 +948,186 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/js/my-tickets/evaluate.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2000,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1876,
+								1876
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 529.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/js/my-tickets/evaluate.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1094,7 +1296,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 265.0,
+	"side_bar_width": 298.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
